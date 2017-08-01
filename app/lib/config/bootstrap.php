@@ -1,0 +1,1 @@
+<?phpYii::setAlias('@api', dirname(dirname(__DIR__)) . '/api/protected');/*Yii::setAlias('@web', dirname(dirname(__DIR__)) . '/web/protected');Yii::setAlias('@admin', dirname(dirname(__DIR__)) . '/admin/protected');*/

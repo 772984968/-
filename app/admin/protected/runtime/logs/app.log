@@ -1,0 +1,1247 @@
+2015-09-19 15:28:55 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: debug/default/sizzle.min.map' in D:\xampp\htdocs\yinbian\frame\base\Controller.php:122
+Stack trace:
+#0 D:\xampp\htdocs\yinbian\frame\base\Module.php(455): yii\base\Controller->runAction('sizzle.min.map', Array)
+#1 D:\xampp\htdocs\yinbian\frame\web\Application.php(83): yii\base\Module->runAction('debug/default/s...', Array)
+#2 D:\xampp\htdocs\yinbian\frame\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\yinbian\app\admin\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\xampp\htdocs\yinbian\frame\web\Application.php:95
+Stack trace:
+#0 D:\xampp\htdocs\yinbian\frame\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\yinbian\app\admin\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-09-19 15:28:55 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'd2586kbjf6ftvntdrtudcnjnh0'
+    '_csrf' => 'bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.yinbian.cc'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:40.0) Gecko/20100101 Firefox/40.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=d2586kbjf6ftvntdrtudcnjnh0; _csrf=bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34 Server at admin.yinbian.cc Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34'
+    'SERVER_NAME' => 'admin.yinbian.cc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/yinbian/app/admin/index.php'
+    'REMOTE_PORT' => '55085'
+    'REDIRECT_URL' => '/debug/default/sizzle.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/debug/default/sizzle.min.map'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1442647735.19
+    'REQUEST_TIME' => 1442647735
+]
+2015-09-19 15:32:25 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: gii
+2015-09-19 15:32:25 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2015-09-19 15:32:25 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2015-09-19 15:32:25 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: <controller:\w+>/<action:\w+>
+2015-09-19 15:32:25 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'menu/index'
+2015-09-19 15:32:25 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:28
+2015-09-19 15:32:25 [127.0.0.1][-][-][info][yii\db\Command::query] select url from `db_power`where state=1
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:32:25 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=yinbian
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:32:25 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:32:25 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:32:25 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:32:25 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:32:25 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:32:25 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: menu/index
+2015-09-19 15:32:25 [127.0.0.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: app\controllers\MenuController::actionIndex()
+2015-09-19 15:32:25 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `db_power` ORDER BY `order`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:84
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MenuController.php:23
+2015-09-19 15:32:25 [127.0.0.1][-][-][trace][yii\base\View::renderFile] Rendering view file: D:\xampp\htdocs\yinbian\app\admin\protected\views\menu\index.php
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\BasicsController.php:50
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MenuController.php:25
+2015-09-19 15:32:25 [127.0.0.1][-][-][trace][yii\base\View::renderFile] Rendering view file: D:\xampp\htdocs\yinbian\app\admin\protected\views\layouts\main.php
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\BasicsController.php:50
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MenuController.php:25
+2015-09-19 15:32:25 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'd2586kbjf6ftvntdrtudcnjnh0'
+    '_csrf' => 'bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/login/captcha' => 'hifu'
+    '__captcha/login/captchacount' => 1
+    'admin' => [
+        'id' => '1'
+        'group_id' => 1
+        'codes' => 'HbaOZK7H'
+        'nickname' => '管理员'
+        'account' => 'admin'
+        'email' => '6564654@qq.com'
+        'phone' => '15866668888'
+        'pass' => 'c1a2dea8e61d38b77a2bf253d9b12759'
+        'uptime' => '1430374217'
+        'state' => 1
+        'login_key' => '82PMhEig'
+        'isAdmin' => 1
+        'loginTime' => 1442625058
+        'loginIp' => '127.0.0.1'
+        'isLogin' => true
+    ]
+    'power' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.yinbian.cc'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:40.0) Gecko/20100101 Firefox/40.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://admin.yinbian.cc/main/index'
+    'HTTP_COOKIE' => 'PHPSESSID=d2586kbjf6ftvntdrtudcnjnh0; _csrf=bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34 Server at admin.yinbian.cc Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34'
+    'SERVER_NAME' => 'admin.yinbian.cc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/yinbian/app/admin/index.php'
+    'REMOTE_PORT' => '55277'
+    'REDIRECT_URL' => '/menu/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menu/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1442647945.129
+    'REQUEST_TIME' => 1442647945
+]
+2015-09-19 15:33:53 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: gii
+2015-09-19 15:33:53 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2015-09-19 15:33:53 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2015-09-19 15:33:53 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: <controller:\w+>/<action:\w+>
+2015-09-19 15:33:53 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'main/index'
+2015-09-19 15:33:53 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:28
+2015-09-19 15:33:53 [127.0.0.1][-][-][info][yii\db\Command::query] select url from `db_power`where state=1
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:33:53 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=yinbian
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:33:53 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:33:53 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:33:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:33:53 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:33:53 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:33:53 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: main/index
+2015-09-19 15:33:53 [127.0.0.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: app\controllers\MainController::actionIndex()
+2015-09-19 15:33:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `db_power` WHERE `state`=1 ORDER BY `order`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:173
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MainController.php:23
+2015-09-19 15:33:53 [127.0.0.1][-][-][trace][yii\base\View::renderFile] Rendering view file: D:\xampp\htdocs\yinbian\app\admin\protected\views\main\index.php
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\BasicsController.php:50
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MainController.php:34
+2015-09-19 15:33:53 [127.0.0.1][-][-][trace][yii\base\View::renderFile] Rendering view file: D:\xampp\htdocs\yinbian\app\admin\protected\views\layouts\main.php
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\BasicsController.php:50
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MainController.php:34
+2015-09-19 15:33:53 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'd2586kbjf6ftvntdrtudcnjnh0'
+    '_csrf' => 'bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/login/captcha' => 'hifu'
+    '__captcha/login/captchacount' => 1
+    'admin' => [
+        'id' => '1'
+        'group_id' => 1
+        'codes' => 'HbaOZK7H'
+        'nickname' => '管理员'
+        'account' => 'admin'
+        'email' => '6564654@qq.com'
+        'phone' => '15866668888'
+        'pass' => 'c1a2dea8e61d38b77a2bf253d9b12759'
+        'uptime' => '1430374217'
+        'state' => 1
+        'login_key' => '82PMhEig'
+        'isAdmin' => 1
+        'loginTime' => 1442625058
+        'loginIp' => '127.0.0.1'
+        'isLogin' => true
+    ]
+    'power' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.yinbian.cc'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:40.0) Gecko/20100101 Firefox/40.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://admin.yinbian.cc/'
+    'HTTP_COOKIE' => 'PHPSESSID=d2586kbjf6ftvntdrtudcnjnh0; _csrf=bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34 Server at admin.yinbian.cc Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34'
+    'SERVER_NAME' => 'admin.yinbian.cc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/yinbian/app/admin/index.php'
+    'REMOTE_PORT' => '55319'
+    'REDIRECT_URL' => '/main/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/main/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1442648033.575
+    'REQUEST_TIME' => 1442648033
+]
+2015-09-19 15:34:03 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: gii
+2015-09-19 15:34:03 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2015-09-19 15:34:03 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2015-09-19 15:34:03 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: <controller:\w+>/<action:\w+>
+2015-09-19 15:34:03 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'menu/index'
+2015-09-19 15:34:03 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:28
+2015-09-19 15:34:03 [127.0.0.1][-][-][info][yii\db\Command::query] select url from `db_power`where state=1
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:34:03 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=yinbian
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:34:03 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:34:03 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:34:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:34:03 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:34:03 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:34:03 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: menu/index
+2015-09-19 15:34:03 [127.0.0.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: app\controllers\MenuController::actionIndex()
+2015-09-19 15:34:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `db_power` ORDER BY `order`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:84
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MenuController.php:23
+2015-09-19 15:34:03 [127.0.0.1][-][-][trace][yii\base\View::renderFile] Rendering view file: D:\xampp\htdocs\yinbian\app\admin\protected\views\menu\index.php
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\BasicsController.php:50
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MenuController.php:25
+2015-09-19 15:34:03 [127.0.0.1][-][-][trace][yii\base\View::renderFile] Rendering view file: D:\xampp\htdocs\yinbian\app\admin\protected\views\layouts\main.php
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\BasicsController.php:50
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MenuController.php:25
+2015-09-19 15:34:03 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'd2586kbjf6ftvntdrtudcnjnh0'
+    '_csrf' => 'bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/login/captcha' => 'hifu'
+    '__captcha/login/captchacount' => 1
+    'admin' => [
+        'id' => '1'
+        'group_id' => 1
+        'codes' => 'HbaOZK7H'
+        'nickname' => '管理员'
+        'account' => 'admin'
+        'email' => '6564654@qq.com'
+        'phone' => '15866668888'
+        'pass' => 'c1a2dea8e61d38b77a2bf253d9b12759'
+        'uptime' => '1430374217'
+        'state' => 1
+        'login_key' => '82PMhEig'
+        'isAdmin' => 1
+        'loginTime' => 1442625058
+        'loginIp' => '127.0.0.1'
+        'isLogin' => true
+    ]
+    'power' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.yinbian.cc'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:40.0) Gecko/20100101 Firefox/40.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://admin.yinbian.cc/main/index'
+    'HTTP_COOKIE' => 'PHPSESSID=d2586kbjf6ftvntdrtudcnjnh0; _csrf=bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34 Server at admin.yinbian.cc Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34'
+    'SERVER_NAME' => 'admin.yinbian.cc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/yinbian/app/admin/index.php'
+    'REMOTE_PORT' => '55327'
+    'REDIRECT_URL' => '/menu/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menu/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1442648043.104
+    'REQUEST_TIME' => 1442648043
+]
+2015-09-19 15:34:09 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: gii
+2015-09-19 15:34:09 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2015-09-19 15:34:09 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2015-09-19 15:34:09 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: <controller:\w+>/<action:\w+>
+2015-09-19 15:34:09 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'menu/edit'
+2015-09-19 15:34:09 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:28
+2015-09-19 15:34:10 [127.0.0.1][-][-][info][yii\db\Command::query] select url from `db_power`where state=1
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:34:10 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=yinbian
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:34:10 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:34:10 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:34:10 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:34:10 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:34:10 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:34:10 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: menu/edit
+2015-09-19 15:34:10 [127.0.0.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: app\controllers\MenuController::actionEdit()
+2015-09-19 15:34:10 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `db_power` WHERE `id`='1'
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MenuController.php:72
+2015-09-19 15:34:10 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `db_power` ORDER BY `order`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:84
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:59
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MenuController.php:93
+2015-09-19 15:34:10 [127.0.0.1][-][-][trace][yii\base\View::renderFile] Rendering view file: D:\xampp\htdocs\yinbian\app\admin\protected\views\menu\edit.php
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\BasicsController.php:50
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MenuController.php:98
+2015-09-19 15:34:10 [127.0.0.1][-][-][trace][yii\base\View::renderFile] Rendering view file: D:\xampp\htdocs\yinbian\app\admin\protected\views\layouts\main.php
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\BasicsController.php:50
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MenuController.php:98
+2015-09-19 15:34:09 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'd2586kbjf6ftvntdrtudcnjnh0'
+    '_csrf' => 'bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/login/captcha' => 'hifu'
+    '__captcha/login/captchacount' => 1
+    'admin' => [
+        'id' => '1'
+        'group_id' => 1
+        'codes' => 'HbaOZK7H'
+        'nickname' => '管理员'
+        'account' => 'admin'
+        'email' => '6564654@qq.com'
+        'phone' => '15866668888'
+        'pass' => 'c1a2dea8e61d38b77a2bf253d9b12759'
+        'uptime' => '1430374217'
+        'state' => 1
+        'login_key' => '82PMhEig'
+        'isAdmin' => 1
+        'loginTime' => 1442625058
+        'loginIp' => '127.0.0.1'
+        'isLogin' => true
+    ]
+    'power' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.yinbian.cc'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:40.0) Gecko/20100101 Firefox/40.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://admin.yinbian.cc/menu/index'
+    'HTTP_COOKIE' => 'PHPSESSID=d2586kbjf6ftvntdrtudcnjnh0; _csrf=bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34 Server at admin.yinbian.cc Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34'
+    'SERVER_NAME' => 'admin.yinbian.cc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/yinbian/app/admin/index.php'
+    'REMOTE_PORT' => '55327'
+    'REDIRECT_QUERY_STRING' => 'id=1'
+    'REDIRECT_URL' => '/menu/edit'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=1'
+    'REQUEST_URI' => '/menu/edit?id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1442648049.925
+    'REQUEST_TIME' => 1442648049
+]
+2015-09-19 15:35:46 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: gii
+2015-09-19 15:35:46 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2015-09-19 15:35:46 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2015-09-19 15:35:46 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: <controller:\w+>/<action:\w+>
+2015-09-19 15:35:46 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'main/index'
+2015-09-19 15:35:46 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:28
+2015-09-19 15:35:46 [127.0.0.1][-][-][info][yii\db\Command::query] select url from `db_power`where state=1
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:35:46 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=yinbian
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:35:46 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:35:46 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:35:46 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:35:46 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:35:46 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+2015-09-19 15:35:46 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: main/index
+2015-09-19 15:35:46 [127.0.0.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: app\controllers\MainController::actionIndex()
+2015-09-19 15:35:46 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `db_power` WHERE `state`=1 ORDER BY `order`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:173
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MainController.php:23
+2015-09-19 15:35:46 [127.0.0.1][-][-][trace][yii\base\View::renderFile] Rendering view file: D:\xampp\htdocs\yinbian\app\admin\protected\views\main\index.php
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\BasicsController.php:50
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MainController.php:34
+2015-09-19 15:35:46 [127.0.0.1][-][-][trace][yii\base\View::renderFile] Rendering view file: D:\xampp\htdocs\yinbian\app\admin\protected\views\layouts\main.php
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\BasicsController.php:50
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\MainController.php:34
+2015-09-19 15:35:46 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'd2586kbjf6ftvntdrtudcnjnh0'
+    '_csrf' => 'bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/login/captcha' => 'hifu'
+    '__captcha/login/captchacount' => 1
+    'admin' => [
+        'id' => '1'
+        'group_id' => 1
+        'codes' => 'HbaOZK7H'
+        'nickname' => '管理员'
+        'account' => 'admin'
+        'email' => '6564654@qq.com'
+        'phone' => '15866668888'
+        'pass' => 'c1a2dea8e61d38b77a2bf253d9b12759'
+        'uptime' => '1430374217'
+        'state' => 1
+        'login_key' => '82PMhEig'
+        'isAdmin' => 1
+        'loginTime' => 1442625058
+        'loginIp' => '127.0.0.1'
+        'isLogin' => true
+    ]
+    'power' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.yinbian.cc'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:40.0) Gecko/20100101 Firefox/40.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://admin.yinbian.cc/'
+    'HTTP_COOKIE' => 'PHPSESSID=d2586kbjf6ftvntdrtudcnjnh0; _csrf=bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34 Server at admin.yinbian.cc Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34'
+    'SERVER_NAME' => 'admin.yinbian.cc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/yinbian/app/admin/index.php'
+    'REMOTE_PORT' => '55348'
+    'REDIRECT_URL' => '/main/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/main/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1442648146.17
+    'REQUEST_TIME' => 1442648146
+]
+2015-09-19 15:35:48 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: gii
+2015-09-19 15:35:48 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2015-09-19 15:35:48 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2015-09-19 15:35:48 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: <controller:\w+>/<action:\w+>
+2015-09-19 15:35:48 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'goods/category'
+2015-09-19 15:35:48 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:28
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\GoodsController.php:29
+2015-09-19 15:35:48 [127.0.0.1][-][-][info][yii\db\Command::query] select url from `db_power`where state=1
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:35:48 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=yinbian
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:35:48 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:35:48 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:35:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\GoodsController.php:29
+2015-09-19 15:35:48 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\GoodsController.php:29
+2015-09-19 15:35:48 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\GoodsController.php:29
+2015-09-19 15:35:48 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: goods/category
+2015-09-19 15:35:48 [127.0.0.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: app\controllers\GoodsController::actionCategory()
+2015-09-19 15:35:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `db_goods_cate` ORDER BY `id`
+    in D:\xampp\htdocs\yinbian\app\lib\models\GoodsCate.php:65
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\GoodsController.php:40
+2015-09-19 15:35:48 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_goods_cate`
+    in D:\xampp\htdocs\yinbian\app\lib\models\GoodsCate.php:65
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\GoodsController.php:40
+2015-09-19 15:35:48 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_goods_cate`
+    in D:\xampp\htdocs\yinbian\app\lib\models\GoodsCate.php:65
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\GoodsController.php:40
+2015-09-19 15:35:48 [127.0.0.1][-][-][trace][yii\base\View::renderFile] Rendering view file: D:\xampp\htdocs\yinbian\app\admin\protected\views\goods\category.php
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\BasicsController.php:50
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\GoodsController.php:41
+2015-09-19 15:35:48 [127.0.0.1][-][-][trace][yii\base\View::renderFile] Rendering view file: D:\xampp\htdocs\yinbian\app\admin\protected\views\layouts\main.php
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\BasicsController.php:50
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\GoodsController.php:41
+2015-09-19 15:35:48 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'd2586kbjf6ftvntdrtudcnjnh0'
+    '_csrf' => 'bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/login/captcha' => 'hifu'
+    '__captcha/login/captchacount' => 1
+    'admin' => [
+        'id' => '1'
+        'group_id' => 1
+        'codes' => 'HbaOZK7H'
+        'nickname' => '管理员'
+        'account' => 'admin'
+        'email' => '6564654@qq.com'
+        'phone' => '15866668888'
+        'pass' => 'c1a2dea8e61d38b77a2bf253d9b12759'
+        'uptime' => '1430374217'
+        'state' => 1
+        'login_key' => '82PMhEig'
+        'isAdmin' => 1
+        'loginTime' => 1442625058
+        'loginIp' => '127.0.0.1'
+        'isLogin' => true
+    ]
+    'power' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.yinbian.cc'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:40.0) Gecko/20100101 Firefox/40.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://admin.yinbian.cc/main/index'
+    'HTTP_COOKIE' => 'PHPSESSID=d2586kbjf6ftvntdrtudcnjnh0; _csrf=bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34 Server at admin.yinbian.cc Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34'
+    'SERVER_NAME' => 'admin.yinbian.cc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/yinbian/app/admin/index.php'
+    'REMOTE_PORT' => '55348'
+    'REDIRECT_URL' => '/goods/category'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/goods/category'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1442648148.301
+    'REQUEST_TIME' => 1442648148
+]
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'lib\models\OrderGoods' not found' in D:\xampp\htdocs\yinbian\app\admin\protected\library\OrderLibrary.php:31
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'd2586kbjf6ftvntdrtudcnjnh0'
+    '_csrf' => 'bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/login/captcha' => 'hifu'
+    '__captcha/login/captchacount' => 1
+    'admin' => [
+        'id' => '1'
+        'group_id' => 1
+        'codes' => 'HbaOZK7H'
+        'nickname' => '管理员'
+        'account' => 'admin'
+        'email' => '6564654@qq.com'
+        'phone' => '15866668888'
+        'pass' => 'c1a2dea8e61d38b77a2bf253d9b12759'
+        'uptime' => '1430374217'
+        'state' => 1
+        'login_key' => '82PMhEig'
+        'isAdmin' => 1
+        'loginTime' => 1442625058
+        'loginIp' => '127.0.0.1'
+        'isLogin' => true
+    ]
+    'power' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.yinbian.cc'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:40.0) Gecko/20100101 Firefox/40.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://admin.yinbian.cc/main/index'
+    'HTTP_COOKIE' => 'PHPSESSID=d2586kbjf6ftvntdrtudcnjnh0; _csrf=bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34 Server at admin.yinbian.cc Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34'
+    'SERVER_NAME' => 'admin.yinbian.cc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/yinbian/app/admin/index.php'
+    'REMOTE_PORT' => '55472'
+    'REDIRECT_URL' => '/order/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/order/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1442648621.64
+    'REQUEST_TIME' => 1442648621
+]
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][trace][yii\base\Module::getModule] Loading module: gii
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: <controller:\w+>/<action:\w+>
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][trace][yii\web\Application::handleRequest] Route requested: 'order/index'
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][info][yii\web\Session::open] Session started
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:28
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\OrderController.php:23
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][info][yii\db\Command::query] select url from `db_power`where state=1
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=yinbian
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][info][yii\db\Command::query] SHOW CREATE TABLE `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][info][yii\db\Command::query] SELECT * FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\OrderController.php:23
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\OrderController.php:23
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][info][yii\db\Command::query] SHOW CREATE TABLE `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\OrderController.php:23
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][trace][yii\base\Controller::runAction] Route to run: order/index
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][trace][yii\base\InlineAction::runWithParams] Running action: app\controllers\OrderController::actionIndex()
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][info][yii\db\Command::query] SELECT COUNT(*) FROM `db_order` WHERE 1=1
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:70
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\OrderController.php:60
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][info][yii\db\Command::query] SELECT * FROM `db_order` WHERE 1=1 ORDER BY `id` DESC LIMIT 20
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:73
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\OrderController.php:60
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_order`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:73
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\OrderController.php:60
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][info][yii\db\Command::query] SHOW CREATE TABLE `db_order`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:73
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\OrderController.php:60
+2015-09-19 15:43:41 [127.0.0.1][-][d2586kbjf6ftvntdrtudcnjnh0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'd2586kbjf6ftvntdrtudcnjnh0'
+    '_csrf' => 'bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/login/captcha' => 'hifu'
+    '__captcha/login/captchacount' => 1
+    'admin' => [
+        'id' => '1'
+        'group_id' => 1
+        'codes' => 'HbaOZK7H'
+        'nickname' => '管理员'
+        'account' => 'admin'
+        'email' => '6564654@qq.com'
+        'phone' => '15866668888'
+        'pass' => 'c1a2dea8e61d38b77a2bf253d9b12759'
+        'uptime' => '1430374217'
+        'state' => 1
+        'login_key' => '82PMhEig'
+        'isAdmin' => 1
+        'loginTime' => 1442625058
+        'loginIp' => '127.0.0.1'
+        'isLogin' => true
+    ]
+    'power' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.yinbian.cc'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:40.0) Gecko/20100101 Firefox/40.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://admin.yinbian.cc/main/index'
+    'HTTP_COOKIE' => 'PHPSESSID=d2586kbjf6ftvntdrtudcnjnh0; _csrf=bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34 Server at admin.yinbian.cc Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34'
+    'SERVER_NAME' => 'admin.yinbian.cc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/yinbian/app/admin/index.php'
+    'REMOTE_PORT' => '55472'
+    'REDIRECT_URL' => '/order/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/order/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1442648621.64
+    'REQUEST_TIME' => 1442648621
+]
+2015-09-19 15:43:42 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: order/sizzle.min.map' in D:\xampp\htdocs\yinbian\frame\base\Controller.php:122
+Stack trace:
+#0 D:\xampp\htdocs\yinbian\frame\base\Module.php(455): yii\base\Controller->runAction('sizzle.min.map', Array)
+#1 D:\xampp\htdocs\yinbian\frame\web\Application.php(83): yii\base\Module->runAction('order/sizzle.mi...', Array)
+#2 D:\xampp\htdocs\yinbian\frame\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\yinbian\app\admin\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\xampp\htdocs\yinbian\frame\web\Application.php:95
+Stack trace:
+#0 D:\xampp\htdocs\yinbian\frame\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\yinbian\app\admin\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-09-19 15:43:42 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'd2586kbjf6ftvntdrtudcnjnh0'
+    '_csrf' => 'bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/login/captcha' => 'hifu'
+    '__captcha/login/captchacount' => 1
+    'admin' => [
+        'id' => '1'
+        'group_id' => 1
+        'codes' => 'HbaOZK7H'
+        'nickname' => '管理员'
+        'account' => 'admin'
+        'email' => '6564654@qq.com'
+        'phone' => '15866668888'
+        'pass' => 'c1a2dea8e61d38b77a2bf253d9b12759'
+        'uptime' => '1430374217'
+        'state' => 1
+        'login_key' => '82PMhEig'
+        'isAdmin' => 1
+        'loginTime' => 1442625058
+        'loginIp' => '127.0.0.1'
+        'isLogin' => true
+    ]
+    'power' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.yinbian.cc'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:40.0) Gecko/20100101 Firefox/40.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=d2586kbjf6ftvntdrtudcnjnh0; _csrf=bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34 Server at admin.yinbian.cc Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34'
+    'SERVER_NAME' => 'admin.yinbian.cc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/yinbian/app/admin/index.php'
+    'REMOTE_PORT' => '55474'
+    'REDIRECT_URL' => '/order/sizzle.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/order/sizzle.min.map'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1442648622.584
+    'REQUEST_TIME' => 1442648622
+]
+2015-09-19 15:43:42 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: gii
+2015-09-19 15:43:42 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2015-09-19 15:43:42 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2015-09-19 15:43:42 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2015-09-19 15:43:42 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'order/sizzle.min.map'
+2015-09-19 15:43:42 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:28
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\OrderController.php:23
+2015-09-19 15:43:42 [127.0.0.1][-][-][info][yii\db\Command::query] select url from `db_power`where state=1
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:43:42 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=yinbian
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:43:42 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:43:42 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_power`
+    in D:\xampp\htdocs\yinbian\app\admin\protected\library\MenuLibrary.php:265
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:109
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:38
+2015-09-19 15:43:42 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\OrderController.php:23
+2015-09-19 15:43:42 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\OrderController.php:23
+2015-09-19 15:43:42 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `db_setting`
+    in D:\xampp\htdocs\yinbian\app\lib\models\Setting.php:61
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SellerController.php:39
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\OrderController.php:23
+2015-09-19 15:43:42 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: site/error
+2015-09-19 15:43:42 [127.0.0.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: app\controllers\SiteController::actionError()
+2015-09-19 15:43:42 [127.0.0.1][-][-][trace][yii\base\View::renderFile] Rendering view file: D:\xampp\htdocs\yinbian\app\admin\protected\views\site\error.php
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SiteController.php:35
+2015-09-19 15:43:42 [127.0.0.1][-][-][trace][yii\base\View::renderFile] Rendering view file: D:\xampp\htdocs\yinbian\app\admin\protected\views\layouts\main.php
+    in D:\xampp\htdocs\yinbian\app\admin\protected\controllers\SiteController.php:35
+2015-09-19 15:43:42 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'd2586kbjf6ftvntdrtudcnjnh0'
+    '_csrf' => 'bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/login/captcha' => 'hifu'
+    '__captcha/login/captchacount' => 1
+    'admin' => [
+        'id' => '1'
+        'group_id' => 1
+        'codes' => 'HbaOZK7H'
+        'nickname' => '管理员'
+        'account' => 'admin'
+        'email' => '6564654@qq.com'
+        'phone' => '15866668888'
+        'pass' => 'c1a2dea8e61d38b77a2bf253d9b12759'
+        'uptime' => '1430374217'
+        'state' => 1
+        'login_key' => '82PMhEig'
+        'isAdmin' => 1
+        'loginTime' => 1442625058
+        'loginIp' => '127.0.0.1'
+        'isLogin' => true
+    ]
+    'power' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.yinbian.cc'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:40.0) Gecko/20100101 Firefox/40.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=d2586kbjf6ftvntdrtudcnjnh0; _csrf=bf7c9b8b93400709152a8d314b72ee8c39e486ad9b1df152772656034205be63a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GCKyOX9NYpIYlajvQSMo5zcfbgTKAqpP%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34 Server at admin.yinbian.cc Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.34'
+    'SERVER_NAME' => 'admin.yinbian.cc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/yinbian/app/admin'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/yinbian/app/admin/index.php'
+    'REMOTE_PORT' => '55474'
+    'REDIRECT_URL' => '/order/sizzle.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/order/sizzle.min.map'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1442648622.584
+    'REQUEST_TIME' => 1442648622
+]

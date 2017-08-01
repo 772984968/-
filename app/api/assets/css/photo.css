@@ -1,0 +1,125 @@
+/*(c) Copyright 2017 于号东. All Rights Reserved.*/ 
+.cont-wrap{
+	width: 8.88888rem;
+	margin: 0 auto 2.41666rem;
+}
+.status{
+	text-align: center;
+	font-size: 0.31944rem;
+	color: #333;
+	margin-top: 0.31944rem;
+}
+.status1{
+	text-align: center;
+	font-size: 0.31944rem;
+	color: #333;
+	margin-top: 0.31944rem;
+}
+.find{
+	font-size: 0.26388rem;
+	color: #b0b0b0;
+	text-align:center;
+	padding: 0.13888rem 0;
+}
+.zdy{
+	font-size: 0.31944rem;
+	color: #333;
+	line-height: 0.5rem;
+	word-wrap: break-word;
+	margin-bottom: 0.625rem;
+}
+.yuy-wrap{
+	border-bottom: 0.19444rem solid #f5f4ef;
+	padding: 0.48611rem 0;
+}
+.yuy-wrap p{
+	width: 9.43055rem;
+	margin: 0 auto;
+	
+}
+.yuy-wrap p:nth-child(1){
+	line-height: 0.54166rem;
+	height: 0.54166rem;
+}
+.yuy-wrap p:nth-child(2){
+	margin-top: 0.25rem;
+}
+.yutime{
+	background: url(/assets/images/map_07.png) 0.15rem 50%no-repeat ;
+	background-size: 0.30555rem 0.30555rem ;
+	padding-left: 0.55555rem;
+	font-size: 0.29166rem;
+	color: #333333;
+}
+.yuadd{
+	background: url(/assets/images/map_03.png) 0.172rem 50%no-repeat ;
+	background-size: 0.25rem 0.33333rem;
+	padding-left: 0.55555rem;
+	font-size: 0.31944rem;
+	color: #333333;
+}
+.fon-w{
+	float: right;
+	font-size: 0.48611rem;
+	font-weight: bold;
+	color: #333;
+}
+.toux{
+	width: 1.01388rem;
+	height: 1.01388rem;
+	border-radius: 0.69444rem;
+	float: left;
+	margin-top: 0.22222rem;
+}
+.xx-wrap{
+	width: 9.43055rem;
+	margin: 0 auto;	
+	padding-left: 0.41666rem;
+	border-bottom: 0.19444rem solid #f5f4ef;
+	padding-bottom: 0.31944rem;
+}
+.xx-wrap p:nth-child(1){
+	overflow: hidden;
+}
+.nickname-p{
+	font-size: 0.375rem;
+	font-weight: 400;
+	color: #333;
+	float: left;
+	margin-left: 0.27777rem;
+	margin-top: 0.55555rem;
+}
+.sex{
+	width: 0.47222rem;
+	height: 0.47222rem;
+	float: left;
+	margin-top: 0.6rem;
+	margin-left: 0.13888rem;
+}
+.aa{
+	width: 0.86111rem;
+	height: 0.86111rem;
+	margin-right: 0.13888rem;
+	float: right;
+	margin-top: 0.34722rem;
+}
+.pl{
+	font-size: 0.31944rem;
+	color: #333;
+	margin-top: 0.34722rem;
+}
+.pl2{
+	font-size: 0.31944rem;
+	color: #333;
+	margin-top: 0.13888rem;
+}
+.haonum{
+	color: #ff9933;
+}
+.chanum{
+	color: #1fbef7;
+}
+.pl-conter{
+	width: 9.43055rem;
+	margin: 0 auto;
+}

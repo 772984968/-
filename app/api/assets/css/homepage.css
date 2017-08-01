@@ -1,0 +1,309 @@
+.home-wrap{
+	width: 10rem;
+	margin:1.52777rem auto 0;
+	overflow-x: hidden;
+}
+.home-head{
+	width: 10rem;
+	/*height: 6.93333rem;*/
+	/*background: url(../images/home_02.jpg) no-repeat;*/
+	background-size:100% 100% ;
+}
+.home-tab{
+	width: 10rem;
+}
+.home-sf{
+	width: 8.97222rem;
+	margin: 0 auto;
+}
+.home-head P{
+	color: #fff;
+	text-align: center;
+	
+}
+.home-img span{
+	margin-top: 0.32rem;
+	width: 2.13333rem;
+	height: 2.13333rem;
+	display: inline-block;
+	border-radius: 0.66666rem;
+}
+.home-img span img{
+	width:2.13333rem;
+	height: 2.13333rem;
+	border-radius: 1.33333rem;
+}
+.home-name{
+	position: relative;
+	font-size: 0.38rem;
+	margin:0.2rem 0 ;
+}
+.home-name img{
+	position: absolute;
+	top: 0.06666rem;
+	margin-left: 0.24rem;
+	width: 0.48rem;
+	height: 0.48rem;
+}
+.home-sf{
+	font-size: 0.29333rem;
+	margin-bottom: 0.2rem;
+}
+.home-xx{
+	font-size: 0.29333rem;
+}
+.home-xx span:nth-child(1){
+	padding-left:0.4rem ;
+	background: url(../images/map_03_03.png) no-repeat;
+	background-size: 0.26666rem 0.37333rem;
+}
+.home-xx span:nth-child(2){
+	padding-left:0.4rem ;
+	background: url(../images/ho_03.png) no-repeat;
+	background-size: 0.32rem 0.36rem;
+	margin-left:0.44rem ;
+}
+.home-xx span:nth-child(3){
+	padding-left:0.4rem ;
+	background: url(../images/ho_06.png) 0 50% no-repeat;
+	background-size: 0.34666rem 0.30666rem;
+	margin-left:0.30666rem;
+}
+.home-js{
+	padding: 0 1.46666rem;
+	font-size: 0.29333rem;
+	margin-top: 0.26666rem;
+}
+.home-j span{
+	display: inline-block;
+	border: 1px solid #fff;
+	border-radius: 0.66666rem;
+	padding: 0.21333rem 0.6rem;
+	font-size: 0.34666rem;
+	margin: 0.4rem 0;
+}
+.home-tab{
+	overflow: hidden;
+}
+.home-tab li{
+	float: left;
+	width: 33.33333%;
+	color: #bababa;
+	font-size: 0.42666rem;
+	text-align: center;
+}
+.home-tab li span{
+	display: inline-block;
+	padding: 0.37333rem 0 0.4rem 0;
+}
+.tab-select span{
+	
+	color: #ff9933;
+	border-bottom: 0.08rem solid #ff9933;
+}
+.home-w{
+	font-size: 0.34666rem;
+	color: #333333;
+	padding:0.24rem 0.30666rem ;
+	border-bottom: 1px solid #C3C3C3;
+	border-top: 1px solid #C3C3C3;
+}
+.home-cont{
+	width: 9.46666rem;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top: 0.45333rem;
+	
+}
+.ba-photo{
+	width: 10rem;
+	overflow: hidden;
+}
+.ba-photo li{
+	width: 3.13333rem;
+	overflow: hidden;
+	float: left;
+	height:3.13333rem;
+	margin-right: 0.05333rem;
+}
+.ba-photo li img{
+	width: 100%;
+	height: 100%;
+}
+.bi{
+	padding-bottom: 0.25rem;
+	margin-bottom: 0.13333rem;
+}
+.zp-title{
+	font-size: 0.37333rem;
+	color: #333;
+	padding: 0.2rem 0 0.2rem 0.46666rem;
+}
+.zp-img{
+	width: 100%;
+	height: 6rem;
+}
+.zp-img img{
+	width: 100%;
+	height: 100%;
+	
+}
+.zp-dz{
+	text-align: right;
+	padding: 0.2rem 0.46666rem 0.2rem 0.46666rem;
+}
+.zp-dz span:nth-child(1){
+	background: url(/assets/images/love_19.png) 0 50% no-repeat;
+	font-size: 0.34666rem;
+	color: #999999;
+	display: inline-block;
+	padding-left: 0.6rem;
+	background-size: 0.42666rem 0.36rem;
+	margin-right:0.8rem ;
+}
+.zp-dz span:nth-child(2){
+	background: url(/assets/images/mis_03.png) 0 50% no-repeat;
+	font-size: 0.34666rem;
+	color: #999999;
+	display: inline-block;
+	padding-left: 0.6rem;
+	background-size: 0.42666rem 0.36rem;
+}
+.pl-s{
+	background: url(/assets/images/mis_03.png) 0 50% no-repeat;
+	display: inline-block;
+	padding-left: 0.6rem;
+	float: right;
+	background-size: 0.42666rem 0.36rem;
+}
+.tab-ul{
+	width: 100%;
+	padding: 0.24rem 0;
+	font-size: 0.29333rem;
+	color: #999999;
+	overflow: hidden;
+	border-top:1px solid #eeeeee;
+}
+.tab-ul li{
+	width: 20%;
+	float:left;
+	text-align: center;
+}
+.yellow-home{
+	color: #ff9933;
+}
+.dz-img{
+	width: 11rem;
+}
+.dz-img img{
+	width: 3.26666rem;
+	height: 3.26666rem;
+	margin-right: 0.10666rem;
+	margin-bottom: 0.10666rem;
+}
+.dz-width{
+	
+	overflow: hidden;
+	width: 10rem;
+}
+.video-list{
+	width: 9.47222rem;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-bottom:0.48611rem ;
+}
+.video-list img{
+	border-radius: 0.13333rem;
+}
+.list-left{
+	float: left;
+	width: 3.11111rem;
+}
+.list-right{
+	width: 6.3rem;
+	float: left;
+}
+.list-right p{
+	margin-left: 0.18055rem;
+}
+.list-right p:nth-child(1){
+	padding-top: 0.15rem;
+	height: 1.11111rem;
+	overflow: hidden;
+	font-size: 0.40277rem;
+	color: #333333;
+}
+.list-right p:nth-child(2){
+	padding-left: 0.38888rem;
+	background: url(../images/video_13.png) 0 50% no-repeat;
+	background-size: 0.27777rem 0.27777rem;
+	font-size: 0.36111rem;
+	color: #999;
+}
+.list-right p:nth-child(3){
+	padding-left: 0.38888rem;
+	font-size: 0.36111rem;
+	background: url(../images/video_16.png) 0 50% no-repeat;
+	background-size: 0.27777rem 0.27777rem;
+	color: #999;
+}
+.list-left img{
+	width: 3.11111rem;
+	height: 2.29166rem ;
+}
+.dz-wd, .dz-yy{
+	padding-top: 0.27777rem;
+}
+.zp-home-center{
+	border-bottom: 0.13888rem  solid #f5f4ef;
+}
+/*====================下面是次元卡的样式===================*/
+.ccc{
+	width: 10rem;
+	font-size: 0.34722rem;
+	color: #ff9933;
+	position: relative;
+	height: 0.77777rem;
+	/*border-top:1px solid #aeb2bd ;*/
+	text-align: center;
+	line-height: 0.77777rem;
+	border-bottom: 1px solid #cfcfcf;
+}
+.zpq{
+	border-bottom: 0.27777rem solid #f5f4ef;
+}
+.ccc .aaa{
+	width: 0.33333rem;
+	height: 0.3333rem;
+	display: inline-block;
+	position: absolute;
+	right: 0.27777rem;
+	top: 0;
+}
+.ccc .bbb{
+	width: 0.33333rem;
+	height: 0.33333rem;
+	display: inline-block;
+	position: absolute;
+	right: 0.29rem;
+	top: 0;
+}
+.zpq-img{
+	width: 9.5rem;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top: 0.11111rem;
+}
+.zpq-img div{
+	width: 10rem;
+	
+	overflow: hidden;
+}
+.zpq-img img{
+	margin-right: 0.125rem;
+	margin-bottom: 0.125rem;
+	width: 3.06944rem;
+	height: 1.95833rem;
+	border-radius: 0.06944rem;
+}
+

@@ -1,0 +1,1 @@
+<html><head></head><body></body><script>    this.window.opener = null;    window.close();</script></html>
