@@ -1,1 +1,1 @@
-<?phpnamespace api\controllers;use Yii;class IndexController extends \yii\web\Controller{    public function actionIndex()    {        echo Yii::$app->getCache()->set('register_code_13043434556','222');       /* Yii::$app->getCache()->set('hello','world',12);        echo Yii::$app->getCache()->get('hello');*/    }}
+<?phpnamespace api\controllers;use Yii;use yii\simple_html_dom\simple_html_dom;class IndexController extends \yii\web\Controller{   }

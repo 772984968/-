@@ -33,6 +33,22 @@ class AdCommon
 		return ['page'=>$page,'pagesize'=>$pagesize,'start'=>$start];
 	}
 
+	public static function pageParameterId($pagedefaultsize=20,$maxnumber=40)
+	{
+		$request = Yii::$app->getRequest();
+		//每页记录大小
+		$pagesize = intval($request->get('pagesize'));
+		$pagesize = $pagesize ? $pagesize : $pagedefaultsize;
+		$pagesize = $pagesize > $maxnumber ? $maxnumber : $pagesize;
+
+		//取相对于这个ID之上或之下的数据
+		$id = intval($request->get('id'));
+		$id = $id ? $id : 999999999;
+
+		$direction = $request->get('direction','down');
+		return ['pagesize'=>$pagesize, 'id'=>$id, 'direction'=>$direction];
+	}
+
 	
 
 	/**

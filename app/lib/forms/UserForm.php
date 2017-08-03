@@ -97,7 +97,7 @@ class UserForm extends Model
             }
 
 
-            if(HUANG_JING == 1)
+            if(HUANG_JING != 0)
             {
                 $user = Yii::$app->factory->getuser();
                 $user->login( $model );
@@ -112,6 +112,8 @@ class UserForm extends Model
             else
             {
                 Yii::$app->getSession()->set('userId', $model->iid);
+                $user = Yii::$app->factory->getuser();
+                $user->login( $model );
                 return true;
             }
 

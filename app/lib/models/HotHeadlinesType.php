@@ -54,4 +54,38 @@ class HotHeadlinesType extends BaseModel
             'notes' => 'Notes',
         ];
     }
+
+    //取有效的列表数据
+    public static function getValidList()
+    {
+        $result = HotHeadlinesType::getCacheList();
+        $new_result = [];
+        foreach($result as $row) {
+            if($row['state']) {
+                $new_result[] = [
+                    'iid' => $row['iid'],
+                    'name' => $row['name'],
+                ];
+            }
+        }
+        return $new_result;
+    }
+
+    //取有效的列表数据
+    public static function getList($fields, $state=2)
+    {
+        $result = HotHeadlinesType::getCacheList();
+        $new_result = [];
+        foreach($result as $row) {
+            $new_row = [];
+            foreach($fields as $field) {
+                if($state != 2 && $row['state'] != $state ) {
+                    continue;
+                }
+                $new_row[$field] = $row[$field];
+            }
+            $new_result[] = $new_row;
+        }
+        return $new_result;
+    }
 }
