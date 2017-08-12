@@ -1,0 +1,1 @@
+<?phpnamespace api\controllers;use Yii;use yii\extend\AdCommon;//好友控制器class BuddyController extends BasisController{}

@@ -5,6 +5,7 @@ namespace lib\models;
 use Yii;
 
 /**
+ * 帐号等级
  * This is the model class for table "at_account_level".
  *
  * @property integer $iid
