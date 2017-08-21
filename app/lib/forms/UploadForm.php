@@ -63,12 +63,39 @@ class UploadForm extends Model
     }
 
     /**
-     * 撤销保存，把保存的删除
+     * 保存
      */
-    public function cancel()
+    public static function savebase64($data)
     {
-        if(is_file($this->local_path)) {
-            unlink($this->local_path);
+
+        $save_path = 'uploads';
+        $local_path = dirname(Yii::$app->basePath) . DIRECTORY_SEPARATOR . $save_path . DIRECTORY_SEPARATOR;
+        $web_path = Yii::$app->params['webpath'] . '/'.$save_path.'/';
+
+        $base64_image_content = $data;
+
+        if(preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64_image_content, $result)) {
+            $type = $result[2];
+            if(!in_array($type,['jpg','png','jpeg'])) {
+                return '';
+            }
+            $filename = mt_rand(1100,9900) .time() .mt_rand(1100,9900).'.' . $type;
+            //本地保存的完整路径
+            $local_path = $local_path . $filename;
+
+            if( !is_dir($local_path) ) {
+                mkdir($local_path);
+            }
+
+            if (file_put_contents($local_path, base64_decode(str_replace($result[1], '', $base64_image_content)))) {
+                $url = $web_path . $filename;
+                return $url;
+            } else {
+                return '';
+            }
         }
+
     }
+
+    
 }

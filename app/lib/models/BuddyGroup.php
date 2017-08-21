@@ -28,7 +28,7 @@ class BuddyGroup extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'list_order'], 'integer'],
+            [['user_id', 'list_order','system_group_id'], 'integer'],
             [['name'], 'string', 'max' => 20],
         ];
     }
@@ -78,19 +78,36 @@ class BuddyGroup extends \yii\db\ActiveRecord
 
     }
 
+    //取系统分组名称
+    public function getSysgroupname(){
+        return $this->hasOne(SystemBuddyGroup::className(), ['iid'=>'system_group_id']);
+    }
 
     public static function has($userId, $name)
     {
         return static::findOne(['user_id'=>$userId, 'name'=>$name]);
     }
-
+    
     public static function getList($userId)
     {
-        return static::find()
-                ->select('iid,name')
+        $data = static::find()
+                ->with(['sysgroupname'])
+                ->select('iid,name,system_group_id')
                 ->where(['user_id'=>$userId])
                 ->orderBy('list_order ASC,iid ASC')
                 ->asArray()
                 ->all();
+
+        if($data)
+        {
+            foreach($data as $key => $row)
+            {
+                if($row['sysgroupname']) {
+                    $data[$key]['name'] = $row['sysgroupname']['name'];
+                }
+                unset($data[$key]['sysgroupname']);
+            }
+        }
+        return $data;
     }
 }

@@ -6,6 +6,7 @@
 */
 namespace lib;
 
+include dirname(__FILE__) . "/Config.php";
 include dirname(__FILE__) . "/constants.php";
 include dirname(__FILE__) . "/vendor/swift/swift_required.php";
 

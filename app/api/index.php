@@ -17,5 +17,16 @@ require_once($yii);
 require_once(dirname(__FILE__).'/../lib/config/bootstrap.php');
 $config = require_once($main);
 
+/*function getmicrotime()
+{
+    list($usec, $sec) = explode(" ",microtime());
+    return ((float)$usec + (float)$sec);
+}
+
+// 记录开始时间
+$time_start = getmicrotime();*/
+
+// 这里放要执行的PHP代码，如:
+// echo create_password(6);
 
 (new yii\web\Application($config))->run();

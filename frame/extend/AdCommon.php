@@ -783,4 +783,16 @@ class AdCommon
     	unset ($proArr);
     	return $result;
     }
+
+	public static function array_clear_null($arr)
+	{
+		$newarr = [];
+		foreach($arr as $value)
+		{
+			if(!is_null($value)) {
+				$newarr[] = $value;
+			}
+		}
+		return $newarr;
+	}
 }

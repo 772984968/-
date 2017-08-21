@@ -1,1 +1,1 @@
-<?phpreturn [    'password_error' => '用户名或密码错误!',    'sms_send_error' => '验证码发送失败,请稍后再试!',    'sms_captcha_error' => '验证码错误,请重新输入!',    'adderror' => '添加失败',    'fail' => '失败',];
+<?phpreturn [    'password_error' => '用户名或密码错误!',    'sms_send_error' => '验证码发送失败,请稍后再试!',    'sms_captcha_error' => '验证码错误,请重新输入!',];

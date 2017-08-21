@@ -11,6 +11,16 @@ class UserForm extends Model
     public $password;       //密码
     public $captcha;        //验证码
 
+    public $user_id;
+    public $head;
+    public $nickname;
+    public $llaccounts;
+    public $signature;
+    public $name;
+    public $sex;
+    public $province;
+    public $city;
+
     public function scenarios()
     {
         return [
@@ -25,7 +35,18 @@ class UserForm extends Model
             ],
             'changepassword' => [
                 'password'
-            ]
+            ],
+            'updateinfo' => [
+                'user_id',
+                'head',
+                'nickname',
+                'llaccounts',
+                'signature',
+                'name',
+                'sex',
+                'province',
+                'city',
+            ],
         ];
     }
 
@@ -35,11 +56,23 @@ class UserForm extends Model
     public function rules()
     {
         return [
-            [['username','password','captcha'], 'required'],
+            [['username', 'password', 'captcha', 'user_id'], 'required'],
             [['username', 'captcha', 'password'],'string','max'=>32],
+            [['name'], 'string', 'max' => 2],
+            ['head', 'headToUrl'],
+            ['llaccounts', 'unique', 'targetClass' => '\lib\models\User', 'message' => '联联号已经注册。'],
             ['username', 'unique', 'targetClass' => '\lib\models\User', 'message' => '帐号已经注册。','on'=>['register']],
-            ['captcha','validateCode']
+            ['captcha','validateCode'],
         ];
+    }
+
+
+    public function headToUrl($attribute, $params)
+    {
+        if(!$this->hasErrors())
+        {
+            //$this->
+        }
     }
 
     public function validateCode($attribute, $params)
@@ -77,7 +110,6 @@ class UserForm extends Model
             }
         }
     }
-
 
     public function login()
     {
@@ -121,7 +153,6 @@ class UserForm extends Model
         }
     }
 
-
     public function changepassword()
     {
   
@@ -137,6 +168,15 @@ class UserForm extends Model
                 $this->addError('username', AdCommon::modelMessage($model));
                 return false;
             }
+        }
+    }
+
+    public function updateinfo()
+    {
+        if($this->validate())
+        {
+            echo $this->sex;
+            return true;
         }
     }
 }

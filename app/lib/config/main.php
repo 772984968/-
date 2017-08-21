@@ -8,9 +8,9 @@
 namespace lib\config;
 
 return [
-		'bootstrap' => ['gii'],
+		//'bootstrap' => ['gii'],
 		'modules' => [
-				'gii' => ['class' => 'yii\gii\Module'],
+				//'gii' => ['class' => 'yii\gii\Module'],
 				//'debug' => ['class' => 'yii\debug\Module']
 		],
 		'language' => 'zh-CN',
@@ -22,15 +22,15 @@ return [
 				'curl' => [
 						'class' => 'lib\vendor\curl\Curl',
 				],
-				'json' => [
+				/*'json' => [
 						'class' => 'lib\vendor\json\JsonClient',
-				],
+				],*/
 				'upload' => [
 						'class' => 'lib\upload\Uploader'
 				],
-				'encrypt' => [
+				/*'encrypt' => [
 						'class' => 'lib\vendor\encrypt\Encrypt',
-				],
+				],*/
 				/*'easemob' => [
 					'class' => 'lib\vendor\easemob\Easemob',
 					'client_id' =>'YXA6IBf60A-MEee1J9MGYvv3Yg',
@@ -49,7 +49,7 @@ return [
 				'factory' => [
 					'class' => 'lib\nodes\FactoryNode',
 				],
-				'mailer' => [
+				/*'mailer' => [
 						'class' => 'yii\swiftmailer\Mailer',
 						'transport' => [
 								'class' => 'Swift_SmtpTransport',
@@ -63,24 +63,24 @@ return [
 								'charset' => 'UTF-8',
 								'from' => ['jiahua.liu@himoke.com' => '艾特科技']
 						],
-				],
-				'redis' => [
-						'class' => 'yii\redis\Connection',
-						'hostname' => '127.0.0.1',//'120.25.84.17',
-						'port' => 6379,
-						'database' => 0,
-						/*'password' => '123456',*/
-				],
+				],*/
+			/*'redis' => [
+                    'class' => 'yii\redis\Connection',
+                    'hostname' => '127.0.0.1',//'120.25.84.17',
+                    'port' => 6379,
+                    'database' => 0,
+                    'password' => '123456',
+				],*/
 				'cache' => [
 					//'class' => 'yii\caching\FileCache',
-					'class' => 'yii\redis\Cache',
-					/*'class'=>'yii\caching\MemCache',
+					//'class' => 'yii\redis\Cache',
+					'class'=>'yii\caching\MemCache',
 					'servers'=>[
 						[
 							'host'=>'127.0.0.1',
 							'port'=>11211,
 						],
-					],*/
+					],
 				],
 				'urlManager' => [
 						'class' => 'yii\web\UrlManager',
@@ -92,7 +92,7 @@ return [
 								'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
 						]
 				],
-				'log' => [
+				/*'log' => [
 						'traceLevel' => YII_DEBUG ? 3 : 0,
 						'targets' => [
 								[
@@ -100,7 +100,7 @@ return [
 										'levels' => ['error', 'warning'],
 								],
 						],
-				],
+				],*/
 				'i18n' => [
 					'translations' => [
 						'*' => [

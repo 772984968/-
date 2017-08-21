@@ -94,6 +94,9 @@ return [
 	'hotHeadlinesTypeEdit' => '/hotheadlinestype/change',
 	'hotHeadlinesTypeDel' => '/hotheadlinestype/del',
 
+	/*-------------- 系统设置的好友信息 ------------------*/
+	'systembuddygroup' => '/systembuddygroup/index',
+	'systembuddygroupAdd' => '/systembuddygroup/add',
 
 
 ];

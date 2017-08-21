@@ -29,6 +29,7 @@ class Buddy extends \yii\db\ActiveRecord
     {
         return [
             [['user_id', 'group_id', 'buddy_id'], 'integer'],
+            ['remark', 'string', 'max' => 15],
         ];
     }
 

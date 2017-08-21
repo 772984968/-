@@ -3,6 +3,7 @@ namespace lib\models;
 
 use Yii;
 use yii\db\ActiveRecord;
+use yii\extend\AdCommon;
 use yii\web\IdentityInterface;
 use lib\wyim\wyim;
 
@@ -43,17 +44,17 @@ class User extends ActiveRecord implements IdentityInterface
         return [
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
-            [['username','auth_key','wy_accid','wy_token'], 'string', 'max'=>32],
-            [['password_hash','password_reset_token'], 'string', 'max'=>255],
-            ['email' , 'email'],
-            [['status', 'role','credits'], 'integer'],
-            ['head','string','max'=>100],
-            ['nickname','string','max'=>15],
-            [['signature','name'],'string','max'=>15],
-            ['sex','in','range'=> ['男','女']],
-            [['province','city'],'string','max'=>7],
-            ['llaccounts','string','max'=>20],
-            ['address','string','max'=>50],
+            [['username', 'auth_key', 'wy_accid', 'wy_token'], 'string', 'max' => 32],
+            [['password_hash', 'password_reset_token'], 'string', 'max' => 255],
+            ['email', 'email'],
+            [['status', 'role', 'credits'], 'integer'],
+            ['head', 'string', 'max' => 100],
+            ['nickname', 'string', 'max' => 15],
+            [['name'], 'string', 'max' => 15],
+            ['sex', 'in', 'range' => ['男', '女']],
+            [['province', 'city'], 'string', 'max' => 7],
+            ['llaccounts', 'string', 'max' => 20],
+            [['address', 'signature'], 'string', 'max' => 50],
         ];
     }
 
@@ -66,14 +67,14 @@ class User extends ActiveRecord implements IdentityInterface
     //通过Token取用户实例
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        
+
     }
 
     //通过用户名取用户实例
     public static function findByUsername($username)
     {
         return static::find()
-            ->where('username = :username AND status !=0 ',[':username'=>$username])
+            ->where('username = :username AND status !=0 ', [':username' => $username])
             ->limit(1)
             ->one();
     }
@@ -82,7 +83,7 @@ class User extends ActiveRecord implements IdentityInterface
     public static function findByEmail($username)
     {
         return static::find()
-            ->where('email = :username AND status !=0 ',[':username'=>$username])
+            ->where('email = :username AND status !=0 ', [':username' => $username])
             ->limit(1)
             ->one();
     }
@@ -92,7 +93,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
 
         return static::find()
-            ->where('llaccounts = :username AND status !=0 ',[':username'=>$username])
+            ->where('llaccounts = :username AND status !=0 ', [':username' => $username])
             ->limit(1)
             ->one();
     }
@@ -146,7 +147,8 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     //这个就是我们进行yii\filters\auth\QueryParamAuth调用认证的函数，下面会说到。
-    public function loginByAccessToken($accessToken, $type) {
+    public function loginByAccessToken($accessToken, $type)
+    {
         //查询数据库中有没有存在这个token
         return static::findIdentityByAccessToken($accessToken, $type);
     }
@@ -160,7 +162,7 @@ class User extends ActiveRecord implements IdentityInterface
             'head' => $this->head,
         ];
         $result = wyim::createAccid($user);
-        if($result === false) {
+        if ($result === false) {
             //登记失败后处理方法
         } else {
             $this->wy_token = $result->token;
@@ -168,7 +170,28 @@ class User extends ActiveRecord implements IdentityInterface
             $this->save();
         }
     }
-    
+
+    public function init()
+    {
+        $this->on(self::EVENT_AFTER_INSERT, [$this, 'after_install']);
+    }
+
+    //添加默认分组
+    public function after_install()
+    {
+        $systemBudygroup = SystemBuddyGroup::find()->asArray()->all();
+        if($systemBudygroup)
+        {
+            $values = '';
+            foreach($systemBudygroup as $row) {
+                $values .= "({$this->iid},{$row['iid']},1),";
+            }
+            $values = trim($values,',');
+            $sql = "INSERT INTO at_buddy_group(user_id,system_group_id,is_system) VALUES$values";
+            Yii::$app->getDb()->createCommand($sql)->execute();
+        }
+   
+    }
     
 
 }

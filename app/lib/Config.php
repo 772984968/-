@@ -1,0 +1,1 @@
+<?phpclass Config{    const SEND_ADD_BUDDY = 1;    const RECEIVE_ADD_BUDDY = 2;    public static function typeMeaning()    {        return [            1 => '请求添加好友',            2 => '请求添加好友',        ];    }}
