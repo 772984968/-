@@ -58,7 +58,6 @@ class UserForm extends Model
         return [
             [['username', 'password', 'captcha', 'user_id'], 'required'],
             [['username', 'captcha', 'password'],'string','max'=>32],
-            [['name'], 'string', 'max' => 2],
             ['head', 'headToUrl'],
             ['llaccounts', 'unique', 'targetClass' => '\lib\models\User', 'message' => '联联号已经注册。'],
             ['username', 'unique', 'targetClass' => '\lib\models\User', 'message' => '帐号已经注册。','on'=>['register']],
@@ -71,7 +70,7 @@ class UserForm extends Model
     {
         if(!$this->hasErrors())
         {
-            //$this->
+            $this->head = UploadForm::savebase64($this->head);
         }
     }
 
@@ -175,8 +174,29 @@ class UserForm extends Model
     {
         if($this->validate())
         {
-            echo $this->sex;
-            return true;
+            $userModel = User::findOne($this->user_id);
+            $userModel->attributes = AdCommon::array_clear_null($this->attributes);
+
+            if( $userModel->save() ) {
+                $WyImInfo = [];
+                if($this->head) {
+                    $WyImInfo['icon'] = $this->head;
+                }
+
+                if($this->nickname) {
+                    $WyImInfo['name'] = $this->nickname;
+                }
+
+                if($WyImInfo) {
+                    $WyImInfo['accid'] = $userModel->wy_accid;
+                    \lib\wyim\wyim::updateUinfo($WyImInfo);
+                }
+
+                return true;
+            } else {
+                $this->addError('iid', AdCommon::modelMessage($userModel->errors));
+                return false;
+            }
         }
     }
 }

@@ -171,6 +171,25 @@ class User extends ActiveRecord implements IdentityInterface
         }
     }
 
+    //更新网易IM信息
+    public function updateWyImInfo($data)
+    {
+        $user = [];
+        
+        $user = [
+            'accid' => $this->wy_accid,
+            'icon' => $this->head,
+            'name' => $this->nickname,
+        ];
+        $result = wyim::updateUinfo($data);
+        if ($result === false) {
+            //登记失败后处理方法
+        } else {
+            return true;
+        }
+    }
+
+
     public function init()
     {
         $this->on(self::EVENT_AFTER_INSERT, [$this, 'after_install']);

@@ -787,10 +787,10 @@ class AdCommon
 	public static function array_clear_null($arr)
 	{
 		$newarr = [];
-		foreach($arr as $value)
+		foreach($arr as $key => $value)
 		{
-			if(!is_null($value)) {
-				$newarr[] = $value;
+			if(!is_null($value) && $value!=="") {
+				$newarr[$key] = $value;
 			}
 		}
 		return $newarr;

@@ -25,7 +25,7 @@ $config = [
     'params' => [
         'sid' => 0,
         'apiurl' => require_once __DIR__ . DS . 'apiurl.php',
-        'webpath' => 'http://api.er.cc',
+        'webpath' => 'http://api.atapp.cc',
         'longImageWidth' => 1024,
         'longImageHeight'=> 614,
     ],
