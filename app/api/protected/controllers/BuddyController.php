@@ -1,1 +1,1 @@
-<?phpnamespace api\controllers;use Yii;use yii\extend\AdCommon;//好友控制器class BuddyController extends BasisController{}
+<?phpnamespace api\controllers;use Yii;use yii\extend\AdCommon;//好友控制器class BuddyController extends BasisController{    //添加    public function actionAdd() {            }    //移动    public function actionMove() {    }    //删除    public function actionDelete() {    }    //申请加好友    //同意    //拒绝}

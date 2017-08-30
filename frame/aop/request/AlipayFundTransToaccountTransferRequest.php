@@ -1,4 +1,5 @@
 <?php
+namespace yii\aop\request;
 /**
  * ALIPAY API: alipay.fund.trans.toaccount.transfer request
  *

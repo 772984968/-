@@ -121,4 +121,60 @@ class Setting extends \yii\db\ActiveRecord
         return Config::toHtml($setting);
     }
 
+    //通过键取对应的值
+    public static function keyTovalue($key)
+    {
+        $result = self::findOne(['key'=>$key]);
+        if($result) {
+            return $result->value;
+        } else {
+            return '';
+        }
+    }
+
+
+    //检查输入值是否正确
+    public static function check($key,$value)
+    {
+        $result = self::findOne(['key'=>$key]);
+        if($result) {
+            if(empty($result->verify)) {
+                return true;
+            }
+            $verify = json_decode($result->verify);
+
+            switch($result->html)
+            {
+                case 'number':
+                    if(!is_numeric($value)) {
+                        self::$error = '请输入数字';
+                        return false;
+                    }
+                    break;
+            }
+
+            foreach($verify as $k => $v)
+            {
+                switch ($k)
+                {
+                    case 'max':
+                        if($value > $v) {
+                            self::$error = '最大值为'.$v;
+                            return false;
+                        }
+                        break;
+                    case 'min':
+                        if($value < $v) {
+                            self::$error = '最小值为'.$v;
+                            return false;
+                        }
+                        break;
+                }
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

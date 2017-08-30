@@ -3,7 +3,7 @@ namespace yii\aop;
 //require_once 'AopEncrypt.php';
 class AopClient extends Object{
 	//应用ID
-	public $appId="2017042006837880";
+	public $appId="2017082508374746";
 
 	//字符集
 	//public $charset;
@@ -12,7 +12,7 @@ class AopClient extends Object{
 	public $rsaPrivateKeyFilePath;
 
 	//私钥值
-	public $rsaPrivateKey='MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAPC79BeZ+aJszhSNz7O7tmp7u5dfolB+YmvqyatxNDC6zsmuauZpeO+oAaVS8uVXR+zV5nLLLfqiEDP6Hfqu9l2TQB5sxhulPT9/Q9mi5KzUev2ehgWHo+gVD/0GJUGhO9uJiCrx5b3bzoavftyIwq0lmt4lpF5bHUZO+eE9QQEFAgMBAAECgYEAlomSLCgXGODdRbEgTw51FcVmG1SsVZWSylU540GZF1fZ8/hj1M3j2EnBLbbfOVcJHSrtPp+bkv1BEJ+5m4dJeygb9fOG49kKP0jr1iJxVR/R9ZIHJzUWqGm21hhTGzgz76rVmO5HAEECxT8NPY10uH9k38WBhy3u75W88QEcpEkCQQD5gbIb+Nl46hSyJayEPZRpJyUMyBuM1FwatiOZ0mg9D8C1QNqkqlPvbUemt2CDfHJjewdSunTmAp5s9BCPgwZnAkEA9v/QBxxx4q0kT1dGx3pVqqlnYVNp2NeiEFGhQjBSEXwGcqXqEeOuvH/KbEw4zWcTHcqj37YSsEvurZwuBAXhswJAUsQ/PSAzo/SioOX2cHes/6TImZDX8sOPOh0peiFeCsNq/bVh0jXeWhI6LoeuMG/b0jxBlaPcm2BLBYGA7NpeCQJBANPW8wQmUUaoWMvzfrD3KyIDyLagY9emmUiFuliaOMjmJmGOCwLs06C3uVTIyq7gCHU0pvfnoH+zoDEmEhFBOiECQAkQP+ZI+mXbZdchrof1afzHzFG4gIF9PmkP4wqR+i1J8CZ2z9y8CJRDFZjAIp5I+kZ71gonfmJu4DoqxkoqG6U=';
+	public $rsaPrivateKey='MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCWIsVICjwg6t9BfWMJ6SlRgSy0pw4r4IvyEj6/XI9qozzUMBV9AAAVsJi3MJ+F3k+SK5MKtO6UI5rzwpxTXAUnTe5qQquvHJieDLiK47upk2YuIuoUZmXxW8V6ylWsaxvW9s1TnthrMVcNOrclVUJv6B16iXq3F/DAgKl4e2qkWhEFaM59PoOcaQLcqat1bR4aCkTP57OVPXOJOoNIHOAjRhtBKjAUze0Tx8Sdf8z7ghJ3/P7Rly3ZhgRPpNYcDaGH5uzu9NbdPyUX9+9NDgYPj/TaMmQbZ6z3Pov1vyzUyucsax0Fs0KEkPdoV+8LooWbvSJdT+C8GRP+8feADcXDAgMBAAECggEAIMjQ+a06ehmvzNY7lUN0AVdK0twT7SLojGDNkO3+Z1PkCZXCa3xfiFz6zC3y98GW8J1RS6o82t53jLk3d8CFY5LR+CQ8501ASmsOtU2Lgjksu/Bl2zSNGEpo8ipS0QbGmodkSNlL+wRYNQxYR++5RUSTg1mYEXlJ2k9+MlAI9oBaVJymWMJGq04SDnWuYzcNWalVQ1tHYTqLrWWR4jUfFI66Ovzp/+l5RisXBSCZXF9JSUiKiOO3mwDq2T/Z0/oeyTSuNZD+B3aM+HoQNJjOhi5WEWvM7qcfMRGk9XB1RCnLNavhvvHBAZ3WIf7yXlxXS6+zgYM5s06vCbIY7VKswQKBgQDZzchi5J6byvGPyKJShaM4wwitRY2fxnC+zNrusSseq6Qa/lEk1siT4lIiIedfHOnwn5wMhl4nCAQHf4Al2iC53YdtpDn+gXG90GryHC9YOWhqzEisL0og9U5vyqGK+pxLwnIyzhE75vthDu67jeulOnMFy3YBCmVZb6t1pwW0oQKBgQCwdw8dM8JQpsD/+aXpkNRZtWicu82tMPRLaQuJN3TRhNZ9O/C6cZo2OlfvytRmaRwnfN1z2fMFTYlAu2qF79GhJNQIRsFKzM99FbsqHVXnFFY5L33hmBM10XIRfNJ9FKPbxJM66irfXKcIbRrFq0f5lY8szvr2oqaulejZwu274wKBgEa2HZGlway4xZY1wCVkh6pc/4spoqI1zdLUNVv7HxG1DfFJkdSQ+suwVZQJR9HEVFsvpn0WfqjTXGOGzHb9i1RsjJRXFhD/u4qxiJcT+Xb+JF1P92QXckyi95UpxyqU1HtwJJ1D86psAj7vlyhDGjcpc8B03tnVozPXImZvFFYhAoGAKBklyhD02rbJrGDiHozWc/wQ5WyXc/9nw6r/ABMl7GYvBw4TyYn+7MudJ9QDJ7JCv4ZUG/suicnwolD0B7NTAzcHJ0pMqd6YV2gUu6Em3/dzEFOGWzjfRJ9vOCIRAnMqOMoWWpDTZSX8nqGML9aX6FLf0eLGjDyxe4J9At6UftkCgYAR/1mv2PYseFG14TXtC8/kGf+TlClvnDk1X1YNX4UOo/4GmM9Ok/q06KUP38N5EpH33aNph8/VAx9LXDFBaaZPHrDbvszvxUeoSDb5pVGA05jyNCMVBJYmoy7Z7EUebP9XSqtGjLUG7a7qoqZTD3gyZm3fqklA2c9k9wwTbK4P5w==';
 
 	//网关
 	public $gatewayUrl = "https://openapi.alipay.com/gateway.do";
@@ -28,7 +28,7 @@ class AopClient extends Object{
 	public $alipayPublicKey = null;
 
 	//使用读取字符串格式，请只传递该值
-	public $alipayrsaPublicKey='MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDI6d306Q8fIfCOaTXyiUeJHkrIvYISRcc73s3vF1ZT7XN8RNPwJxo8pWaJMmvyTn9N4HQ632qJBVHf8sxHi/fEsraprwCtzvzQETrNRwVxLO5jVmRGi60j8Ue1efIlzPXV9je9mkjzOmdssymZkh2QhUrCmZYI/FCEa3/cNMW0QIDAQAB';
+	public $alipayrsaPublicKey='MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhreRaQiN3GIWZSbH8AbCQ2ctfUSIFo+XCLSAf+0iAftx63xu8LQT3obzAlbNiAARdsvcgHuoSCohzw5wapKS09n9dHmF7yvev8W3Xc5W2pAG50aojHwOdOjiG8Vv2GzUrWkigru70e+gDkIRwJAUORKLKGPxzSb/CceopmPO+zOfr3xWOMnahx7vf1Uxm7YVCNRuM+2rlHLsBpXP/eyG1Gl9aQJaLyf5Y+m5CvCC1O3yIWPjgHE/n6/0qSa0p8JNMP1riOr3LiL8ydi5hKqpwTZUe/gtdsqoBAC7ZgKlk5bl6AfRjLVPLq0xH0laTYU6xgFqwOcqMFnlULajJglb+wIDAQAB';
 
 
 	public $debugInfo = false;
@@ -49,7 +49,7 @@ class AopClient extends Object{
 
 
 	//签名类型
-	public $signType = "RSA";
+	public $signType = "RSA2";
 
 
 	//加密密钥和类型
@@ -920,7 +920,6 @@ class AopClient extends Object{
 	}
 
 	function parserJSONSign($responseJSon) {
-var_dump($responseJSon);die;
 		return $responseJSon->sign;
 	}
 

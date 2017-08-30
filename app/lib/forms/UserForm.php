@@ -1,5 +1,6 @@
 <?php
 namespace lib\forms;
+use lib\vendor\imagine\Filter\Basic\Paste;
 use Yii;
 use yii\base\Model;
 use yii\extend\AdCommon;
@@ -10,6 +11,7 @@ class UserForm extends Model
     public $username;       //账号
     public $password;       //密码
     public $captcha;        //验证码
+    public $inviteCode;     //邀请码
 
     public $user_id;
     public $head;
@@ -28,6 +30,9 @@ class UserForm extends Model
                 'username',
                 'password',
                 'captcha',
+                'llaccounts',
+                'nickname',
+                'inviteCode',
             ],
             'login' => [
                 'username',
@@ -40,7 +45,6 @@ class UserForm extends Model
                 'user_id',
                 'head',
                 'nickname',
-                'llaccounts',
                 'signature',
                 'name',
                 'sex',
@@ -57,14 +61,25 @@ class UserForm extends Model
     {
         return [
             [['username', 'password', 'captcha', 'user_id'], 'required'],
+            [['nickname'], 'required' , 'on' => 'register'],
             [['username', 'captcha', 'password'],'string','max'=>32],
             ['head', 'headToUrl'],
+            ['inviteCode', 'validateInviteCode'],
             ['llaccounts', 'unique', 'targetClass' => '\lib\models\User', 'message' => '联联号已经注册。'],
             ['username', 'unique', 'targetClass' => '\lib\models\User', 'message' => '帐号已经注册。','on'=>['register']],
             ['captcha','validateCode'],
         ];
     }
 
+    public function validateInviteCode($attribute, $params)
+    {
+        if(!$this->hasErrors()){
+            if(!User::findOne(['llaccounts'=>$this->inviteCode])) {
+                $this->addError($attribute, '邀请码输入不存在');
+                return false;
+            }
+        }
+    }
 
     public function headToUrl($attribute, $params)
     {
@@ -97,12 +112,15 @@ class UserForm extends Model
         if( $this->validate() )
         {
             $model = new User();
-            $model->username = $this->username;
+            $model->attributes = AdCommon::array_clear_null($this->attributes);
+            $model->head = Yii::$app->params['webpath'] . '/uploads/default_head.png';
+           
             $model->setPassword( $this->password );
-         
             if( $model->save() ) {
                 $model->registerWyAccid();
-                return true;
+                $this->setScenario('login');
+                $result = $this->login();
+                return $result;
             } else {
                 $this->addError('name',AdCommon::modelMessage($model->errors));
                 return false;
@@ -135,6 +153,14 @@ class UserForm extends Model
                 return [
                     'userid'=>$model->iid,
                     'token'=>$user->getToken(),
+                    'nickname' => $model->nickname,
+                    'llaccounts' => $model->llaccounts,
+                    'signature' => $model->signature,
+                    'fans_number' => $model->fans_number,
+                    'share_number' => $model->share_number,
+                    'follow_number' => $model->follow_number,
+                    'head' => $model->head,
+                    'is_vip' => $model->vip_type ? 1 : 0,
                     'accountlevel'=>$user->getAccountLevel(),
                     'wy_im_accid' => $model->wy_accid,
                     'wy_im_token' => $model->wy_token,

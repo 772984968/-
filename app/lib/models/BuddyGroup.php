@@ -28,7 +28,7 @@ class BuddyGroup extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'list_order','system_group_id'], 'integer'],
+            [['user_id', 'list_order','system_group_id', 'is_system'], 'integer'],
             [['name'], 'string', 'max' => 20],
         ];
     }

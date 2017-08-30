@@ -47,13 +47,15 @@ class User extends ActiveRecord implements IdentityInterface
             [['username', 'auth_key', 'wy_accid', 'wy_token'], 'string', 'max' => 32],
             [['password_hash', 'password_reset_token'], 'string', 'max' => 255],
             ['email', 'email'],
-            [['status', 'role', 'credits'], 'integer'],
+            [['diamond','wallet', 'reward_count'], 'number'],
+            [['vip_start', 'vip_end'],'safe'],
+            [['status', 'role', 'credits', 'agent', 'share_number', 'follow_number', 'fans_number', 'vip_type'], 'integer'],
             ['head', 'string', 'max' => 100],
             ['nickname', 'string', 'max' => 15],
             [['name'], 'string', 'max' => 15],
             ['sex', 'in', 'range' => ['男', '女']],
             [['province', 'city'], 'string', 'max' => 7],
-            ['llaccounts', 'string', 'max' => 20],
+            [['llaccounts', 'inviteCode'], 'string', 'max' => 20],
             [['address', 'signature'], 'string', 'max' => 50],
         ];
     }
@@ -157,30 +159,32 @@ class User extends ActiveRecord implements IdentityInterface
     public function registerWyAccid()
     {
         $user = [
-            'username' => $this->username,
-            'nickname' => $this->nickname,
-            'head' => $this->head,
+            'accid' => $this->username,
+            'name' => $this->nickname,
+            'icon' => \Yii::$app->params['webpath'] . '\uploads\default_head.png',
         ];
+
         $result = wyim::createAccid($user);
         if ($result === false) {
+            switch(wyim::$error->code){
+                case 414:   //用户已经注册更新wytoken
+                        $result = wyim::refreshToken(['accid'=>$this->username]);
+                        if(!$result) {
+                           return false;
+                        }
+                    break;
+            }
             //登记失败后处理方法
-        } else {
-            $this->wy_token = $result->token;
-            $this->wy_accid = $result->accid;
-            $this->save();
         }
+        $this->wy_token = $result->token;
+        $this->wy_accid = $result->accid;
+        $this->save();
     }
 
     //更新网易IM信息
     public function updateWyImInfo($data)
     {
-        $user = [];
         
-        $user = [
-            'accid' => $this->wy_accid,
-            'icon' => $this->head,
-            'name' => $this->nickname,
-        ];
         $result = wyim::updateUinfo($data);
         if ($result === false) {
             //登记失败后处理方法
@@ -210,6 +214,17 @@ class User extends ActiveRecord implements IdentityInterface
             Yii::$app->getDb()->createCommand($sql)->execute();
         }
    
+    }
+
+
+    //取上一级
+    public function getTop()
+    {
+        if($this->inviteCode) {
+            return $this->findOne(['llaccounts'=>$this->inviteCode]);
+        }
+        return false;
+
     }
     
 

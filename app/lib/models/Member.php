@@ -36,7 +36,7 @@ class Member extends BaseModel
     {
         return [
             [[ 'friend_number', 'flock_number', 'flock_peopel_number', 'is_default'], 'integer'],
-            ['price','number'],
+            [['price', 'invite_price'],'number'],
             [['operates'], 'string'],
             [['name','price'], 'required'],
             [['name'], 'string', 'max' => 10],
@@ -65,6 +65,6 @@ class Member extends BaseModel
     {
         return self::findOne(['is_default'=>1])->toArray();
     }
-
+    
     
 }

@@ -14,8 +14,10 @@ use Yii;
  * @property string $url
  * @property integer $addtime
  */
-class Ads extends \yii\db\ActiveRecord
+class Ads extends BaseModel
 {
+    const LIST_CACHE_NAME = 'system_ads_list_';
+    const NUMBER_NAME = 'listorder';
     /**
      * @inheritdoc
      */

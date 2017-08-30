@@ -31,14 +31,7 @@ return [
 				/*'encrypt' => [
 						'class' => 'lib\vendor\encrypt\Encrypt',
 				],*/
-				/*'easemob' => [
-					'class' => 'lib\vendor\easemob\Easemob',
-					'client_id' =>'YXA6IBf60A-MEee1J9MGYvv3Yg',
-					'client_secret' =>'YXA6GwAATwRA3k-VDDpRchpTjfoNixc',
-					'org_name' =>'1118170323115067',
-					'app_name' =>'cyj',
-					'url' => 'https://a1.easemob.com/1118170323115067/cyj/'
-				],
+				/*
 				'user' => [
 						'identityClass' => 'app\models\User',
 						'enableAutoLogin' => true,
@@ -64,23 +57,23 @@ return [
 								'from' => ['jiahua.liu@himoke.com' => '艾特科技']
 						],
 				],*/
-			/*'redis' => [
+				'redis' => [
                     'class' => 'yii\redis\Connection',
                     'hostname' => '127.0.0.1',//'120.25.84.17',
                     'port' => 6379,
                     'database' => 0,
-                    'password' => '123456',
-				],*/
+                    //'password' => '123456',
+				],
 				'cache' => [
 					//'class' => 'yii\caching\FileCache',
-					//'class' => 'yii\redis\Cache',
-					'class'=>'yii\caching\MemCache',
+					'class' => 'yii\redis\Cache',
+					/*'class'=>'yii\caching\MemCache',
 					'servers'=>[
 						[
 							'host'=>'127.0.0.1',
 							'port'=>11211,
 						],
-					],
+					],*/
 				],
 				'urlManager' => [
 						'class' => 'yii\web\UrlManager',

@@ -75,6 +75,9 @@ return [
 
 	/*-------------- 积分设置 ------------------*/
 	'creditsSetting' => '/setting/index?type=4',
+	'vipRewardSetting' => '/setting/index?type=5',
+	'rechargeRewardSetting' => '/setting/index?type=6',
+	'exchangeSetting' => '/setting/index?type=7',
 
 	/*-------------- 会员管理 ------------------*/
 	'AccountLevel' => '/accountlevel/index',

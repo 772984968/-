@@ -30,7 +30,7 @@
 		public static function register($mobile)
 		{
 				self::$mobile = $mobile;
-				self::$message = '【次元纪】{code} 注册验证码。嘘！不要告诉其他人，这是我们的小秘密哦！';
+				self::$message = '{code} 注册验证码。嘘！不要告诉其他人，这是我们的小秘密哦！';
 				self::create_rand();
 				return self::send();
 		}
@@ -39,7 +39,7 @@
 		public static function login($mobile)
 		{
 			self::$mobile = $mobile;
-			self::$message = '【次元纪】登录验证码{code}。为了你的安全，请不要随意告诉陌生人验证码，因为...你有可能被陌生人胖揍！';
+			self::$message = '登录验证码{code}。为了你的安全，请不要随意告诉陌生人验证码，因为...你有可能被陌生人胖揍！';
 			self::create_rand();
 			return self::send();
 		}
@@ -48,7 +48,7 @@
 		public static function findpass($mobile)
 		{
 			self::$mobile = $mobile;
-			self::$message = '【次元纪】{code} 忘记密码验证码。我也爱追番，但是要注意饮食休息哦，下次别再忘记密码咯哟~';
+			self::$message = '{code} 忘记密码验证码。我也爱追番，但是要注意饮食休息哦，下次别再忘记密码咯哟~';
 			self::create_rand();
 			return self::send();
 		}
