@@ -154,6 +154,7 @@ abstract class TemplateController extends SellerController
 
         $this->data['fieldOption'] = $this->getOption();
 
+        $this->config['method'] = 'add';
         $this->data['config']= $this->config;
 
         return $this->view('../template/window');
@@ -199,6 +200,7 @@ abstract class TemplateController extends SellerController
 
 
         $this->data['fieldOption'] = $setting;
+        $this->config['method'] = 'change';
         $this->data['config'] = $this->config;
 
         return $this->view('../template/window');

@@ -114,11 +114,12 @@ class UserForm extends Model
             $model = new User();
             $model->attributes = AdCommon::array_clear_null($this->attributes);
             $model->head = Yii::$app->params['webpath'] . '/uploads/default_head.png';
-           
             $model->setPassword( $this->password );
+
             if( $model->save() ) {
-                $model->registerWyAccid();
-                $this->setScenario('login');
+                $model->registerWyAccid();      //注册网易IM
+
+                $this->setScenario('login');    //登入
                 $result = $this->login();
                 return $result;
             } else {
@@ -164,6 +165,7 @@ class UserForm extends Model
                     'accountlevel'=>$user->getAccountLevel(),
                     'wy_im_accid' => $model->wy_accid,
                     'wy_im_token' => $model->wy_token,
+                    'inviteCode' => $model->inviteCode,
                 ];
             }
             else
@@ -205,7 +207,8 @@ class UserForm extends Model
 
             if( $userModel->save() ) {
                 $WyImInfo = [];
-                if($this->head) {
+                if($this->head || $this->nickname) {
+                    \lib\wyim\wyim::updateUinfo($userModel);
                     $WyImInfo['icon'] = $this->head;
                 }
 
@@ -215,10 +218,9 @@ class UserForm extends Model
 
                 if($WyImInfo) {
                     $WyImInfo['accid'] = $userModel->wy_accid;
-                    \lib\wyim\wyim::updateUinfo($WyImInfo);
+                    
                 }
-
-                return true;
+                return ['head'=>$this->head];
             } else {
                 $this->addError('iid', AdCommon::modelMessage($userModel->errors));
                 return false;

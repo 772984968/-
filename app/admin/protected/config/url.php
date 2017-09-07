@@ -102,4 +102,22 @@ return [
 	'systembuddygroupAdd' => '/systembuddygroup/add',
 
 
+	/*-------------- 系统设置的好友信息 ------------------*/
+	'Agentmanage' => '/agentmanage/index',		//代理设置
+	'AgentmanageAdd' => '/agentmanage/add',		//代理设置
+	'AgentmanageEdit' => '/agentmanage/change',		//代理设置
+
+	'cleaerMember' => '/agentmanage/cleaermember',		//消除会员功能
+
+	/*-------------- 用户管理 ------------------*/
+	'UserManage' => '/user/index',
+	'UserManageEdit' => '/user/change',
+
+	/*-------------- APP端升级 ------------------*/
+	'appUpgrade' => '/appupgrade/index',
+	'appUpgradeAdd' => '/appupgrade/add',
+	'appUpgradeEdit' => '/appupgrade/change',
+	'appUpgradeDel' => '/appupgrade/del',
+
+
 ];

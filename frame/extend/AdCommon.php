@@ -25,9 +25,9 @@ class AdCommon
 	
 	public static function pageget($pagedefaultsize=6,$maxnumber=20)
 	{
-		$page = intval(Yii::$app->request->get('page'));
+		$page = intval(Yii::$app->request->post('page'));
 		$page = $page ? $page : 1;
-		$pagesize = intval(Yii::$app->request->get('pagesize'));
+		$pagesize = intval(Yii::$app->request->post('pagesize'));
 		$pagesize = $pagesize ? $pagesize : $pagedefaultsize;
 		$start = $page-1>0 ? ($page-1)*$pagesize : 0;
 		return ['page'=>$page,'pagesize'=>$pagesize,'start'=>$start];
@@ -49,7 +49,13 @@ class AdCommon
 		return ['pagesize'=>$pagesize, 'id'=>$id, 'direction'=>$direction];
 	}
 
-	
+	public static function arrayToKeyValueString($arry) {
+		$str = '';
+		foreach($arry as $key =>$value) {
+			$str .= $key.$value;
+		}
+		return $str;
+	}
 
 	/**
 	 * 生成生缩略图返回路径

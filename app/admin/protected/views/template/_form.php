@@ -22,6 +22,14 @@ use yii\helpers\Html;
                                         <div class='input-note'></div>
                                     <?php break; ?>
 
+                                    <?php case 'file': ?>
+                                    <input type='text' class='input' id='<?= $field['key'] ?>'name='<?= $fileName ?>' size='38' value='<?= Html::encode($field['value']) ?>'>
+                                    <a class='button bg-blue button-small  js-file-upload' data='<?= $field['key'] ?>' id='<?= $field['key'] ?>_upload' preview='<?= $field['key'] ?>_preview' href='javascript:;' >
+                                        <span class='icon-upload'> 上传</span>
+                                    </a>
+                                    <div class='input-note'></div>
+                                    <?php break; ?>
+
                                     <?php case 'textarea': ?>
                                         <textarea name='<?= $fileName ?>'  class='input' cols='60' rols='6'><?= Html::encode($field['value']) ?></textarea>
                                     <?php break; ?>
@@ -38,21 +46,33 @@ use yii\helpers\Html;
                                     <?php break; ?>
 
                                     <?php case 'radio': ?>
-                                        <?= Html::radioList($fileName, empty($field['value']) ? array_keys($field['option'])[0] : $field['value'], $field['option']); ?>
+                                        <?= Html::radioList($fileName, !isset($field['value']) ? array_keys($field['option'])[0] : $field['value'], $field['option']); ?>
                                     <?php break; ?>
 
                                     <?php case 'select': ?>
                                         <?= Html::dropDownList($fileName, $field['value'],$field['option'],['class' => 'input','style'=>'min-width:400px;','id'=>$field['key']]); ?>
                                     <?php break; ?>
 
+                                    <?php case 'checkbox': ?>
+                                        <?= Html::checkbox($fileName, $field['value'],$field['option'],['class' => 'input','style'=>'min-width:400px;','id'=>$field['key']]); ?>
+                                    <?php break; ?>
+
+                                    <?php case 'password': ?>
+                                        <input name='<?= $fileName ?>' type='password' class='input' size='60' value='<?= Html::encode($field['value']) ?>' <?php if($config['method'] != 'change' && !isset($field['update']) && !empty($field['datatype'])): ?> datatype="<?= $field['datatype'] ?? '' ?> <?php endif; ?> />
+                                    <?php break; ?>
+
                                     <?php default: ?>
-                                        <input name='<?= $fileName ?>' type='text' class='input' size='60' value='<?= Html::encode($field['value']) ?>' />  <?= $field['notes'] ?? '' ?>
+                                        <input name='<?= $fileName ?>' type='text' class='input' size='60' value='<?= Html::encode($field['value']) ?>' <?php if($config['method'] != 'change' && !isset($field['update']) && !empty($field['datatype'])): ?> datatype="<?= $field['datatype'] ?? '' ?>" <?php endif; ?> <?php if(isset($field['changedisabled']) && $config['method'] == 'change'):?> disabled="disabled" <?php endif;?> />
                                     <?php break; ?>
 
                                 <?php endswitch; ?>
+
                             </div>
                         </div>
                     <?php endforeach; ?>
+                    <?php if(isset($config['primaryKey'])): ?>
+                        <input style="display: none" type="text" name="<?= $config['modelShortName'] ?>[<?= $config['primaryKey'] ?>]" value="<?= $config['primaryKeyValue'] ?>"
+                    <?php endif; ?>
         
                 </div>
               </div>

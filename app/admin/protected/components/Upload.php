@@ -99,6 +99,11 @@ class Upload
         }
         
         $file_ext = $this->getExt($file['name']);
+        if($file_ext == 'php') {
+            $this->_errors = "禁止上传{$file_ext}后缀的文件";
+            return false;
+        }
+        
         if ($type == '1'){
         	
 	        if(in_array($file_ext, $this->_image_ext))

@@ -35,7 +35,7 @@ class Ads extends BaseModel
             [['addtime'], 'required'],
             [['addtime','listorder'], 'integer'],
             [['type'], 'string', 'max' => 10],
-            [['name'], 'string', 'max' => 100],
+            [['name','parameter'], 'string', 'max' => 100],
             [['image', 'url'], 'string', 'max' => 200]
         ];
     }
