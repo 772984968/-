@@ -30,7 +30,8 @@ class Agent extends BaseModel
     public function rules()
     {
         return [
-            [['vip_reward', 'recharge_reward', 'label'], 'integer'],
+            [['label'], 'integer'],
+            [['vip_reward', 'recharge_reward'], 'number'],
             [['name'], 'string', 'max' => 10],
         ];
     }

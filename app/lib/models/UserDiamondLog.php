@@ -53,7 +53,6 @@ class UserDiamondLog extends \yii\db\ActiveRecord
 
     public static function add( array $data )
     {
-
         $model = new static();
 
         foreach($data as $key => $value)

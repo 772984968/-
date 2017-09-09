@@ -391,7 +391,7 @@ $.ajaxSetup({
 
                     $(this).parents('.form-group').append(str);
                     $('.js-img-upload').last().duxFileUpload({
-                        type: 'jpg,png,gif,bmp,jpeg',
+                        type: 'jpg,png,gif,bmp,jpeg,apk',
                         uploadUrl: duxConfig.fileUploadUrl,
                         complete: function () {},
                         uploadParams: function () {}

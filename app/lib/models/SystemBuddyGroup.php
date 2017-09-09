@@ -12,8 +12,11 @@ use Yii;
  * @property boolean $cannot_delete
  * @property boolean $is_default
  */
-class SystemBuddyGroup extends \yii\db\ActiveRecord
+class SystemBuddyGroup extends BaseModel
 {
+    const LIST_CACHE_NAME = 'System_Buddy_Group_list';
+    const NUMBER_NAME = 'iid';
+
     /**
      * @inheritdoc
      */
@@ -46,7 +49,17 @@ class SystemBuddyGroup extends \yii\db\ActiveRecord
         ];
     }
 
-    public function init()
+    public static function getDefaultGroupIid()
+    {
+        $list = static::getCacheList();
+        foreach($list as $row) {
+            if($row['is_default']) {
+                return $row['iid'];
+            }
+        }
+    }
+
+    /*public function init()
     {
         $this->on(self::EVENT_AFTER_INSERT,[$this, 'after_install']);
     }
@@ -79,5 +92,5 @@ class SystemBuddyGroup extends \yii\db\ActiveRecord
                 break;
             }
         }
-    }
+    }*/
 }

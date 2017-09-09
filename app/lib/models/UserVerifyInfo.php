@@ -1,7 +1,7 @@
 <?php
 
 namespace lib\models;
-
+use lib\traits\operateDbTrait;
 use Yii;
 
 /**
@@ -16,6 +16,7 @@ use Yii;
  */
 class UserVerifyInfo extends \yii\db\ActiveRecord
 {
+    use operateDbTrait;
     /**
      * @inheritdoc
      */
@@ -31,9 +32,8 @@ class UserVerifyInfo extends \yii\db\ActiveRecord
     {
         return [
             [['user_id','target_id'], 'required'],
-            [['user_id', 'target_id', 'type', 'status', 'link_id'], 'integer'],
+            [['user_id', 'target_id', 'type', 'status', 'link_id', 'is_ratify', 'relevance_id'], 'integer'],
             [['create_time'], 'safe'],
-            ['is_ratify', 'boolean'],
         ];
     }
 
@@ -53,8 +53,14 @@ class UserVerifyInfo extends \yii\db\ActiveRecord
         ];
     }
 
+
     public function getUserinfo(){
-        return $this->hasOne(User::className(),['iid'=>'target_id'])->select('nickname,head');
+        return $this->hasOne(User::className(),['iid'=>'target_id'])->select('iid,nickname,head');
+    }
+
+
+    public function getTeaminfo() {
+        return $this->hasOne(Team::className(),['iid'=>'relevance_id'])->select('iid,icon,name');
     }
 
 }

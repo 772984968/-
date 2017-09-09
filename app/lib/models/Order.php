@@ -3,7 +3,7 @@
 namespace lib\models;
 
 use Yii;
-
+use lib\models\Setting;
 /**
  * This is the model class for table "at_order".
  *
@@ -83,7 +83,7 @@ class Order extends \yii\db\ActiveRecord
                     CodeLog::addlog('定单处理','设置用户为会员失败');
                     return false;
                 }
-
+                $t->commit();
                 //推荐人奖励
                 if($userModel->inviteCode) {
                     $inviteUser = User::findOne(['llaccounts' => $userModel->inviteCode]);
@@ -93,25 +93,42 @@ class Order extends \yii\db\ActiveRecord
                         'source_user_id' => $userModel->iid,
                         'note' => $userModel->username,
                     ]);
+
+                    //前端N个人拿钱
+                    $Users = User::find()->where('iid<'.$inviteUser->iid)->orderBy('iid DESC')->limit(Setting::keyTovalue('vip_before_user'))->all();
+                    if($Users) {
+                        $beforeNmoney = Setting::keyTovalue('vip_before_user_money');
+                        foreach($Users as $beforeUser) {
+                            $walletClass = Yii::$app->factory->getwealth('wallet', $beforeUser)->addReward([
+                                'number' => $beforeNmoney,
+                                'type' => \Config::WALLET_VIP_BEFORE_REGISTER,
+                                'source_user_id' => $userModel->iid,
+                                'note' => $userModel->username,
+                            ]);
+                        }
+                    }
                 }
-                
+
+
                 //代理人奖励
                 $agents = Agent::getCacheList();
                 $use_count = 0;
                 $agents_count = count($agents);
-
-                while($topuserModel = $userModel->getTop())
+                $topuserModel = $userModel->getTop();
+                while($topuserModel)
                 {
                     if($topuserModel->agent) {
                         $reward_number = 0;
                         $userAgent = Agent::getCacheRow($topuserModel->agent);
-                        foreach($agents as $agent) {
+
+                        foreach($agents as $akye => $agent) {
                             if($userAgent['label'] >= $agent['label'] && !isset($agent['use'])) {
                                 $reward_number += $agent['vip_reward'];
-                                $agent['use'] = 1;
+                                $agents[$akye]['use'] = 1;
                                 $use_count++;
                             }
                         }
+
 
                         if($reward_number) {
                             Yii::$app->factory->getwealth('wallet', $topuserModel)->addReward([
@@ -127,17 +144,24 @@ class Order extends \yii\db\ActiveRecord
                             break;
                         }
                     }
+                    $topuserModel = $topuserModel->getTop();
                 }
                 break;
             case 1:
                 $userModel = User::findOne($this->user_id);
-                Yii::$app->factory->getwealth('wallet', $userModel)->add([
+                if(!Yii::$app->factory->getwealth('wallet', $userModel)->add([
                     'number' => $this->product,
                     'type' => \Config::WALLET_RECHARGE,
-                ]);
+                    'source_user_id' => $this->iid,
+                    'note' => '定单ID',
+                ])) {
+                    $t->rollBack();
+                    return false;
+                }
+                $t->commit();
                 break;
         }
-        $t->commit();
+
         return true;
     }
 }

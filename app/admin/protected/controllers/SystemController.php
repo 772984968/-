@@ -266,7 +266,7 @@ class SystemController extends SellerController
 
 				if (empty($ads->errors))
 				{
-					$this->success(\yii::t('app', 'success'), \yii::$app->params['url']['adstype']);
+					$this->success(\yii::t('app', 'success'), \yii::$app->params['url']['ads']);
 				}
 				else
 				{
@@ -305,7 +305,7 @@ class SystemController extends SellerController
 //			var_dump($ad->errors);die;
 			if (empty($ad->errors))
 			{
-				$this->success(\yii::t('app', 'success'), \yii::$app->params['url']['adstype']);
+				$this->success(\yii::t('app', 'success'), \yii::$app->params['url']['ads']);
 			}
 			else
 			{

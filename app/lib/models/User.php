@@ -118,16 +118,32 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->getAuthKey() === $authKey;
     }
 
+    public function getAgentinfo() {
+        return $this->hasOne(Agent::className(),['iid'=>'agent']);
+    }
+
+    public function getMemberinfo() {
+        return $this->hasOne(Member::className(),['iid'=>'vip_type']);
+    }
+
     //验证密码
     public function validatePassword($password)
     {
-        return Yii::$app->security->validatePassword($password, $this->password_hash);
+        if(HUANG_JING < 2 ) {
+            return Yii::$app->security->validatePassword($password, $this->password_hash);
+        } else {
+            return hash_hmac('sha256',$password,'59617D9B-E370-419F-8CC9-F540CFDA8C84') == $this->password_hash;
+        }
     }
 
     //设置密码
     public function setPassword($password)
     {
-        $this->password_hash = Yii::$app->security->generatePasswordHash($password);
+        if(HUANG_JING < 2) {
+            $this->password_hash = Yii::$app->security->generatePasswordHash($password);
+        } else {
+            $this->password_hash = hash_hmac('sha256',$password,'59617D9B-E370-419F-8CC9-F540CFDA8C84');
+        }
     }
 
     //创建authkey
@@ -158,27 +174,24 @@ class User extends ActiveRecord implements IdentityInterface
     //用户注册网易信息
     public function registerWyAccid()
     {
-        $user = [
-            'accid' => $this->username,
-            'name' => $this->nickname,
-            'icon' => \Yii::$app->params['webpath'] . '\uploads\default_head.png',
-        ];
-
-        $result = wyim::createAccid($user);
-        if ($result === false) {
+        $result = wyim::createAccid($this);
+        if ( $result === false) {
             switch(wyim::$error->code){
                 case 414:   //用户已经注册更新wytoken
-                        $result = wyim::refreshToken(['accid'=>$this->username]);
-                        if(!$result) {
-                           return false;
-                        }
+                        $result = wyim::refreshToken($this);
                     break;
             }
             //登记失败后处理方法
         }
-        $this->wy_token = $result->token;
-        $this->wy_accid = $result->accid;
-        $this->save();
+
+        if($result) {
+            $this->wy_token = $result->token;
+            $this->wy_accid = $result->accid;
+            $this->save();
+        } else {
+            return false;
+        }
+
     }
 
     //更新网易IM信息
@@ -194,29 +207,6 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
 
-    public function init()
-    {
-        $this->on(self::EVENT_AFTER_INSERT, [$this, 'after_install']);
-    }
-
-    //添加默认分组
-    public function after_install()
-    {
-        $systemBudygroup = SystemBuddyGroup::find()->asArray()->all();
-        if($systemBudygroup)
-        {
-            $values = '';
-            foreach($systemBudygroup as $row) {
-                $values .= "({$this->iid},{$row['iid']},1),";
-            }
-            $values = trim($values,',');
-            $sql = "INSERT INTO at_buddy_group(user_id,system_group_id,is_system) VALUES$values";
-            Yii::$app->getDb()->createCommand($sql)->execute();
-        }
-   
-    }
-
-
     //取上一级
     public function getTop()
     {
@@ -224,7 +214,6 @@ class User extends ActiveRecord implements IdentityInterface
             return $this->findOne(['llaccounts'=>$this->inviteCode]);
         }
         return false;
-
     }
     
 

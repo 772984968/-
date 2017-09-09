@@ -46,6 +46,7 @@ class BuddyGroup extends \yii\db\ActiveRecord
         ];
     }
 
+
     public function move($top)
     {
         $list = static::find()
@@ -90,6 +91,8 @@ class BuddyGroup extends \yii\db\ActiveRecord
     
     public static function getList($userId)
     {
+        $sysGroup = SystemBuddyGroup::getCacheList();
+
         $data = static::find()
                 ->with(['sysgroupname'])
                 ->select('iid,name,system_group_id')
@@ -98,16 +101,89 @@ class BuddyGroup extends \yii\db\ActiveRecord
                 ->asArray()
                 ->all();
 
+        $newdata = [];
+        foreach($sysGroup as $row) {
+            $newdata[$row['iid']] = ['iid'=>$row['iid'], 'name'=>$row['name'], 'system_group_id'=>$row['iid'],'buddy'=>[]];
+        }
+
+        if($data)
+        {
+            foreach($sysGroup as $row) {
+                $newdata[$row['iid']] = ['iid'=>$row['iid'], 'name'=>$row['name'], 'system_group_id'=>$row['iid'],'buddy'=>[]];
+            }
+
+            foreach($data as $key => $row)
+            {
+                if($row['sysgroupname']) {
+                    $row['name'] = $row['sysgroupname']['name'];
+                }
+                unset($row['sysgroupname']);
+                unset($row['system_group_id']);
+                $row['buddy'] = [];
+                $newdata[$row['iid']] = $row;
+            }
+        }
+
+        return $newdata;
+        
+    }
+
+    public static function getNoBuddyList($userId){
+        $sysGroup = SystemBuddyGroup::getCacheList();
+        $newdata = [];
+        $data = static::find()
+            ->with(['sysgroupname'])
+            ->select('iid,name,system_group_id')
+            ->where(['user_id'=>$userId])
+            ->orderBy('list_order ASC,iid ASC')
+            ->asArray()
+            ->all();
+
+        foreach($sysGroup as $row) {
+            $newdata[] = ['iid'=>$row['iid'], 'name'=>$row['name'], 'system_group_id'=>$row['iid']];
+        }
+
         if($data)
         {
             foreach($data as $key => $row)
             {
                 if($row['sysgroupname']) {
-                    $data[$key]['name'] = $row['sysgroupname']['name'];
+                    $row['name'] = $row['sysgroupname']['name'];
                 }
-                unset($data[$key]['sysgroupname']);
+                unset($row['sysgroupname']);
+                $newdata[] = $row;
             }
         }
-        return $data;
+        return $newdata;
+    }
+
+    //移动分组好友到默认分组
+    public static function moveBuddyToDefaultGroup($userId, $source)
+    {
+        $default_group_id = SystemBuddyGroup::getDefaultGroupIid();
+        $sql = "UPDATE at_buddy SET group_id=$default_group_id where user_id=$userId AND group_id=$source";
+        Yii::$app->getDb()->createCommand($sql)->execute();
+        return true;
+    }
+
+    //移动好友到别的分组
+    public static function moveBuddyToOtherGroup($userId, $buddy_id, $group_id) {
+        $buddyModel = Buddy::findOne(['user_id'=>$userId, 'buddy_id'=>$buddy_id]);
+        if(!$buddyModel) {
+            return false;
+        }
+
+        $buddyGroupModel = static::findOne(['user_id'=>$userId, 'iid'=> $group_id]);
+        if(!$buddyGroupModel) {
+            return false;
+        }
+
+        $buddyModel->group_id = $group_id;
+        return $buddyModel->save();
+    }
+
+    public static function getDefaultGroup($userId)
+    {
+        return static::findOne(['user_id'=>$userId, 'is_system'=>1]);
     }
 }
