@@ -170,7 +170,8 @@ class Menulibrary
      */
     public function getUserMenu($menu = array())
     {
-        if(empty($menu)) $menu = power::find()->where(['state' => 1])->orderBy('order asc')->all(); 
+
+        if(empty($menu)) $menu = power::find()->where(['state' => 1])->orderBy('pid asc,order asc')->all();
         $arr = array();
         foreach ($menu as $key => $value) 
         {
@@ -201,6 +202,7 @@ class Menulibrary
                 $tree[] = &$items[$item['id']];
             }
         }
+
         return $tree;
     }
 
@@ -285,7 +287,29 @@ class Menulibrary
             $power = $power ? $power : "''";
         }
         $query = Power::findBySql('select * from '.Power::tableName().' where id in(' . $power . ') and state=1')->all();
-
         return $this->getUserMenu($query);
+    }
+
+    public function setPower2($power)
+    {
+        if(is_array($power)) {
+            $power = implode(',',$power);
+            $power = $power ? $power : "''";
+        }
+        return $this->createmenu($power);
+    }
+
+    private function createmenu($power, $pid=0)
+    {
+        $result = Power::findBySql("SELECT * FROM ".Power::tableName()." WHERE id in($power) AND pid=$pid AND state=1")->asArray()->all();
+        if($result)
+        {
+            foreach($result as $key => $menu)
+            {
+                $result[$key]['url'] = \Yii::$app->params['url'][$menu['url']] ?? '';
+                $result[$key]['menu'] =  $this->createmenu($power, $menu['id']);
+            }
+        }
+        return $result;
     }
 }

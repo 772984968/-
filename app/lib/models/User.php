@@ -6,6 +6,7 @@ use yii\db\ActiveRecord;
 use yii\extend\AdCommon;
 use yii\web\IdentityInterface;
 use lib\wyim\wyim;
+use lib\wealth\Diamond;
 
 /**
  * User model
@@ -49,7 +50,7 @@ class User extends ActiveRecord implements IdentityInterface
             ['email', 'email'],
             [['diamond','wallet', 'reward_count'], 'number'],
             [['vip_start', 'vip_end'],'safe'],
-            [['status', 'role', 'credits', 'agent', 'share_number', 'follow_number', 'fans_number', 'vip_type'], 'integer'],
+            [['status', 'role', 'credits', 'agent', 'share_number', 'follow_number', 'fans_number', 'vip_type', 'live_telecast_status'], 'integer'],
             ['head', 'string', 'max' => 100],
             ['nickname', 'string', 'max' => 15],
             [['name'], 'string', 'max' => 15],
@@ -125,7 +126,15 @@ class User extends ActiveRecord implements IdentityInterface
     public function getMemberinfo() {
         return $this->hasOne(Member::className(),['iid'=>'vip_type']);
     }
+    
+    public function countPrice() {
+        return (string)(number_format($this->wallet + $this->diamond / \lib\models\Setting::keyTovalue('money2diamond') * 100,2));
+    }
 
+    //关联钻石表
+    public function getDiamondinfo() {
+        return $this->hasMany(UserDiamondLog::className(),['user_id'=>'iid']);
+    }
     //验证密码
     public function validatePassword($password)
     {
@@ -215,6 +224,17 @@ class User extends ActiveRecord implements IdentityInterface
         }
         return false;
     }
-    
+
+    public static function get_head_url($head)
+    {
+        $head_arr = json_decode($head);
+        if($head_arr && is_object($head_arr)) {
+            $url = \lib\nodes\ImageNode::fastdfs_to_url($head_arr);
+        } else {
+            $url = $head;
+        }
+        return $url ?? '';
+    }
+   
 
 }

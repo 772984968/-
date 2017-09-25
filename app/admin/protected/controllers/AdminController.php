@@ -50,7 +50,9 @@ class AdminController extends SellerController
 			{
 				$this->error(\yii::t('app', 'password'));
 			}
+
 			$codes = (!empty($post['pass'])) ? AdCommon::randomkeys() : '';
+
 			$model->attributes = [
                 'group_id' => $post['group_id'],
                 'account'  => $post['account'],
@@ -62,6 +64,7 @@ class AdminController extends SellerController
 				'state'    => $post['state'],
 				'uptime'   => time(),	 
             ];
+           
             $model->save();
 
 			if (!empty($model->errors))

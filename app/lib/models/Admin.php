@@ -140,11 +140,11 @@ class Admin extends \yii\db\ActiveRecord
     */
     public function checkName()
     {
-        if(!\lib\components\AdCommon::isChinese($this->nickname) && !\lib\components\AdCommon::isEnglish($this->nickname))
+        /*if(!\lib\components\AdCommon::isChinese($this->nickname) && !\lib\components\AdCommon::isEnglish($this->nickname))
         {
             $this->addError('nickname','姓名格式有误！');
             return false;
-        }
+        }*/
         
         return true;
     }

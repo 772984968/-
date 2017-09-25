@@ -112,9 +112,9 @@ $.fn.duxMultiUpload = function (options) {
             div.sortable();
             //处理上传列表
             function htmlList(file) {
-                var html = '<div class="media radius clearfix">\
-                    <a class="del" href="javascript:;" alt="删除"><img src="' + file.url + '" ></a>\
-                    <div class="media-body">\
+                var html = '<div class="media radius clearfix" style="float:left;margin-left:15px;margin-top:0px;">\
+                    <a class="del" href="javascript:;" alt="删除"><img style="max-width: 200px;" src="' + file.url + '" ></a>\
+                    <div class="media-body" style="display:none">\
                     <input name="' + dataName + '[url][]" type="hidden" class="input" value="' + file.url + '" />\
                     <input name="' + dataName + '[title][]" type="text" class="input" value="' + file.title + '" />\
                     </div>\

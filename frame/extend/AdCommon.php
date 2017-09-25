@@ -50,6 +50,9 @@ class AdCommon
 	}
 
 	public static function arrayToKeyValueString($arry) {
+		if(!is_array($arry)) {
+			return $arry;
+		}
 		$str = '';
 		foreach($arry as $key =>$value) {
 			$str .= $key.$value;

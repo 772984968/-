@@ -66,4 +66,12 @@ class UserDiamondLog extends \yii\db\ActiveRecord
             return false;
         }
     }
+    
+    //求和
+    public static function sum($id){
+        $model=new UserDiamondLog;
+        return $model::find()->where(['user_id'=>$id,'type'=>0])->sum('number');
+             
+    }
+    
 }

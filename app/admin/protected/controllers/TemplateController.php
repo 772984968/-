@@ -64,12 +64,18 @@ abstract class TemplateController extends SellerController
             $etime = empty($search['etime']) ? time() : strtotime($search['etime']);
             $where .= " and UNIX_TIMESTAMP(create_time) between " . $stime ." and " . $etime;
         }
+        $primaryKey = $this->config['modelName']::primaryKey()[0];
+
         $query = $this->config['modelName']::find()
-                    ->where($where,$where_keyword);
+                    ->where($where,$where_keyword)->orderBy($primaryKey.' DESC');
 
         $this->data['count'] = $query->count();
+
         $this->data['page']  = $this->page( $this->data['count'] );
-        $this->data['data']  = $query->all();
+        $page = \Yii::$app->getRequest()->get('page', 0);
+        $start = $page>0 ? ($page-1)*20 : 0;
+        $this->data['data']  = $query->offset($start)->limit(20)->all();
+        
         $this->data['searchvalue'] = $search;
         
     }

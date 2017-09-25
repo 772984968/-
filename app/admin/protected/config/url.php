@@ -78,6 +78,7 @@ return [
 	'vipRewardSetting' => '/setting/index?type=5',
 	'rechargeRewardSetting' => '/setting/index?type=6',
 	'exchangeSetting' => '/setting/index?type=7',
+    'signSetting' => '/setting/signsetting',//
 
 	/*-------------- 会员管理 ------------------*/
 	'AccountLevel' => '/accountlevel/index',
@@ -112,6 +113,9 @@ return [
 	/*-------------- 用户管理 ------------------*/
 	'UserManage' => '/user/index',
 	'UserManageEdit' => '/user/change',
+    'UserManageInv'=>'/user/invitations',
+    'UserManageRecord'=>'/user/record',
+    'UserManageCancel'=>'/user/cancelmember',
 
 	/*-------------- APP端升级 ------------------*/
 	'appUpgrade' => '/appupgrade/index',
@@ -119,5 +123,15 @@ return [
 	'appUpgradeEdit' => '/appupgrade/change',
 	'appUpgradeDel' => '/appupgrade/del',
 
+	/*-------------- 直播频道管理 ------------------*/
+	'Channel' => '/channel/index',
+	'ChannelDel' => '/channel/del',
+
+	/*-------------- VIP视频管理 ------------------*/
+	'VipVideo' => '/vipvideo/index',
+	'VipVideoAdd' => '/vipvideo/add',
+	'VipVideoEdit' => '/vipvideo/change',
+	'VipVideoDel' => '/vipvideo/del',
+	'VipVideoMAdd' => '/vipvideo/madd',
 
 ];

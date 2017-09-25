@@ -1,9 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\helpers\Url;
-
 $this->title = $config['listTitle'];
-
 ?>
 <div class="dux-tools">
     <div class="tools-function clearfix">
@@ -21,9 +19,7 @@ $this->title = $config['listTitle'];
             <strong><!--title--></strong>
         </div>
         <div class="panel-body">
-
-         <?php echo $this->render('_form', ['fieldOption' => $fieldOption, 'config' => $config]); ?>
-       
+         <?php echo $this->render('_form', ['fieldOption' => $fieldOption, 'config' => $config]); ?> 
         <div class="panel-foot">
             <div class="form-button">
                 <div id="tips"></div>
@@ -31,9 +27,6 @@ $this->title = $config['listTitle'];
                 <button class="button bg" type="reset">重置</button>
             </div>
         </div>
-
     </div>
 <?php echo html::endForm(); ?>
-
-
     </div>

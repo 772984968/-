@@ -62,6 +62,14 @@ use yii\helpers\Html;
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <div class="label"><label>内部跳转</label></div>
+                    <div class="field">
+                        <?php echo Html::activeTextInput($model, 'internal_jump', ['class' => 'input', 'size' => 30]);?>
+                        <div class="input-note"></div>
+                    </div>
+                </div>
+
             </div>
             <div class="panel-foot">
                 <div class="form-button">

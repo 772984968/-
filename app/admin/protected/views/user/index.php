@@ -5,6 +5,7 @@ use yii\helpers\Url;
 
 $this->title = '';
 ?>
+
 <div class="dux-tools">
     <div class="tools-function clearfix">
         <?php if(!empty($search)): ?>
@@ -63,7 +64,7 @@ $this->title = '';
         <?php endif; ?>
 
     </div>
-</div>
+ </div>
 <div class="admin-main">
     <div class="panel dux-box">
         <div class="table-responsive">
@@ -120,13 +121,16 @@ $this->title = '';
                             <?php if(!empty($config['chgUrl'])): ?>
                                 <!-- update -->
                                  <a class="button bg-blue button-small icon-pencil" href="<?php echo Url::toRoute(yii::$app->params['url'][$config['chgUrl']]);?>?id=<?= Html::encode($v['iid'])?>" title="修改"></a>
+                                 <a class="button bg-blue button-small icon-eye" href="<?php echo Url::toRoute(yii::$app->params['url'][$config['invUrl']]);?>?id=<?= Html::encode($v['iid'])?>" title="邀请的用户列表"></a>
+                                 <a class="button bg-blue button-small icon-money" href="<?php echo Url::toRoute(yii::$app->params['url'][$config['recordUrl']]);?>?id=<?= Html::encode($v['iid'])?>" title="查看用户的消费记录"></a>
+                           
                             <?php endif; ?>
                             <?php if(!empty($config['delUrl'])): ?>
                                 <!-- delete -->
                                 <a class="button bg-red button-small icon-trash-o js-del"  href="javascript:;"  url="<?php echo Url::toRoute(yii::$app->params['url'][$config['delUrl']]);?>?isCsrf=0" data="<?= Html::encode($v['iid'])?>" title="删除"></a>
                             <?php endif; ?>
-                                <a class=""  href="/user/clearmemberone?isCsrf=0&uid=<?= Html::encode($v['iid'])?>"  url=""  title="">消除会员</a>
-
+                      <!--      <button  class="button bg-red button-small icon-trash-o "   id="cancelmember" onclick="cancelmember(this);" title="取消会员" url="<?php echo Url::toRoute(yii::$app->params['url'][$config['cancelUrl']]);?>?id=<?= Html::encode($v['iid'])?>"> 取消会员</button>
+                      -->  
                             </td>
                         </tr>
                     <?php endforeach;?>
@@ -150,3 +154,29 @@ $this->title = '';
         $('#etime').duxTime();
     });
 </script>
+
+<script>
+//取消会员
+
+function cancelmember(th){
+	
+	if(confirm('取消之后不可恢复，确定要取消会员吗？')){
+		var url=$(th).attr('url')
+	        $.get(url, function(result){
+			 if(result)
+			 {			
+				  alert(JSON.parse(result)['code']);
+				 }			 
+			  });
+		}
+}
+</script>
+
+
+
+
+
+
+
+
+

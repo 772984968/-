@@ -59,7 +59,7 @@ class LoginController extends BasicsController
      */
     public function actions()
     {
-        ob_clean();
+        //ob_clean();
         parent::actions();
         return [
                 'captcha' => [

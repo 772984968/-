@@ -19,6 +19,18 @@ return [
 						'cookieValidationKey' => 'asdfasdfwerqr4fsdfasdfasdfa',
 				],
 				'db' => require_once __DIR__ . DS . 'db.php',
+				'dbyh' => [
+					//主数据库配置
+					'class' => 'yii\db\Connection',
+					'dsn' => 'mysql:host=192.168.31.109;dbname=atapp',
+					'username' => 'atkj',
+					'password' => 'password',
+					/*'dsn' => 'mysql:host=39.108.81.54;dbname=discovery',
+                    'username' => 'atkj',
+                    'password' => 'tK~yFeNXDGr#+CoSWp',*/
+					'charset' => 'utf8',
+					'tablePrefix' => '',
+				],
 				'curl' => [
 						'class' => 'lib\vendor\curl\Curl',
 				],
@@ -56,17 +68,18 @@ return [
 								'charset' => 'UTF-8',
 								'from' => ['jiahua.liu@himoke.com' => '艾特科技']
 						],
-				],*/
+				],
 				'redis' => [
                     'class' => 'yii\redis\Connection',
                     'hostname' => '127.0.0.1',//'120.25.84.17',
                     'port' => 6379,
                     'database' => 0,
                     //'password' => '123456',
-				],
+				],*/
+
 				'cache' => [
-					//'class' => 'yii\caching\FileCache',
-					'class' => 'yii\redis\Cache',
+					'class' => 'yii\caching\FileCache',
+					//'class' => 'yii\redis\Cache',
 					/*'class'=>'yii\caching\MemCache',
 					'servers'=>[
 						[
@@ -106,5 +119,8 @@ return [
 				],
 		],
 		'params' => [
+		    'wy_app_key' => 'd41c9fbcccebd61dd1497c90fc69f554',
+            'wy_app_secret' => 'ea815ecdd7f6',
+
 		],
 ];

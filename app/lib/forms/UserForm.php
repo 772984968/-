@@ -22,6 +22,7 @@ class UserForm extends Model
     public $sex;
     public $province;
     public $city;
+  //  public $time;
 
     public function scenarios()
     {
@@ -51,7 +52,26 @@ class UserForm extends Model
                 'province',
                 'city',
             ],
-        ];
+            'msgpassword' => [
+                'username',
+                'captcha',
+                'password',
+            ],
+            'emailpassword' => [
+                'username',
+                'captcha',
+                'password',
+            ],
+           'encryptedpassword' => [
+                'username',
+                'captcha',
+                'password',
+            ],
+            'sign'=>[
+                'user_id',
+
+            ]
+       ];
     }
 
     /**
@@ -67,7 +87,19 @@ class UserForm extends Model
             ['inviteCode', 'validateInviteCode'],
             ['llaccounts', 'unique', 'targetClass' => '\lib\models\User', 'message' => '联联号已经注册。'],
             ['username', 'unique', 'targetClass' => '\lib\models\User', 'message' => '帐号已经注册。','on'=>['register']],
-            ['captcha','validateCode'],
+            ['captcha','validateCode','on'=>'register'],//
+            ['captcha','validateCode2','on'=>'msgpassword'],
+//             [['user_id','time'], 'required' , 'on' => 'sign'],
+
+
+
+        ];
+    }
+
+    public function attributeLabels()
+    {
+        return [
+            'inviteCode' => '缴请码',
         ];
     }
 
@@ -85,30 +117,59 @@ class UserForm extends Model
     {
         if(!$this->hasErrors())
         {
-            $this->head = UploadForm::savebase64($this->head);
+            $this->head = UploadForm::savebase64tofile($this->head);
+
+            $img = new \yii\extend\Image($this->head,pathinfo($this->head, PATHINFO_EXTENSION));
+            $img->noopsyche(50,50);
+            $this->head = fastdfs_storage_upload_by_filename($this->head);
         }
     }
 
     public function validateCode($attribute, $params)
     {
-        if (!$this->hasErrors()) {
 
-            if(AdCommon::isMobile( $this->username )) {
-                $className = '\lib\forms\NoteForm';
+        if (!$this->hasErrors()) {
+           if(AdCommon::isMobile( $this->username )) {
+            $className = '\lib\forms\NoteForm';
             } else {
                 $this->addError($attribute, '用户名需为手机号码!');
                 return false;
             }
-
             if( !$className::checkRegister($this->username, $this->captcha)) {
                 $this->addError($attribute, Yii::t('common','sms_captcha_error'));
                 return false;
             }
         }
     }
+/**
+ * 验证码找回密码  li
+ * @return boolean
+ */
+    public function validateCode2($attribute, $params)
+    {
+
+        if (!$this->hasErrors()) {
+            if(AdCommon::isMobile( $this->username )) {
+                $className = '\lib\forms\NoteForm';
+            } else {
+                $this->addError($attribute, '用户名需为手机号码!');
+                return false;
+            }
+            $model = new User();
+           if (!$model->findOne(['username'=>$this->username])){
+               $this->addError($attribute, '不存在该用户');
+            }
+                if( !$className::checkfindpassword($this->username, $this->captcha)) {
+                $this->addError($attribute, Yii::t('common','sms_captcha_error'));
+                return false;
+            }
+        }
+    }
+
 
     public function register()
     {
+
         if( $this->validate() )
         {
             $model = new User();
@@ -160,12 +221,14 @@ class UserForm extends Model
                     'fans_number' => $model->fans_number,
                     'share_number' => $model->share_number,
                     'follow_number' => $model->follow_number,
-                    'head' => $model->head,
+                    'diamond' => $model->diamond,
+                    'head' => $model->get_head_url($model->head),
                     'is_vip' => $model->vip_type ? 1 : 0,
                     'accountlevel'=>$user->getAccountLevel(),
                     'wy_im_accid' => $model->wy_accid,
                     'wy_im_token' => $model->wy_token,
                     'inviteCode' => $model->inviteCode,
+                    'total_assets' => $model->countPrice(),
                 ];
             }
             else
@@ -182,13 +245,11 @@ class UserForm extends Model
 
     public function changepassword()
     {
-  
+
         if( $this->validate() )
         {
             $model = Yii::$app->factory->getuser()->getIdentity();
-            
             $model->setPassword( $this->password );
-
             if( $model->save() ) {
                 return true;
             } else {
@@ -197,6 +258,49 @@ class UserForm extends Model
             }
         }
     }
+        /**
+     * @author li
+     * @return boolean
+     * 找回密码
+     */
+    public function msgpassword()
+    {
+
+        if( $this->validate() )
+        {   $model=User::findOne(['username'=>$this->username]);
+            $model->setPassword( $this->password );
+            if($model->save()) {
+                return true;
+            } else {
+                $this->addError('username', AdCommon::modelMessage($model));
+                return false;
+            }
+        }
+    }
+    /**
+     * @author li
+     * @return boolean
+     * 签到
+     */
+    public function sign()
+    {
+
+        if( $this->validate() )
+        {
+
+            $className = '\lib\models\Sign';
+            $signModel=new $className();
+            if(!$signModel->signin($this->user_id))
+            {
+                $this->addError('user_id',\yii\extend\AdCommon::modelMessage($signModel->errors));
+                return false;
+           }
+           //积分写到用户表
+           return true;
+
+        }
+    }
+
 
     public function updateinfo()
     {
@@ -205,11 +309,19 @@ class UserForm extends Model
             $userModel = User::findOne($this->user_id);
             $userModel->attributes = AdCommon::array_clear_null($this->attributes);
 
+            if($this->head) {
+                $userModel->head = json_encode($this->head);
+            }
+
             if( $userModel->save() ) {
+
+                $url = $userModel->get_head_url($userModel->head);
+
+
                 $WyImInfo = [];
                 if($this->head || $this->nickname) {
                     \lib\wyim\wyim::updateUinfo($userModel);
-                    $WyImInfo['icon'] = $this->head;
+                    $WyImInfo['icon'] = $url;
                 }
 
                 if($this->nickname) {
@@ -218,9 +330,10 @@ class UserForm extends Model
 
                 if($WyImInfo) {
                     $WyImInfo['accid'] = $userModel->wy_accid;
-                    
+
                 }
-                return ['head'=>$this->head];
+                
+                return ['head'=> $url];
             } else {
                 $this->addError('iid', AdCommon::modelMessage($userModel->errors));
                 return false;

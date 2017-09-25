@@ -217,6 +217,7 @@ $.ajaxSetup({
         var options = $.extend(defaults, options);
         this.each(function () {
             //表单提交
+
             var form = this;
             Do.ready('form', 'dialog', function () {
                 $(form).Validform({
@@ -246,9 +247,15 @@ $.ajaxSetup({
                             //设置样式
                             o.obj.parents('.form-group').removeClass('check-error');
                             o.obj.parents('.form-group').addClass(className);
+
                         }
+
+                    },
+                    beforeSubmit: function(form) {
+                        loadindex = layer.load('上传中', {shade: false});
                     },
                     callback: function (data) {
+                        layer.close(loadindex);
                         /*关闭弹窗*/
                         function closeLayer(data, type){
                             var parent = window.parent.window;
@@ -264,7 +271,7 @@ $.ajaxSetup({
                                 }
                             }
                         }
-                        layer.load('表单正在处理中，请稍等 ...');
+
                         if (data.status == 1) {
                             //成功返回
                             if ($.isFunction(options.returnFun)) {
@@ -428,12 +435,14 @@ $.ajaxSetup({
                 });
                 //上传开始
                 uploader.on('uploadStart', function (file) {
+                    loadindex = layer.load('上传中', {shade: false});
                     uploader.option('formData' , $.extend(options.uploadParams(), {'class_id':$('#class_id').val()}));
                     upButton.attr('disabled', true);
                     upButton.find('.webuploader-pick span').text(' 等待');
                 });
                 //上传完毕
                 uploader.on('uploadSuccess', function (file, data) {
+                    layer.close(loadindex);
                     upButton.attr('disabled', false);
                     upButton.find('.webuploader-pick span').text(' 上传');
                     if (data.status) {

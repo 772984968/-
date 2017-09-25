@@ -73,6 +73,7 @@ class Adminlibrary
 		else
 		{
             $power = AdminGroup::findOne(['id' => $adminInfo['group_id']]);
+
             $menu  = isset($power['power']) && $power['power'] != '' ? $power['power'] : array();
 
             $adminInfo['isAdmin']   = $power['is_admin'];
@@ -80,7 +81,7 @@ class Adminlibrary
             $adminInfo['loginIp']   = \Yii::$app->request->getUserIP();
 
             $this->adminLoginLog($adminInfo);                # 登录日志
-            
+
             $this->_saveSession($adminInfo, $menu);          # session 
 
 			return ['status' => 0, 'msg' => '登录成功！'];
@@ -141,6 +142,8 @@ class Adminlibrary
 
 		\Yii::$app->session['admin'] = $data;
         \Yii::$app->session['power'] = $menu;
+    
+
 	}
 }
 

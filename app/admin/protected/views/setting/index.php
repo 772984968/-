@@ -12,7 +12,7 @@ $this->title = $other['title'];
             </div>
         <?php endif; ?>
     </div>
-</div>        
+</div>
     <div class="admin-main">
     <?php echo html::beginForm(yii::$app->params['url']['upSetting'], 'Post', array('id' => 'form', 'class' => 'form-x dux-form form-auto'));?>
     <div class="panel dux-box  active">
@@ -22,8 +22,6 @@ $this->title = $other['title'];
         <div class="panel-body">
 
          <?php echo $this->render('_form', ['data' => $data, 'other' => $other]); ?>
-
-       
         <div class="panel-foot">
             <div class="form-button">
                 <div id="tips"></div>
@@ -33,6 +31,4 @@ $this->title = $other['title'];
         </div>
     </div>
 <?php echo html::endForm(); ?>
-
-
-    </div>
+</div>

@@ -17,18 +17,18 @@ class Image {
     public  $height=450;        //生成的图片高度
     public  $tumb_name;         //缩略图名称
 
-    public function __construct($image,$ext='thumb_') {
+    public function __construct($image,$ext) {
 
         if(is_file($image)){
             @chmod($image, 0777);
             $this->_sourceImg = $image;
-            $this->_imgType   = pathinfo($image, PATHINFO_EXTENSION);
-            $thumb_name = $ext.basename($image);
-            $this->_tmpImg = dirname($image).'/'.$thumb_name;
-            $this->tumb_name = $thumb_name;
-            @copy($this->_sourceImg, $this->_tmpImg);
+            $this->_imgType   = $ext;
+
+            $this->_tmpImg = $image;
+
+            //@copy($this->_sourceImg, $this->_tmpImg);
             @chmod($this->_tmpImg,0777);
-            switch($this->_imgType){
+            switch($ext){
                 case 'gif' :
                     $this->_save = "imagegif";
                     $this->_create   = 'imagecreatefromgif';
@@ -107,11 +107,14 @@ class Image {
         return $this->tumb_name;
     }
 
-    public function noopsyche()
+    public function noopsyche($width, $height)
     {
+        $this->width = $width;
+        $this->height = $height;
         list($org_width, $org_height) = getimagesize($this->_sourceImg);
 
         if( $org_height >= $this->height && $org_width >= $this->width) {
+
             //宽高都比设置的小
             $height_bl = $org_height / $this->height;
             $width_bl = $org_width / $this->width;
@@ -124,6 +127,7 @@ class Image {
                 $yoffset = ( $org_height - ( $this->height * $width_bl ) )/2;
                 $org_height = $this->height * $width_bl; //设置取源图数据的宽度
             }
+
         } else if($org_width >= $this->width ) {
             //图片宽度比设置的大
             $height_bl = $this->height / $org_height;
@@ -159,9 +163,12 @@ class Image {
         $_create = $this->_create;
         $img = $_create($this->_sourceImg);
         $img_n=imagecreatetruecolor($this->width, $this->height);
+
         imagecopyresized($img_n, $img, 0, 0, $xoffset, $yoffset, $this->width, $this->height, $org_width, $org_height);
         $value = $this->_imgType == 'png' ? 7 : 75; // PNG图片质量最高为9 其他格式为 100 默认为75
+
         $_save($img_n,$this->_tmpImg,$value);
+
         return $this;
     }
 

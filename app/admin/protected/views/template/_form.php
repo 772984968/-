@@ -22,6 +22,15 @@ use yii\helpers\Html;
                                         <div class='input-note'></div>
                                     <?php break; ?>
 
+                                    <?php case 'images': ?>
+                                        <input type='text' class='input' id='<?= $field['key'] ?>'name='<?= $fileName ?>' size='38' value='<?= Html::encode($field['value']) ?>'>
+                                        <a class='button bg-blue button-small  js-multi-upload' data='<?= $field['key'] ?>' id='<?= $field['key'] ?>_upload' preview='<?= $field['key'] ?>_preview' href='javascript:;' >
+                                            <span class='icon-upload' data="uploadimages"> 上传</span>
+                                        </a>
+                                        <div id="uploadimages"></div>
+                                        <div class='input-note'></div>
+                                    <?php break; ?>
+
                                     <?php case 'file': ?>
                                     <input type='text' class='input' id='<?= $field['key'] ?>'name='<?= $fileName ?>' size='38' value='<?= Html::encode($field['value']) ?>'>
                                     <a class='button bg-blue button-small  js-file-upload' data='<?= $field['key'] ?>' id='<?= $field['key'] ?>_upload' preview='<?= $field['key'] ?>_preview' href='javascript:;' >

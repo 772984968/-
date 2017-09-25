@@ -32,12 +32,15 @@ class SellerController extends BasicsController
         }
         else
         {
+
             # 管理员信息
             $this->admin = \yii::$app->session['admin'];
+
             $this->data['admin'] = $this->admin;
             # 权限
             $this->_setPower();
             \yii::$app->params['setting'] = \lib\models\Setting::getSetting();
+            
         }   
     }
 
@@ -48,10 +51,13 @@ class SellerController extends BasicsController
      */
     public function page($count)
     {
-        return $pagination = new Pagination([
+
+        $pagination = new Pagination([
             'pageSize'   => \yii::$app->params['pageSize'],
             'totalCount' => $count,
         ]);
+        
+        return $pagination;
     }
 
     /**

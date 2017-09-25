@@ -21,6 +21,7 @@ $this->title = '管理系统-后台';
         <link href="/style/css/admin.css" rel="stylesheet">
         <script src="/style/js/jquery.js"></script>
         <script src="/style/js/pintuer.js"></script>
+        <script src="/style/layer/layer.js"></script>
         <script>
             var duxConfig = {
                 //基础配置
@@ -35,11 +36,11 @@ $this->title = '管理系统-后台';
             };
         </script>
         <script src="/style/js/do.js"></script>
-        <script src="/style/js/config.js"></script> 
+        <script src="/style/js/config.js"></script>
         <script src="/style/js/definition.js"></script>
     </head>
     <body>
-		
+
         <?php $this->beginBody()?>
         <?php echo $content;?>
         <?php $this->endBody()?>

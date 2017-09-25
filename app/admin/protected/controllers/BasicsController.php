@@ -46,7 +46,6 @@ class BasicsController extends Controller
         {
             $view = $this->action->id;
         }
-
         return $this->render($view, $this->data);
     }
 

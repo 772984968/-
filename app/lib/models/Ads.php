@@ -33,7 +33,7 @@ class Ads extends BaseModel
     {
         return [
             [['addtime'], 'required'],
-            [['addtime','listorder'], 'integer'],
+            [['addtime', 'listorder', 'internal_jump'], 'integer'],
             [['type'], 'string', 'max' => 10],
             [['name','parameter'], 'string', 'max' => 100],
             [['image', 'url'], 'string', 'max' => 200]

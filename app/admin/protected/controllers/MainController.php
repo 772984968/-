@@ -18,15 +18,17 @@ class MainController extends SellerController
      */
     public function actionIndex()
     {
-        if ($this->admin['isAdmin'] == 1)   # 超级管理员
+
+        if ($this->admin['is_admin'] == 1)   # 超级管理员
         {
+
             $menuList = MenuLibrary::app()->getUserMenu();
         }
         else                                # 角色
         {
             $power = \yii::$app->session['power'];
-            
-            $menuList = MenuLibrary::app()->setPower($power);
+
+            $menuList = MenuLibrary::app()->setPower2($power);
         }
 
         //var_dump($menuList);die;
