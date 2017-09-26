@@ -1,1 +1,0 @@
-<?phpreturn [    'pageSize'     => '20',  # 分页显示条    'ExprotMaxDay' => '31',    'uploadprefix' => 'IMG_',    'uploadPath'   => '../upload',    'imagePath'    => '/images/',    'filePath'     => '/file/',    'thumbPath'    => '/thum/',];
