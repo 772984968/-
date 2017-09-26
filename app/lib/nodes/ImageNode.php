@@ -1,0 +1,1 @@
+<?phpnamespace lib\nodes;use Yii;class ImageNode{    public static function fastdfs_to_url($data)    {        $server = Yii::$app->params['imgServer'][$data->group_name] ?? '';        return $server . $data->group_name . '/' . $data->filename;    }}
