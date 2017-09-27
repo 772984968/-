@@ -310,25 +310,10 @@ class UserForm extends Model
             $userModel->attributes = AdCommon::array_clear_null($this->attributes);
 
             if( $userModel->save() ) {
-
                 $url = \lib\nodes\UserNode::get_head_url($userModel->head);
-
-
-                $WyImInfo = [];
                 if($this->head || $this->nickname) {
                     \lib\wyim\wyim::updateUinfo($userModel);
-                    $WyImInfo['icon'] = $url;
                 }
-
-                if($this->nickname) {
-                    $WyImInfo['name'] = $this->nickname;
-                }
-
-                if($WyImInfo) {
-                    $WyImInfo['accid'] = $userModel->wy_accid;
-
-                }
-                
                 return ['head'=> $url];
             } else {
                 $this->addError('iid', AdCommon::modelMessage($userModel->errors));
