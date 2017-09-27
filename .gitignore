@@ -11,3 +11,4 @@ app/api/assets/
 app/admin/style/
 app/upload/file/
 app/api/index.php
+app/api/uploads/
