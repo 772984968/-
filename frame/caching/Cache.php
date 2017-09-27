@@ -82,7 +82,6 @@ abstract class Cache extends Component implements \ArrayAccess
      */
     public function buildKey($key)
     {
-        return $key;
         if (is_string($key)) {
             $key = ctype_alnum($key) && StringHelper::byteLength($key) <= 32 ? $key : md5($key);
         } else {
@@ -101,7 +100,9 @@ abstract class Cache extends Component implements \ArrayAccess
      */
     public function get($key)
     {
+
         $key = $this->buildKey($key);
+
         $value = $this->getValue($key);
         if ($value === false || $this->serializer === false) {
             return $value;
@@ -200,7 +201,7 @@ abstract class Cache extends Component implements \ArrayAccess
             $value = call_user_func($this->serializer[0], [$value, $dependency]);
         }
 
-        //$key = $this->buildKey($key);
+        $key = $this->buildKey($key);
 
         return $this->setValue($key, $value, $duration);
     }
