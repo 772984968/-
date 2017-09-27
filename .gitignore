@@ -1,0 +1,11 @@
+app/lib/config/db.php
+*.jpeg
+*.apk
+.idea
+.xml
+README.md
+app/lib/config/
+app/admin/assets/
+app/back/assets/
+app/api/assets/
+app/admin/style/

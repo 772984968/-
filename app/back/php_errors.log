@@ -1,0 +1,3148 @@
+[27-Jun-2017 09:53:29 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "images/20170627/d771a36f992.jpg". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('images/20170627...', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\web\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2268',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/images/20170627/d771a36f992.jpg',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/images/20170627/d771a36f992.jpg',
+    'REMOTE_PORT' => '55924',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/web/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/web',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/web',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'upload.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_DNT' => '1',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_REFERER' => 'http://admin.atapp.cc/system/ads',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 BIDUBrowser/8.7 Safari/537.36',
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'upload.atapp.cc',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1498528409.4081521,
+    'REQUEST_TIME' => 1498528409,
+]
+[27-Jun-2017 09:54:11 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "images/20170627/d771a36f992.jpg". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('images/20170627...', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\web\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2268',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/images/20170627/d771a36f992.jpg',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/images/20170627/d771a36f992.jpg',
+    'REMOTE_PORT' => '55951',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/web/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/web',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/web',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'upload.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_DNT' => '1',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 BIDUBrowser/8.7 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'upload.atapp.cc',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1498528451.7044301,
+    'REQUEST_TIME' => 1498528451,
+]
+[27-Jun-2017 09:54:11 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\web\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2268',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '55951',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/web/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/web',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/web',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'upload.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_DNT' => '1',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'upload.atapp.cc',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1498528451.892622,
+    'REQUEST_TIME' => 1498528451,
+]
+[04-Jul-2017 10:53:49 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '780',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '50317',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_DNT' => '1',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499136829.4727881,
+    'REQUEST_TIME' => 1499136829,
+]
+[04-Jul-2017 15:03:13 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56032',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151793.2527709,
+    'REQUEST_TIME' => 1499151793,
+]
+[04-Jul-2017 15:03:14 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56049',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_DNT' => '1',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151794.020283,
+    'REQUEST_TIME' => 1499151794,
+]
+[04-Jul-2017 15:03:25 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56054',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151805.5688889,
+    'REQUEST_TIME' => 1499151805,
+]
+[04-Jul-2017 15:03:27 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56054',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151807.0913761,
+    'REQUEST_TIME' => 1499151807,
+]
+[04-Jul-2017 15:03:27 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56054',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151807.9862859,
+    'REQUEST_TIME' => 1499151807,
+]
+[04-Jul-2017 15:03:31 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56054',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151811.330658,
+    'REQUEST_TIME' => 1499151811,
+]
+[04-Jul-2017 15:03:33 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56054',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151813.113234,
+    'REQUEST_TIME' => 1499151813,
+]
+[04-Jul-2017 15:03:35 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56054',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151815.1590259,
+    'REQUEST_TIME' => 1499151815,
+]
+[04-Jul-2017 15:03:40 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56074',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151820.8083639,
+    'REQUEST_TIME' => 1499151820,
+]
+[04-Jul-2017 15:03:41 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56074',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151821.391953,
+    'REQUEST_TIME' => 1499151821,
+]
+[04-Jul-2017 15:03:42 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56074',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151821.9923451,
+    'REQUEST_TIME' => 1499151821,
+]
+[04-Jul-2017 15:03:42 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56074',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151822.368741,
+    'REQUEST_TIME' => 1499151822,
+]
+[04-Jul-2017 15:03:43 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56084',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_DNT' => '1',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151823.929769,
+    'REQUEST_TIME' => 1499151823,
+]
+[04-Jul-2017 15:03:51 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2312',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56101',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151831.5478511,
+    'REQUEST_TIME' => 1499151831,
+]
+[04-Jul-2017 15:05:02 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56165',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499151902.812602,
+    'REQUEST_TIME' => 1499151902,
+]
+[04-Jul-2017 15:11:20 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2204',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56297',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499152280.2409871,
+    'REQUEST_TIME' => 1499152280,
+]
+[04-Jul-2017 15:18:07 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2452',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56447',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499152687.922987,
+    'REQUEST_TIME' => 1499152687,
+]
+[04-Jul-2017 15:19:18 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2452',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56597',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499152758.711421,
+    'REQUEST_TIME' => 1499152758,
+]
+[04-Jul-2017 15:29:48 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2512',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56830',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499153388.2879181,
+    'REQUEST_TIME' => 1499153388,
+]
+[04-Jul-2017 15:34:19 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2404',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '57083',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499153659.099194,
+    'REQUEST_TIME' => 1499153659,
+]
+[04-Jul-2017 15:46:43 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2548',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '57269',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499154403.456218,
+    'REQUEST_TIME' => 1499154403,
+]
+[04-Jul-2017 15:51:28 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2548',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '57465',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499154688.6802831,
+    'REQUEST_TIME' => 1499154688,
+]
+[04-Jul-2017 15:52:29 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2548',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '57580',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499154749.3583269,
+    'REQUEST_TIME' => 1499154749,
+]
+[04-Jul-2017 15:57:48 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2492',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '58008',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499155068.2735391,
+    'REQUEST_TIME' => 1499155068,
+]
+[04-Jul-2017 15:59:13 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2252',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '58166',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499155153.1035819,
+    'REQUEST_TIME' => 1499155153,
+]
+[04-Jul-2017 16:18:24 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2248',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '59246',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499156304.4778371,
+    'REQUEST_TIME' => 1499156304,
+]
+[04-Jul-2017 16:18:33 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2384',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '59284',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499156313.4048841,
+    'REQUEST_TIME' => 1499156313,
+]
+[04-Jul-2017 16:18:52 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2236',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '59316',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499156332.1860671,
+    'REQUEST_TIME' => 1499156332,
+]
+[04-Jul-2017 16:25:29 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2320',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '59589',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499156729.5865409,
+    'REQUEST_TIME' => 1499156729,
+]
+[04-Jul-2017 16:32:09 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2284',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '59772',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499157129.787411,
+    'REQUEST_TIME' => 1499157129,
+]
+[04-Jul-2017 17:55:36 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2544',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '57024',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499162136.86358,
+    'REQUEST_TIME' => 1499162136,
+]
+[04-Jul-2017 19:54:28 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2516',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '52724',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499169268.3397181,
+    'REQUEST_TIME' => 1499169268,
+]
+[04-Jul-2017 20:00:54 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2512',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '53343',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499169654.5241239,
+    'REQUEST_TIME' => 1499169654,
+]
+[04-Jul-2017 20:03:45 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2252',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '53831',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499169825.6775291,
+    'REQUEST_TIME' => 1499169825,
+]
+[04-Jul-2017 20:28:49 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2564',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '51717',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499171329.1901281,
+    'REQUEST_TIME' => 1499171329,
+]
+[04-Jul-2017 20:31:17 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2380',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '52122',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499171477.3704121,
+    'REQUEST_TIME' => 1499171477,
+]
+[04-Jul-2017 20:40:52 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2260',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '53710',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499172052.090147,
+    'REQUEST_TIME' => 1499172052,
+]
+[04-Jul-2017 20:45:27 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2284',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '54387',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499172327.003706,
+    'REQUEST_TIME' => 1499172327,
+]
+[04-Jul-2017 20:50:02 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2320',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '55397',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499172602.656358,
+    'REQUEST_TIME' => 1499172602,
+]
+[04-Jul-2017 20:54:54 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2308',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '56056',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499172894.8420141,
+    'REQUEST_TIME' => 1499172894,
+]
+[04-Jul-2017 21:01:47 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2276',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '57073',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499173307.617084,
+    'REQUEST_TIME' => 1499173307,
+]
+[04-Jul-2017 21:04:08 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2440',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '57554',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499173448.537276,
+    'REQUEST_TIME' => 1499173448,
+]
+[04-Jul-2017 21:05:45 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2440',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '57827',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499173545.10518,
+    'REQUEST_TIME' => 1499173545,
+]
+[04-Jul-2017 21:11:12 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2464',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '58792',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499173872.840163,
+    'REQUEST_TIME' => 1499173872,
+]
+[04-Jul-2017 21:14:32 Asia/Shanghai] yii\base\InvalidRouteException: Unable to resolve the request "u/error". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\ErrorHandler.php(80): yii\base\Module->runAction('u/error')
+#1 E:\atapp\frame\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in E:\atapp\frame\base\Module.php:464
+Stack trace:
+#0 E:\atapp\frame\web\Application.php(87): yii\base\Module->runAction('favicon.ico', Array)
+#1 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in E:\atapp\frame\web\Application.php:100
+Stack trace:
+#0 E:\atapp\frame\base\Application.php(377): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\atapp\app\back\index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\360\\360Desktop;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Rational\\common;C:\\phpStudy\\php70n;C:\\Program Files\\nodejs\\;C:\\phpStudy\\MySQL\\bin;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Local\\Microsoft\\WindowsApps;C:\\phpStudy\\php70n;C:\\Users\\è¥¿æ–—é—¨\\AppData\\Roaming\\npm;',
+    'SYSTEMROOT' => 'C:\\WINDOWS',
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\WINDOWS',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'C:/phpStudy/php70n',
+    '_FCGI_SHUTDOWN_EVENT_' => '2464',
+    'HTTP_CONNECTION' => 'close',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '59369',
+    'SCRIPT_FILENAME' => 'E:/atapp/app/back/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'E:/atapp/app/back',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'back.atapp.cc',
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\WINDOWS',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_HOST' => 'back.atapp.cc',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'REDIRECT_STATUS' => '200',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1499174072.7965009,
+    'REQUEST_TIME' => 1499174072,
+]
+[12-Sep-2017 09:09:14 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:10:11 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:10:31 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:10:48 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:11:05 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:15:16 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:15:18 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:15:25 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:15:26 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:15:43 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:17:19 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:18:16 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:18:17 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:24:41 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:24:57 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:31:53 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:31:55 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:32:24 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:32:25 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:32:34 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:32:56 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:33:22 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:35:17 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:35:18 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:43:40 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:45:44 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:49:37 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:49:47 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:50:50 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:54:23 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:54:29 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:54:32 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:47 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:52 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:53 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:55 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:55 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:56 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:56 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:57 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:57 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:57 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:58 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:58 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:59 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:56:59 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:00 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:00 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:01 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:01 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:02 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:02 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:03 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:03 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:04 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:04 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:05 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:05 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:05 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:06 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:06 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:07 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:07 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:08 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:08 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:09 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:09 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:10 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:10 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:11 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:11 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:11 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:12 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:12 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:13 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:13 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:14 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:14 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:15 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:15 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:16 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:16 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:17 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:17 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:18 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:18 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:19 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:19 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:20 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:20 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:21 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:21 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:22 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:22 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:23 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:23 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0
+[12-Sep-2017 09:57:24 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\phpStudy\php70n\ext\php_interbase.dll' - ÕÒ²»µ½Ö¸¶¨µÄÄ£¿é¡£
+ in Unknown on line 0

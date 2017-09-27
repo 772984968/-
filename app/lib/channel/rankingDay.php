@@ -1,0 +1,1 @@
+<?phpnamespace lib\channel;class rankingDay extends ranking{    protected static $name = 'rank_king_day';}

@@ -1,0 +1,38 @@
+
+body{
+	height: 100%;
+	width: 100%;
+	background:#dcd9d2;
+	overflow: hidden;
+}
+.down-page-wrap{
+	margin: 0 auto;
+	overflow: hidden;
+	width: 10rem;
+	/*height: 100%;*/
+	background: url(/assets/images/down-page.png) no-repeat;
+	background-size:10rem 100%;
+}
+.down-title{
+	margin-top: 9.7rem;
+	color: #ff6d6d;
+	font-size: 0.44444rem;
+	text-align: center;
+}
+.page-font{
+	width: 9.44444rem;
+	margin: 0 auto;
+	font-size: 0.42638rem;
+	color: #ffffff; 
+	text-align: center;
+	padding: 0.41666rem 0;
+	background: #ff9933;
+	border-radius: 0.69444rem;
+}
+.iosdown{
+	margin-top: 0.5rem;
+	margin-bottom: 0.72222rem;
+}
+.androiddown{
+	margin-bottom: 2.15277rem;
+}
