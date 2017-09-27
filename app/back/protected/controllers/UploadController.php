@@ -18,6 +18,7 @@ class UploadController extends Controller
         $tmp_name = $_FILES['file']['tmp_name'] ?? '';
         $name = $_FILES['file']['name'] ?? '';
         $imgType   = pathinfo($name, PATHINFO_EXTENSION);
+
         if($tmp_name && is_file($tmp_name)) {
 
             //取要裁剪的大小
@@ -26,7 +27,7 @@ class UploadController extends Controller
             $height = intval($rq->get('height'));
 
             //裁剪图片
-            $img = new \yii\extend\Image($tmp_name,'');
+            $img = new \yii\extend\Image($tmp_name,$imgType);
             if($width && $height) {
                 $img->noopsyche($width,$height)->_tmpImg;
             }
