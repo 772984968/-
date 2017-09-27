@@ -222,7 +222,7 @@ class UserForm extends Model
                     'share_number' => $model->share_number,
                     'follow_number' => $model->follow_number,
                     'diamond' => $model->diamond,
-                    'head' => $model->get_head_url($model->head),
+                    'head' => \lib\nodes\UserNode::get_head_url($model->head),
                     'is_vip' => $model->vip_type ? 1 : 0,
                     'accountlevel'=>$user->getAccountLevel(),
                     'wy_im_accid' => $model->wy_accid,

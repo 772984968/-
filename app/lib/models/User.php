@@ -224,6 +224,17 @@ class User extends ActiveRecord implements IdentityInterface
         }
         return false;
     }
+
+    public static function get_head_url($head)
+    {
+        $head_arr = json_decode($head);
+        if($head_arr && is_object($head_arr)) {
+            $url = \lib\nodes\ImageNode::fastdfs_to_url($head_arr);
+        } else {
+            $url = $head;
+        }
+        return $url ?? '';
+    }
    
 
 }

@@ -185,7 +185,7 @@ class Fans extends \yii\db\ActiveRecord
         foreach($result as $row) {
             $row[$infoField]['mutual'] = !empty($row['mutual']) ? '1' : '0';
         
-            $row[$infoField]['head'] = User::get_head_url($row[$infoField]['head']);
+            $row[$infoField]['head'] = \lib\nodes\UserNode::get_head_url($row[$infoField]['head']);
             $data[] = $row[$infoField];
         }
         return $data;
