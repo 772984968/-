@@ -13,3 +13,4 @@ app/upload/file/
 app/api/index.php
 app/api/uploads/
 app/upload/
+TestController.php

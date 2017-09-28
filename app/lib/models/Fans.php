@@ -191,4 +191,8 @@ class Fans extends \yii\db\ActiveRecord
         return $data;
     }
 
+    public static function aFollowb($usera, $userb) {
+        return static::findOne(['user_id'=>$userb, 'fans_id'=>$usera]) ? '1' : '0';
+    }
+
 }

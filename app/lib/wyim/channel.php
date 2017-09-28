@@ -58,7 +58,7 @@ class channel extends wy
     {
         set_time_limit(0);
         $pnum = 1;
-        $cache = Yii::$app->getCache();
+        $cache = Yii::$app->redis;
         while(true)
         {
             $rst = static::getList($pnum);
@@ -68,36 +68,58 @@ class channel extends wy
             }
 
             foreach($rst as $key => $row) {
-                $cacheData = ['status' => $row->status];
+                $cacheData = json_encode(['status' => $row->status]);
                 $cache->set(static::LIST_CACHE.$row->cid, $cacheData);
             }
 
             $pnum++;
         }
 
-        chatroom::refurbish();   //刷新聊天室人数
+        //chatroom::refurbish();   //刷新聊天室人数
 
     }
     
     //取缓存在本机的直播信息
     public static function getinfo($cid)
     {
-        $cache = Yii::$app->getCache();
-        return $cache->get(static::LIST_CACHE.$cid);
+        if(!$cid) {
+            return '';
+        }
+        $cache = Yii::$app->redis;
+        return json_decode($cache->get(static::LIST_CACHE.$cid));
     }
 
     //删除缓存数据
     public static function deleteCache($cid) {
-        $cache = Yii::$app->getCache();
-        $cache->delete(static::LIST_CACHE.$cid);
+        $cache = Yii::$app->redis;
+        $cache->expire(static::LIST_CACHE.$cid, -1);
     }
 
     //修改缓存直播状态
     public static function changeStatus($cid, $status) {
         $info = static::getinfo($cid) ?? [];
-        $info['status'] = $status;
-        $cache = Yii::$app->getCache();
-        $cache->set(static::LIST_CACHE.$cid, $info);
+
+        if($info) {
+            $info->status = $status;
+        } else {
+            $info['status'] = $status;
+        }
+
+        $cache = Yii::$app->redis;
+        $cache->set(static::LIST_CACHE.$cid, json_encode($info));
+    }
+
+    //取直播状态
+    public static function getStatus($cid)
+    {
+        $info = static::getinfo($cid);
+
+        if(!$info) {
+            $status = '0';
+        } else {
+           $status = (string)$info->status;
+        }
+        return $status;
     }
 
 }
