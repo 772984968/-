@@ -1,0 +1,1 @@
+<?phpnamespace app\controllers;use yii\web\Controller;use Yii;class ChannelController extends Controller{    public function actionRefurbish()    {        \lib\wyim\channel::refurbish();    }}

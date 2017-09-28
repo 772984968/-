@@ -120,7 +120,7 @@ class UserForm extends Model
             $this->head = UploadForm::savebase64tofile($this->head);
 
             $img = new \yii\extend\Image($this->head,pathinfo($this->head, PATHINFO_EXTENSION));
-            $img->noopsyche(50,50);
+            $img->noopsyche(100,100);
             $this->head = json_encode(fastdfs_storage_upload_by_filename($this->head));
         }
     }

@@ -119,10 +119,17 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->getAuthKey() === $authKey;
     }
 
+    //取代理信息
     public function getAgentinfo() {
         return $this->hasOne(Agent::className(),['iid'=>'agent']);
     }
 
+    //取直播 信息
+    public function getChannelinfo() {
+        return $this->hasOne(Channel::className(), ['user_id'=>'iid']);
+    }
+
+    //取VIP信息
     public function getMemberinfo() {
         return $this->hasOne(Member::className(),['iid'=>'vip_type']);
     }
@@ -223,17 +230,6 @@ class User extends ActiveRecord implements IdentityInterface
             return $this->findOne(['llaccounts'=>$this->inviteCode]);
         }
         return false;
-    }
-
-    public static function get_head_url($head)
-    {
-        $head_arr = json_decode($head);
-        if($head_arr && is_object($head_arr)) {
-            $url = \lib\nodes\ImageNode::fastdfs_to_url($head_arr);
-        } else {
-            $url = $head;
-        }
-        return $url ?? '';
     }
    
 
