@@ -20,7 +20,8 @@ defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL', 3);
 
 defined('HUANG_JING') or define('HUANG_JING', 0);   //0为线下,1为线上
-
+$grafika = dirname(__FILE__).'/../lib/vendor/grafika/src/autoloader.php';
+require_once($grafika);
 require_once($yii);
 $config = require_once($main);
 (new yii\web\Application($config))->run();
