@@ -80,7 +80,7 @@ class UserForm extends Model
     public function rules()
     {
         return [
-            [['username', 'password', 'captcha', 'user_id'], 'required'],
+            [['username', 'password', 'captcha', 'user_id', 'inviteCode'], 'required'],
             [['nickname'], 'required' , 'on' => 'register'],
             [['username', 'captcha', 'password'],'string','max'=>32],
             ['head', 'headToUrl'],
