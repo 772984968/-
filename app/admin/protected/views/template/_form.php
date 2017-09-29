@@ -82,7 +82,6 @@ use yii\helpers\Html;
                     <?php if(isset($config['primaryKey'])): ?>
                         <input style="display: none" type="text" name="<?= $config['modelShortName'] ?>[<?= $config['primaryKey'] ?>]" value="<?= $config['primaryKeyValue'] ?>"
                     <?php endif; ?>
-        
                 </div>
               </div>
         </div>

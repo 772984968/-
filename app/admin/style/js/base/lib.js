@@ -69,7 +69,7 @@ $.fn.duxMultiUpload = function (options) {
                 upButton.attr('disabled', true);
                 upButton.find('.webuploader-pick span').text(' 等待');
             });
-            
+
             //上传完毕
             uploader.on('uploadSuccess', function (file, data) {
                 upButton.attr('disabled', false);
@@ -130,9 +130,6 @@ $.fn.duxMultiUpload = function (options) {
         });
     });
 };
-
-
-
 //图表插件
 $.fn.duxChart = function (options) {
     var defaults = {
