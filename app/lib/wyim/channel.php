@@ -169,49 +169,4 @@ class channel extends wy
         return $data;
     }
 
-    //取联联比赛列表，包含，状态，和人气
-    public static function getLLlist()
-    {
-        $newData = Yii::$app->getCache()->get(static::LIST_CACHE);
-        if(!$newData)
-        {
-            $data = \lib\models\Channel::find()
-                ->with('userinfo')
-                ->asArray()
-                ->all();
-
-            $newData = [];
-            if($data)
-            {
-                //加上状态，和人气值
-                foreach($data as $key => $row)
-                {
-                    $row['status'] = channel::getStatus($row['cid']);
-                    $row['grade'] = \lib\channel\liveTelecastRanking::getGrade($row['user_id']);
-                    $data[$key] = $row;
-                }
-
-                //把数据进行排序
-
-                while($data)
-                {
-                    $best = ['grade'=>0, 'status'=>0, 'key'=>0];
-                    foreach($data as $key => $row) {
-                        if($row['status']>= $best['status'] && $row['grade']>=$best['grade']) {
-                            $best['grade'] = $row['grade'];
-                            $best['status'] = $row['status'];
-                            $best['key'] = $key;
-                        }
-                    }
-                    $newData[] = $data[$best['key']];
-                    unset($data[$best['key']]);
-                }
-                //把数据进行缓存
-                Yii::$app->getCache()->set(static::LIST_CACHE, $newData, 60);
-            }
-        }
-        return $newData;
-
-    }
-
 }
