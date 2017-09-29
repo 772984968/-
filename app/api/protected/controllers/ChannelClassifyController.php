@@ -1,0 +1,1 @@
+<?phpnamespace api\controllers;use Yii;//直播视频分类class ChannelClassifyController extends BasisController{    //关注列表    public function actionFollow()    {    }    //热门列表    public function actionHot()    {    }    //比赛列表    public function actionMatch()    {    }}
