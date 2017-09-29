@@ -70,7 +70,6 @@ class channel extends wy
     {
         set_time_limit(0);
         $pnum = 1;
-        $cache = Yii::$app->redis;
         while(true)
         {
             $rst = static::getList($pnum);
@@ -80,11 +79,10 @@ class channel extends wy
             }
 
             foreach($rst as $key => $row) {
-                $cacheData = json_encode(['status' => $row->status]);
-                $cache->set(static::LIST_CACHE.$row->cid, $cacheData);
+                static::changeStatus($row->cid, $row->status);
             }
-
             $pnum++;
+
         }
 
         //chatroom::refurbish();   //刷新聊天室人数
@@ -132,6 +130,42 @@ class channel extends wy
            $status = (string)$info->status;
         }
         return $status;
+    }
+
+    //开始直播
+    public static function begin($cid, $grade) {
+
+        $info = static::getinfo($cid) ?? [];
+        if($info) {
+            $info->status = 1;
+            $info->grade = $grade;
+            $info->begin_time = time();
+        } else {
+            $info = [
+                'status' => 1,
+                'grade' => $grade,
+                'begin_time' => time(),
+            ];
+        }
+        Yii::$app->redis->set(static::LIST_CACHE.$cid, json_encode($info));
+    }
+
+    public static function finish($cid, $grade)
+    {
+
+        $info = static::getinfo($cid);
+        static::changeStatus($cid, 0);
+        $time = time()-$info->begin_time;
+        $h = intval($time / 3600);
+        $m = intval($time / 60);
+        $s = $time % 60;
+
+        $data =  [
+            'duration'=>"$h:$m:$s",
+            'onlineusercount' => chatroom::get_online_count($cid),
+            'grade' => $grade - $info->grade,
+        ];
+        return $data;
     }
 
 }
