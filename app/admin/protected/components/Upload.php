@@ -24,6 +24,9 @@ class Upload
     public $_image_path   = '';    //默认图片上传路径
     public $_thumb_path   = '';    //默认缩略图上传路径
     public $_file_path    = '';    //默认文件上传路径
+    public $height='';              //图片设置高度
+    public $width='';               //图片设置宽度
+    public $mode='';               //是否是智适应1智适应0否
 
     /**
      * [__construct 构造函数]
@@ -56,8 +59,13 @@ class Upload
      */
     public function uploadImage($file, $small_thumb = false,$type=1)
     {
+        $height=\Yii::$app->request->post('height');
+        $width=\Yii::$app->request->post('width');
+        $mode=\Yii::$app->request->post('mode');
+        if (isset($height))$this->height=$height;
+        if (isset($width))$this->width=$width;
+        if (isset($mode))$this->mode=$mode;
         if(!empty($this->_errors)) return false;
-
         if (!$this->checkUpload($file,$type))
         {
             return false;
@@ -66,7 +74,6 @@ class Upload
         $show_path  = ($this->_is_image === true) ? $this->_image_path : $this->_file_path;
         $show_path .= date('Ymd', time()) . '/';
         $save_path  = ROOT.\yii::$app->params['uploadPath'].$show_path;
-
         $filename   = $this->_rand_name ? substr(md5(uniqid('file')), 0,11).'.'.$this->getExt($file['name']) : $file['name'];
         if(!is_dir($save_path))
         {
@@ -76,13 +83,29 @@ class Upload
         $save_path       .= $filename;
 
         $this->_file_name = $this->_setting['upload_domain'].$show_path.$filename;
+        /**
+         *
+         *文件裁剪插件
+         */
         $editer= new Editor();
         if ($editer->isAvailable()){
             $editer->open($image,$tmp_name);
-            $editer->resize($image, 300,300);
+            if ($this->height!='0'&&$this->width!='0'){
+                if ($this->mode!='') {
+                    $editer->resize($image, $this->width, $this->height,$this->mode);
+                }else{
+                    $editer->resize($image, $this->width, $this->height);
+                }
+            }elseif($this->height=='0'&&$this->width!='0'){
+                $editer->resizeExactWidth($image, $this->width);
+            }elseif ($this->height!=0&&$this->width=='0'){
+                $editer->resizeExactHeight($image, $this->height);
+            }
             if (!$editer->save($image,$save_path)){
                 $this->_errors = '移动文件失败';
                 return false;
+            }else{
+
             }
 
         }
@@ -144,6 +167,7 @@ class Upload
         		return false;
         	}
         }
+
         if(!is_uploaded_file($file['tmp_name']))
         {
             $this->_errors = "系统临时文件错误";
