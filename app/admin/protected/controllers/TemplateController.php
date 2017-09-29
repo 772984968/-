@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace app\controllers;
 use yii\rhy\Config;
 use lib\components\AdCommon;
@@ -23,7 +23,7 @@ abstract class TemplateController extends SellerController
         'listTitle' => '标签列表',
         'listFormName' => '参数',
     ];*/
-    
+
     /**
      * [actionIndex 主列表]
      * @return [type] [description]
@@ -50,7 +50,7 @@ abstract class TemplateController extends SellerController
         $search = $this->get('search');
         $where  = '1=1';
         $where_keyword = [];
-       
+
         //搜索
         if(!empty($search['type']) && !empty($search['keyword']))
         {
@@ -75,15 +75,15 @@ abstract class TemplateController extends SellerController
         $page = \Yii::$app->getRequest()->get('page', 0);
         $start = $page>0 ? ($page-1)*20 : 0;
         $this->data['data']  = $query->offset($start)->limit(20)->all();
-        
+
         $this->data['searchvalue'] = $search;
-        
+
     }
 
 
     //设置添加，修改需要生成的表单选项
     abstract protected function getOption();
-    
+
    /* return [
         array('name'=>'上级','key'=>'pid','value'=>'0','html'=>'select','option'=>$tree),
         array('name'=>'名称','key'=>'name','value'=>'','html'=>'text','option'=>''),
@@ -91,7 +91,7 @@ abstract class TemplateController extends SellerController
         array('name'=>'显示','key'=>'is_show','value'=>'1','html'=>'radio','option'=>'否,是'),
         array('name'=>'新窗口打开','key'=>'is_new','value'=>'','html'=>'radio','option'=>'否,是'),
         array('name'=>'排序','key'=>'order','value'=>'','html'=>'text','option'=>''),
-    
+
     ];*/
 
 
@@ -180,7 +180,7 @@ abstract class TemplateController extends SellerController
         $model = $this->config['modelName']::findOne($id);
 
 
-        if ($this->isPost()) 
+        if ($this->isPost())
         {
             $data = $this->post( $this->config['modelShortName'] );
 
@@ -197,7 +197,7 @@ abstract class TemplateController extends SellerController
         }
 
 
-        $setting = $this->getOption();  
+        $setting = $this->getOption();
 
         foreach($setting as $k => $v)
         {
