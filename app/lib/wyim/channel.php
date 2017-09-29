@@ -43,7 +43,7 @@ class channel extends wy
     }
 
     //取网易直播列表数据
-    private static function getList($pnum) {
+    public static function getList($pnum) {
         static::$url =  'https://vcloud.163.com/app/channellist';
         $data = array(
             'records' => 50,
@@ -51,6 +51,18 @@ class channel extends wy
         );
         $result = static::sendJson($data);
         return $result ? $result->ret->list : false;
+    }
+
+    //取网易云直播状态
+    public static function channelstats($cid)
+    {
+        static::$url =  'https://vcloud.163.com/app/channelstats';
+        $data = array(
+            'cid' => $cid
+        );
+        $result = static::sendJson($data);
+        return $result ? $result->ret->status : false;
+
     }
 
     //刷新列表
