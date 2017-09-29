@@ -304,7 +304,7 @@ $.ajaxSetup({
                                             },
                                             no: function(){
                                                 closeLayer(data, 'no');
-                                            } 
+                                            }
                                         }
                                     });
                                 }
@@ -416,9 +416,10 @@ $.ajaxSetup({
                 $(this).parents('.image_node').prev().remove();
                 $(this).parents('.image_node').remove();
             })
-            
+
             /*创建上传*/
             Do.ready('webuploader', function () {
+
                 var uploader = WebUploader.create({
                     swf: duxConfig.baseDir + 'webuploader/Uploader.swf',
                     server: options.uploadUrl,
@@ -436,7 +437,21 @@ $.ajaxSetup({
                 //上传开始
                 uploader.on('uploadStart', function (file) {
                     loadindex = layer.load('上传中', {shade: false});
-                    uploader.option('formData' , $.extend(options.uploadParams(), {'class_id':$('#class_id').val()}));
+                    //裁剪参数
+                    var height=$('#height').val();
+                    var width=$('#width').val();
+                    var mode=$("input[name='mode']:checked").val();
+                    if(height==null||height==''){
+                    	height=0;
+                    }
+                    if(width==null||width==''){
+                    	width=0;
+                    }
+                    if(mode==null||mode==''){
+                    	mode='fit';
+                    }
+
+                    uploader.option('formData' , $.extend(options.uploadParams(), {'class_id':$('#class_id').val(),'height':height,'width':width,'mode':mode}));
                     upButton.attr('disabled', true);
                     upButton.find('.webuploader-pick span').text(' 等待');
                 });
@@ -449,9 +464,10 @@ $.ajaxSetup({
                         urlVal.val(data.data.url);
                         options.complete(data.data);
                         preview.siblings('.upload_image_show').attr('src',data.data.url);
-
+                        layer.alert('添加成功', {icon: 3});
                     } else {
                         alert(data.info);
+
                     }
                 });
                 uploader.on('uploadError', function (file) {
