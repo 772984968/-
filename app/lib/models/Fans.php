@@ -14,6 +14,7 @@ use lib\traits\operateDbTrait;
  */
 class Fans extends \yii\db\ActiveRecord
 {
+    public static $error;
     use operateDbTrait;
     /**
      * @inheritdoc
@@ -52,7 +53,8 @@ class Fans extends \yii\db\ActiveRecord
     {
         //已添加，直接返回
         if(static::findOne(['user_id'=>$follow_user_id, 'fans_id'=>$user_id])) {
-            return true;
+            static::$error = '您已经关注了';
+            return false;
         }
         $t = Yii::$app->getDb()->beginTransaction();
 
@@ -60,6 +62,7 @@ class Fans extends \yii\db\ActiveRecord
         $model->user_id = $follow_user_id;
         $model->fans_id = $user_id;
         if(!$model->save()) {
+            static::$error = '关注失败请稍候再试';
             $t->rollBack();
             return false;
         }
@@ -67,6 +70,7 @@ class Fans extends \yii\db\ActiveRecord
         $userModel = User::findOne($follow_user_id);
         $userModel->fans_number++;
         if(!$userModel->save()) {
+            static::$error = '关注失败请稍候再试';
             $t->rollBack();
             return false;
         }
@@ -74,6 +78,7 @@ class Fans extends \yii\db\ActiveRecord
         $fansModel = User::findOne($user_id);
         $fansModel->follow_number++;
         if(!$fansModel->save()) {
+            static::$error = '关注失败请稍候再试';
             $t->rollBack();
             return false;
         }
