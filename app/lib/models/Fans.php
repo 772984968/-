@@ -196,8 +196,22 @@ class Fans extends \yii\db\ActiveRecord
         return $data;
     }
 
+    //a是否关注了b
     public static function aFollowb($usera, $userb) {
         return static::findOne(['user_id'=>$userb, 'fans_id'=>$usera]) ? '1' : '0';
     }
 
+    //取所有关注人的ID
+    public static function followIds($user_id) {
+        $result = static::find()
+            ->select('user_id')
+            ->where(['fans_id'=>$user_id])
+            ->asArray()
+            ->all();
+        $ids = [];
+        foreach($result as $row) {
+            $ids[] = $row['user_id'];
+        }
+        return $ids;
+    }
 }
