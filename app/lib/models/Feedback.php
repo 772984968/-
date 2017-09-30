@@ -46,4 +46,9 @@ class Feedback extends \yii\db\ActiveRecord
             'create_time' => 'Create Time',
         ];
     }
+    //关联用户表
+    public function getUserinfo(){
+      return  $this->hasOne(User::className(),['iid'=>'user_id']);
+    }
+
 }
