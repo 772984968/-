@@ -46,7 +46,7 @@ use yii\helpers\Url;
 				<input type="text" placeholder="奖励经验值" class="input" value="<?= $vo->credits ?>" name="credits"/>
 				&nbsp;	&nbsp;	&nbsp;
 				<a class="button bg-blue button-small icon-pencil"onclick="signupdate(this);" url="<?=  Url::to(['signupdate']) ?>" title="修改"></a>
-                &nbsp;	&nbsp;	&nbsp;&nbsp;	&nbsp;
+				<a class="button bg-red button-small icon-trash-o js-del"onclick="signdelete(this);" url="<?=  Url::to(['signupdate','iid'=>$vo->iid]) ?>" title="删除"></a>
 
 				<br><br>
 				</div>

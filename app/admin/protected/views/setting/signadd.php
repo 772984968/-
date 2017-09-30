@@ -25,6 +25,19 @@ use yii\helpers\Url;
             </div>
         </div>
             </form>
+              <form action="<?= Url::toRoute('signadd')?>" class="dux-form form-auto"  method="post">
+        <div class="panel-foot">
+            <div class="form-button">
+				<label class="label"> 持续签到--奖励积分值</label>
+				<input type="hidden" name="continue_day" value="1">
+				<input type="number" placeholder="签到天数" class="input" min="0" name="day" />
+				<input type="number" placeholder="奖励经验值" class="input" name="credits" min="0" /><br>
+				<br><br>
+               <button class="button bg-main" type="submit">添加</button>
+                <button class="button bg" type="reset">重置</button>
+            </div>
+        </div>
+            </form>
     </div>
 
 </div>
