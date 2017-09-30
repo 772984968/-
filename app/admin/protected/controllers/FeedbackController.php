@@ -13,8 +13,7 @@ class FeedbackController extends SellerController
         $this->_article = new Feedback();
     }
     public function actionIndex(){
-
-        $query = $this->query($this->_article ,'', 1,'feedback_id DESC');
+        $query = $this->query($this->_article ,'userinfo', 1,'feedback_id DESC');
         $this->data['count'] = $query['count'];
         $this->data['data']  = $query['data'];
         $this->data['page']  = $query['page'];
