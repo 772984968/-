@@ -37,7 +37,6 @@ $this->title = '';
 						      	<td><?= Html::encode($v->userinfo->llaccounts)?></td>
 								<td><?= Html::encode(mb_substr($v->content,0,5)).'...'?></td>
 								<td><?= Html::encode(date('Y-m-d H:i:s',$v->create_time))?></td>
-								<td><input type="hidden" value=""></td>
 								<th><a class="button bg-blue button-small icon-eye" onclick="details('<?= Html::encode($v->content)?>')" title="查看反馈详情"></a><a class="button bg-red button-small icon-trash-o js-del"  href="javascript:;"  url="/feedback/del?isCsrf=0" data="<?= Html::encode($v->feedback_id)?>" title="删除"></a></th>
 							</tr>
 						<?php endforeach;?>
