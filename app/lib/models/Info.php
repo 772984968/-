@@ -59,4 +59,19 @@ class Info extends \yii\db\ActiveRecord
             'date' => 'Date',
         ];
     }
+
+    //取地址为Area的，报名用户ID
+    public static function getAreaUserId($area)
+    {
+        $rst = static::find()
+            ->select('user_id')
+            ->where(['division'=>$area])
+            ->asArray()
+            ->all();
+        $ids = [];
+        foreach ($rst  as $row) {
+            $ids[] = $row['user_id'];
+        }
+        return $ids;
+    }
 }

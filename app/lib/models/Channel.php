@@ -66,6 +66,6 @@ class Channel extends \yii\db\ActiveRecord
 
     public function getUserinfo()
     {
-        return $this->hasOne(User::className(), ['iid'=>'user_id'])->select('iid,nickname,head,vip_type,');
+        return $this->hasOne(User::className(), ['iid'=>'user_id'])->select('iid,nickname,head,vip_type,fans_number');
     }
 }

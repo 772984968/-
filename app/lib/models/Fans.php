@@ -14,6 +14,7 @@ use lib\traits\operateDbTrait;
  */
 class Fans extends \yii\db\ActiveRecord
 {
+    public static $error;
     use operateDbTrait;
     /**
      * @inheritdoc
@@ -52,7 +53,8 @@ class Fans extends \yii\db\ActiveRecord
     {
         //已添加，直接返回
         if(static::findOne(['user_id'=>$follow_user_id, 'fans_id'=>$user_id])) {
-            return true;
+            static::$error = '您已经关注了';
+            return false;
         }
         $t = Yii::$app->getDb()->beginTransaction();
 
@@ -60,6 +62,7 @@ class Fans extends \yii\db\ActiveRecord
         $model->user_id = $follow_user_id;
         $model->fans_id = $user_id;
         if(!$model->save()) {
+            static::$error = '关注失败请稍候再试';
             $t->rollBack();
             return false;
         }
@@ -67,6 +70,7 @@ class Fans extends \yii\db\ActiveRecord
         $userModel = User::findOne($follow_user_id);
         $userModel->fans_number++;
         if(!$userModel->save()) {
+            static::$error = '关注失败请稍候再试';
             $t->rollBack();
             return false;
         }
@@ -74,6 +78,7 @@ class Fans extends \yii\db\ActiveRecord
         $fansModel = User::findOne($user_id);
         $fansModel->follow_number++;
         if(!$fansModel->save()) {
+            static::$error = '关注失败请稍候再试';
             $t->rollBack();
             return false;
         }
@@ -185,10 +190,28 @@ class Fans extends \yii\db\ActiveRecord
         foreach($result as $row) {
             $row[$infoField]['mutual'] = !empty($row['mutual']) ? '1' : '0';
         
-            $row[$infoField]['head'] = User::get_head_url($row[$infoField]['head']);
+            $row[$infoField]['head'] = \lib\nodes\UserNode::get_head_url($row[$infoField]['head']);
             $data[] = $row[$infoField];
         }
         return $data;
     }
 
+    //a是否关注了b
+    public static function aFollowb($usera, $userb) {
+        return static::findOne(['user_id'=>$userb, 'fans_id'=>$usera]) ? '1' : '0';
+    }
+
+    //取所有关注人的ID
+    public static function followIds($user_id) {
+        $result = static::find()
+            ->select('user_id')
+            ->where(['fans_id'=>$user_id])
+            ->asArray()
+            ->all();
+        $ids = [];
+        foreach($result as $row) {
+            $ids[] = $row['user_id'];
+        }
+        return $ids;
+    }
 }

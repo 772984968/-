@@ -80,7 +80,7 @@ class UserForm extends Model
     public function rules()
     {
         return [
-            [['username', 'password', 'captcha', 'user_id'], 'required'],
+            [['username', 'password', 'captcha', 'user_id', 'inviteCode'], 'required'],
             [['nickname'], 'required' , 'on' => 'register'],
             [['username', 'captcha', 'password'],'string','max'=>32],
             ['head', 'headToUrl'],
@@ -120,8 +120,8 @@ class UserForm extends Model
             $this->head = UploadForm::savebase64tofile($this->head);
 
             $img = new \yii\extend\Image($this->head,pathinfo($this->head, PATHINFO_EXTENSION));
-            $img->noopsyche(50,50);
-            $this->head = fastdfs_storage_upload_by_filename($this->head);
+            $img->noopsyche(500,500);
+            $this->head = json_encode(fastdfs_storage_upload_by_filename($this->head));
         }
     }
 
@@ -222,7 +222,7 @@ class UserForm extends Model
                     'share_number' => $model->share_number,
                     'follow_number' => $model->follow_number,
                     'diamond' => $model->diamond,
-                    'head' => $model->get_head_url($model->head),
+                    'head' => \lib\nodes\UserNode::get_head_url($model->head),
                     'is_vip' => $model->vip_type ? 1 : 0,
                     'accountlevel'=>$user->getAccountLevel(),
                     'wy_im_accid' => $model->wy_accid,
@@ -309,30 +309,11 @@ class UserForm extends Model
             $userModel = User::findOne($this->user_id);
             $userModel->attributes = AdCommon::array_clear_null($this->attributes);
 
-            if($this->head) {
-                $userModel->head = json_encode($this->head);
-            }
-
             if( $userModel->save() ) {
-
-                $url = $userModel->get_head_url($userModel->head);
-
-
-                $WyImInfo = [];
+                $url = \lib\nodes\UserNode::get_head_url($userModel->head);
                 if($this->head || $this->nickname) {
                     \lib\wyim\wyim::updateUinfo($userModel);
-                    $WyImInfo['icon'] = $url;
                 }
-
-                if($this->nickname) {
-                    $WyImInfo['name'] = $this->nickname;
-                }
-
-                if($WyImInfo) {
-                    $WyImInfo['accid'] = $userModel->wy_accid;
-
-                }
-                
                 return ['head'=> $url];
             } else {
                 $this->addError('iid', AdCommon::modelMessage($userModel->errors));

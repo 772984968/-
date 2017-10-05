@@ -165,7 +165,7 @@ class Image {
         $img_n=imagecreatetruecolor($this->width, $this->height);
 
         imagecopyresized($img_n, $img, 0, 0, $xoffset, $yoffset, $this->width, $this->height, $org_width, $org_height);
-        $value = $this->_imgType == 'png' ? 7 : 75; // PNG图片质量最高为9 其他格式为 100 默认为75
+        $value = $this->_imgType == 'png' ? 9 : 100; // PNG图片质量最高为9 其他格式为 100 默认为75
 
         $_save($img_n,$this->_tmpImg,$value);
 

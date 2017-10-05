@@ -28,7 +28,7 @@ class AlipayNode extends \yii\base\Component
 //实例化具体API对应的request类,类名称和接口名称对应,当前调用接口名称：alipay.trade.app.pay
         $request = new AlipayTradeAppPayRequest();
 //SDK已经封装掉了公共参数，这里只需要传入业务参数
-        $request->setNotifyUrl("http://appapi.atkj6666.cn/order/ali");
+        $request->setNotifyUrl(Yii::$app->params['ali_pay_Notify_Url']);
         $request->setBizContent($bizcontent);
 //这里和普通的接口调用不同，使用的是sdkExecute
         $response = $aop->sdkExecute($request);

@@ -54,7 +54,7 @@ class ArticleController extends SellerController
 		}
 
 		$query = $this->query($this->_article ,'cate', $where);
-		
+
 		$this->data['category'] = ArticlecatLibrary::APP()->getCategory();
 
 		$this->data['count'] = $query['count'];
@@ -62,7 +62,7 @@ class ArticleController extends SellerController
 		$this->data['page']  = $query['page'];
 		$this->data['searchvalue'] = $search;
 		$this->data['where'] = $where;
-		
+
 		$this->data['search'] = ['id' => \yii::t('app', '文章ID'),
 				'title' => \yii::t('app', '文章标题'),
 		];
@@ -99,6 +99,7 @@ class ArticleController extends SellerController
 			}
 		}
 		$this->data['model'] = $this->_article;
+
 		$this->data['category'] = ArticlecatLibrary::APP()->getSelectMenu();
 		return $this->view();
 	}
@@ -194,9 +195,8 @@ class ArticleController extends SellerController
     public function actionPusharticle()
     {
 
-        $selection = new Selection();
-
-        if ($this->isPost()){
+          $selection = new Selection();
+           if ($this->isPost()){
             $post = \Yii::$app->request->post();
 
             $selection->article_id = $post['article_id'];
@@ -217,7 +217,6 @@ class ArticleController extends SellerController
             }
         }else{
             $id = \Yii::$app->request->get('id');
-
             if(empty($id)) $this->error(\yii::t('app', 'error'));
             $article = $this->_article->findOne($id);
 

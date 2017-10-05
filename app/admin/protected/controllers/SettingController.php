@@ -92,6 +92,7 @@ class SettingController extends SellerController
             $data=\Yii::$app->request->post();
             $signtting->sign_day=$data['day'];
             $signtting->credits=$data['credits'];
+            if (isset($data['continue_day']))$signtting->continue_day=1;
             if ($signtting->save()){
                 return $this->success('添加成功！','signsetting');
             }else{
