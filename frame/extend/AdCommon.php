@@ -798,7 +798,7 @@ class AdCommon
 		$newarr = [];
 		foreach($arr as $key => $value)
 		{
-			if(!is_null($value) && $value!=="") {
+			if(!is_null($value) && $value!=="" && $value!==false) {
 				$newarr[$key] = $value;
 			}
 		}
