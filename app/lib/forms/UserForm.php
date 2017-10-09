@@ -125,9 +125,9 @@ class UserForm extends Model
                 $head_is = json_encode(fastdfs_storage_upload_by_filename($head)); //保存到图片服务器
                 if($head_is) {
                     $this->head = $head_is;
+                    return;
                 }
                 unlink($head);  //删除文件
-                return;
             }
             $this->addError('head', '头像上传失败,请稍候再试');
             return false;
