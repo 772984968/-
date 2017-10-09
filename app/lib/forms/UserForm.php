@@ -120,11 +120,17 @@ class UserForm extends Model
             $head = UploadForm::savebase64tofile($this->head);
             if($head)
             {
-                $this->head = $head;
-                $img = new \yii\extend\Image($this->head,pathinfo($this->head, PATHINFO_EXTENSION));
-                $img->noopsyche(500,500);
-                $this->head = json_encode(fastdfs_storage_upload_by_filename($this->head));
+                $img = new \yii\extend\Image($head,pathinfo($head, PATHINFO_EXTENSION));
+                $img->noopsyche(500,500);   //裁剪图片
+                $head = json_encode(fastdfs_storage_upload_by_filename($head)); //保存到图片服务器
+                if($head) {
+                    $this->head = $head;
+                }
+                unlink($head);  //删除文件
+                return;
             }
+            $this->addError('head', '头像上传失败,请稍候再试');
+            return false;
         }
     }
 
