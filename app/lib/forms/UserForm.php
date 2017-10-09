@@ -122,9 +122,9 @@ class UserForm extends Model
             {
                 $img = new \yii\extend\Image($head,pathinfo($head, PATHINFO_EXTENSION));
                 $img->noopsyche(500,500);   //裁剪图片
-                $head = json_encode(fastdfs_storage_upload_by_filename($head)); //保存到图片服务器
-                if($head) {
-                    $this->head = $head;
+                $head_is = json_encode(fastdfs_storage_upload_by_filename($head)); //保存到图片服务器
+                if($head_is) {
+                    $this->head = $head_is;
                 }
                 unlink($head);  //删除文件
                 return;
