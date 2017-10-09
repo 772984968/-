@@ -18,6 +18,7 @@ use Yii;
  */
 class UserWithdrawDeposit extends \yii\db\ActiveRecord
 {
+    const SEND_BACK = 3;
     /**
      * @inheritdoc
      */
@@ -57,5 +58,35 @@ class UserWithdrawDeposit extends \yii\db\ActiveRecord
             'pay_sn' => 'Pay Sn',
             'create_time' => 'Create Time',
         ];
+    }
+
+    //退出
+    public function sendBack()
+    {
+        if($this->status == 0)
+        {
+            $t = Yii::$app->getDb()->beginTransaction();
+            $userModel = User::findOne($this->user_id);
+            if(!$userModel) {
+                $t->rollBack();
+                return false;
+            }
+            if(!Yii::$app->factory->getwealth('wallet',$userModel)->add([
+                'number' => $this->number,
+                'type' => \Config::WALLET_SEND_BACK,
+            ])) {
+                $t->rollBack();
+                return false;
+            }
+            $this->status = static::SEND_BACK;
+            if($this->save()) {
+                $t->commit();
+                return true;
+            } else {
+                $t->rollBack();
+                return false;
+            }
+        }
+
     }
 }
