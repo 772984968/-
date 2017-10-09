@@ -117,11 +117,14 @@ class UserForm extends Model
     {
         if(!$this->hasErrors())
         {
-            $this->head = UploadForm::savebase64tofile($this->head);
-
-            $img = new \yii\extend\Image($this->head,pathinfo($this->head, PATHINFO_EXTENSION));
-            $img->noopsyche(500,500);
-            $this->head = json_encode(fastdfs_storage_upload_by_filename($this->head));
+            $head = UploadForm::savebase64tofile($this->head);
+            if($head)
+            {
+                $this->head = $head;
+                $img = new \yii\extend\Image($this->head,pathinfo($this->head, PATHINFO_EXTENSION));
+                $img->noopsyche(500,500);
+                $this->head = json_encode(fastdfs_storage_upload_by_filename($this->head));
+            }
         }
     }
 
