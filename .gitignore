@@ -1,4 +1,6 @@
 app/lib/config/db.php
+*.jpg
+*.png
 *.jpeg
 *.apk
 .idea
