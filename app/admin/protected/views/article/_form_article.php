@@ -36,11 +36,13 @@ use yii\helpers\Html;
                     <div class="label"><label>图片</label></div>
                     <div class="field">
                         <input type="text" class="input" id="image" name="Article[article_img]" size="38" value="<?=isset($model['article_img']) ? $model['article_img'] : ''?>">
-                        <a class="button bg-blue button-small  js-img-upload" data="image" id="image_upload" preview="image_preview" href="javascript:;" ><span class="icon-upload"> 上传</span></a>
+                        <a class="button bg-blue button-small  js-img-upload" data="image" id="image_upload" preview="image_preview" href="javascript:;" ><span class="icon-upload"> 图片上传</span></a>
+                        <a class="button bg-blue button-small  js-file-upload" data="file" id="image_upload" preview="image_preview" href="javascript:;" ><span class="icon-upload"> 文件上传</span></a>
+
                         <a class="button bg-blue button-small icon-picture-o" id="image_preview" href="javascript:;" > 预览</a>
-                        height：<input type="text" value="600" class="input" id="heigh" placeholder="不设置不改变">
-                        width:<input type="text" value="600" class="input" id="widt" placeholder="不设置不改变">
-                        <input type="radio" value="fit" name="mod" checked="checked">智适应<input type="radio" value="exact" name="mod">严格大小
+                        height：<input type="text" value="600" class="input" id="height" placeholder="不设置不改变">
+                        width:<input type="text" value="600" class="input" id="width" placeholder="不设置不改变">
+                        <input type="radio" value="fit" name="model" checked="checked">智适应<input type="radio" value="exact" name="model">严格大小
                         <div class="input-note"></div>
                     </div>
                 </div>

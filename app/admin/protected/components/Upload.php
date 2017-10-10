@@ -59,12 +59,6 @@ class Upload
      */
     public function uploadImage($file, $small_thumb = false,$type=1)
     {
-        $height=\Yii::$app->request->post('height');
-        $width=\Yii::$app->request->post('width');
-        $mode=\Yii::$app->request->post('mode');
-        if (isset($height))$this->height=$height;
-        if (isset($width))$this->width=$width;
-        if (isset($mode))$this->mode=$mode;
         if(!empty($this->_errors)) return false;
         if (!$this->checkUpload($file,$type))
         {
@@ -79,44 +73,23 @@ class Upload
         {
             mkdir($save_path, 0777, true);
         }
-
         $save_path       .= $filename;
-
         $this->_file_name = $this->_setting['upload_domain'].$show_path.$filename;
-        /**
+
+        /***
          *
-         *文件裁剪插件
+         *图片裁剪插件
          */
-        $editer= new Editor();
-        if ($editer->isAvailable()){
-            $editer->open($image,$tmp_name);
-            if ($this->height!='0'&&$this->width!='0'){
-                if ($this->mode!='') {
-                    $editer->resize($image, $this->width, $this->height,$this->mode);
-                }else{
-                    $editer->resize($image, $this->width, $this->height);
-                }
-            }elseif($this->height=='0'&&$this->width!='0'){
-                $editer->resizeExactWidth($image, $this->width);
-            }elseif ($this->height!=0&&$this->width=='0'){
-                $editer->resizeExactHeight($image, $this->height);
-            }
-            if (!$editer->save($image,$save_path)){
+        if ($this->_is_image===true){
+            $this->imageResizer($tmp_name,$save_path);
+        }else{
+            $mv = move_uploaded_file($tmp_name, $save_path);
+            if(!$mv)
+            {
                 $this->_errors = '移动文件失败';
                 return false;
-            }else{
-
             }
-
         }
-
-//         $mv = move_uploaded_file($tmp_name, $save_path);
-
-//         if(!$mv)
-//         {
-//             $this->_errors = '移动文件失败';
-//             return false;
-//         }
 
         return true;
     }
@@ -126,9 +99,10 @@ class Upload
      */
     public function checkUpload($file,$type)
     {
+
         if (!$file || $file['error'] != UPLOAD_ERR_OK)
         {
-            $this->_errors = '文件上传失败（'.$file['error'].'）';
+           $this->_errors = '文件上传失败（'.$file['error'].'）';
             return false;
         }
 
@@ -152,10 +126,11 @@ class Upload
 
 	        if ($file['size'] > $this->_image_size * 1024)
 	        {
-	            $this->_errors = "上传图片大小超出限制";
+	           $this->_errors = "上传图片大小超出限制";
 	            return false;
 	        }
         }else {
+
         	if(in_array($file_ext, $this->_file_ext))
         	{
         		$this->_is_image = false;
@@ -185,7 +160,39 @@ class Upload
      */
     private function getExt($realname)
     {
+
         $pathinfo = pathinfo($realname);
         return trim(strtolower($pathinfo['extension']));
+    }
+    /**
+     *对上传的图片进行裁剪编辑等
+     */
+    public function imageResizer($tmp_name,$save_path){
+        $height=\Yii::$app->request->post('height');
+        $width=\Yii::$app->request->post('width');
+        $mode=\Yii::$app->request->post('mode');
+        if (isset($height))$this->height=$height;
+        if (isset($width))$this->width=$width;
+        if (isset($mode))$this->mode=$mode;
+        $editer= new Editor();
+        if ($editer->isAvailable()){
+            $editer->open($image,$tmp_name);
+            if ($this->height!='0'&&$this->width!='0'){
+                if ($this->mode!='') {
+                    $editer->resize($image, $this->width, $this->height,$this->mode);
+                }else{
+                    $editer->resize($image, $this->width, $this->height);
+                }
+            }elseif($this->height=='0'&&$this->width!='0'){
+                $editer->resizeExactWidth($image, $this->width);
+            }elseif ($this->height!=0&&$this->width=='0'){
+                $editer->resizeExactHeight($image, $this->height);
+            }
+            if (!$editer->save($image,$save_path)){
+
+                $this->_errors = '移动文件失败';
+                return false;
+            }
+        }
     }
 }

@@ -440,7 +440,7 @@ $.ajaxSetup({
                     //裁剪参数
                     var height=$('#height').val();
                     var width=$('#width').val();
-                    var mode=$("input[name='mode']:checked").val();
+                    var mode=$("input[name='model']:checked").val();
                     if(height==null||height==''){
                     	height=0;
                     }
@@ -450,7 +450,6 @@ $.ajaxSetup({
                     if(mode==null||mode==''){
                     	mode='fit';
                     }
-
                     uploader.option('formData' , $.extend(options.uploadParams(), {'class_id':$('#class_id').val(),'height':height,'width':width,'mode':mode}));
                     upButton.attr('disabled', true);
                     upButton.find('.webuploader-pick span').text(' 等待');
