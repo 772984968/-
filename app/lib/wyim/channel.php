@@ -151,6 +151,7 @@ class channel extends wy
         Yii::$app->redis->set(static::LIST_CACHE.$cid, json_encode($info));
     }
 
+    //结束直播
     public static function finish($cid, $grade)
     {
 

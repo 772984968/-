@@ -12,8 +12,10 @@ use Yii;
  * @property string $name
  * @property integer $addtime
  */
-class Adstype extends \yii\db\ActiveRecord
+class Adstype extends BaseModel
 {
+    const LIST_CACHE_NAME = 'ads_type_list_';
+    const NUMBER_NAME = 'id';
     /**
      * @inheritdoc
      */
@@ -61,6 +63,18 @@ class Adstype extends \yii\db\ActiveRecord
     public function getAds()
     {
         return $this->hasMany(Ads::className(), ['type' => 'type'])->orderBy('listorder DESC');
+    }
+
+    //取缓存中 id 序号行
+    public static function getCacheRow( $id ) {
+
+        $data = static::getCacheList();
+        foreach($data as $row) {
+            if($row['type'] == $id) {
+                return $row;
+            }
+        }
+        return false;
     }
 
     
