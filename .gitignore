@@ -11,6 +11,7 @@ app/admin/assets/
 app/back/assets/
 app/api/assets/
 app/admin/style/
+app/admin/index.php
 app/upload/file/
 app/api/index.php
 app/api/uploads/
