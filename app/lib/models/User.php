@@ -36,7 +36,6 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return '{{%user}}';
     }
-
     /**
      * @inheritdoc
      */
@@ -50,7 +49,7 @@ class User extends ActiveRecord implements IdentityInterface
             ['email', 'email'],
             [['diamond','wallet', 'reward_count'], 'number'],
             [['vip_start', 'vip_end'],'safe'],
-            [['status', 'role', 'credits', 'agent', 'share_number', 'follow_number', 'fans_number', 'vip_type', 'live_telecast_status'], 'integer'],
+            [['status', 'role', 'credits', 'agent', 'share_number', 'follow_number', 'fans_number', 'vip_type', 'live_telecast_status','is_robot'], 'integer'],
             ['head', 'string', 'max' => 100],
             ['nickname', 'string', 'max' => 15],
             [['name'], 'string', 'max' => 15],
@@ -60,7 +59,6 @@ class User extends ActiveRecord implements IdentityInterface
             [['address', 'signature'], 'string', 'max' => 50],
         ];
     }
-
     //通过ID取用户实例
     public static function findIdentity($id)
     {
@@ -133,7 +131,7 @@ class User extends ActiveRecord implements IdentityInterface
     public function getMemberinfo() {
         return $this->hasOne(Member::className(),['iid'=>'vip_type']);
     }
-    
+
     public function countPrice() {
         return (string)(number_format($this->wallet + $this->diamond / \lib\models\Setting::keyTovalue('money2diamond') * 100,2));
     }
@@ -196,6 +194,9 @@ class User extends ActiveRecord implements IdentityInterface
                 case 414:   //用户已经注册更新wytoken
                         $result = wyim::refreshToken($this);
                     break;
+                default:
+                    echo wyim::$error;
+                    return false;
             }
             //登记失败后处理方法
         }
@@ -213,7 +214,7 @@ class User extends ActiveRecord implements IdentityInterface
     //更新网易IM信息
     public function updateWyImInfo($data)
     {
-        
+
         $result = wyim::updateUinfo($data);
         if ($result === false) {
             //登记失败后处理方法
@@ -221,6 +222,7 @@ class User extends ActiveRecord implements IdentityInterface
             return true;
         }
     }
+
 
 
     //取上一级
@@ -231,6 +233,6 @@ class User extends ActiveRecord implements IdentityInterface
         }
         return false;
     }
-   
+
 
 }

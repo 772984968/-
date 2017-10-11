@@ -106,6 +106,7 @@ $this->title = '';
 
                                     <?php else: ?>
                                         <!--文本-->
+
                                         <?= Html::encode( $value ) ?>
 
                                     <?php endif; ?>
@@ -129,7 +130,7 @@ $this->title = '';
                             </td>
                         </tr>
                     <?php endforeach;?>
-               
+
                 </tbody>
             </table>
         </div>
