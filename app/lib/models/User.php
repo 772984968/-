@@ -7,6 +7,7 @@ use yii\extend\AdCommon;
 use yii\web\IdentityInterface;
 use lib\wyim\wyim;
 use lib\wealth\Diamond;
+use lib\traits\tokenTrait;
 
 /**
  * User model
@@ -22,12 +23,14 @@ use lib\wealth\Diamond;
  * @property integer $updated_at
  * @property string $password write-only password
  */
-class User extends ActiveRecord implements IdentityInterface
+class User extends ActiveRecord
 {
+    use tokenTrait;
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
     const STATUS_INITIALIZE = 1;
 
+    public $userId;
 
     /**
      * @inheritdoc
@@ -92,11 +95,11 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     //通过联联帐号找实例
-    public static function findByLlaccounts($username)
+    public static function findByLlaccounts($llaccount)
     {
 
         return static::find()
-            ->where('llaccounts = :username AND status !=0 ', [':username' => $username])
+            ->where('llaccounts = :llaccount AND status !=0 ', [':llaccount' => $llaccount])
             ->limit(1)
             ->one();
     }
@@ -106,18 +109,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return $this->getPrimaryKey();
     }
-
-    //取密码
-    public function getAuthKey()
-    {
-        return $this->auth_key;
-    }
-
-    //验证authkey是否正确
-    public function validateAuthKey($authKey)
-    {
-        return $this->getAuthKey() === $authKey;
-    }
+    
 
     //取代理信息
     public function getAgentinfo() {
@@ -133,15 +125,156 @@ class User extends ActiveRecord implements IdentityInterface
     public function getMemberinfo() {
         return $this->hasOne(Member::className(),['iid'=>'vip_type']);
     }
-    
-    public function countPrice() {
-        return (string)(number_format($this->wallet + $this->diamond / \lib\models\Setting::keyTovalue('money2diamond') * 100,2));
-    }
 
     //关联钻石表
     public function getDiamondinfo() {
         return $this->hasMany(UserDiamondLog::className(),['user_id'=>'iid']);
     }
+
+    //登入
+    public function login($account, $password)
+    {
+
+        if( AdCommon::isMobile($account) ) {
+            $model = static::findByUsername( $account );
+        } else {
+            $model = static::findByLlaccounts( $account );
+        }
+
+        if( empty($model) || !$model->validatePassword($password) ) {
+            throw new \Exception(Yii::t('common', 'password_error'));
+        }
+     
+        if(HUANG_JING != 0)
+        {
+            $model->setToken();
+            return $model->getLoginInfo();
+        }
+        else
+        {
+            Yii::$app->getSession()->set('userId', $model->iid);
+            return true;
+        }
+    }
+
+    //取登入信息
+    public function getLoginInfo()
+    {
+        return [
+            'userid'=>$this->iid,
+            'token'=> $this->getToken(),
+            'nickname' => $this->nickname,
+            'llaccounts' => $this->llaccounts,
+            'signature' => $this->signature,
+            'fans_number' => $this->fans_number,
+            'share_number' => $this->share_number,
+            'follow_number' => $this->follow_number,
+            'diamond' => $this->diamond,
+            'head' => $this->get_head(),
+            'is_vip' => $this->vip_type ? 1 : 0,
+            'accountlevel'=>[
+                "iid"=>"5",
+                "name"=>"一级",
+                "credits"=>"0",
+                "withdrawal_proportion"=>"1"
+            ],
+            'wy_im_accid' => $this->wy_accid,
+            'wy_im_token' => $this->wy_token,
+            'inviteCode' => $this->inviteCode,
+            'total_assets' => $this->countPrice(),
+        ];
+    }
+
+    //取用户信息
+    public function getinfo()
+    {
+        return [
+            'head' => $this->get_head(),
+            'nickname' => $this->nickname,
+            'llaccounts' => $this->llaccounts,
+            'signature' => $this->signature,
+            'name' => $this->name,
+            'sex' => $this->sex,
+            'province' => $this->province,
+            'city' => $this->city,
+            'vip_type' => $this->vip_type,
+            'fans_number' => $this->fans_number,
+            'follow_number' => $this->follow_number,
+            'wy_accid' => $this->wy_accid,
+        ];
+    }
+
+    //检查权限
+    public function checkPower($power)
+    {
+        if(!$this->vip_type) {
+            return false;
+        }
+
+        $vip = Member::getCacheRow($this->vip_type);
+        if(!$vip) {
+            return false;
+        }
+
+        if(in_array($power,$vip['powers'])) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    //取头像路径
+    public function get_head()
+    {
+
+        $head_arr = json_decode($this->head);
+
+        if($head_arr && is_object($head_arr)) {
+            if(empty($head_arr->group_name) ||  empty($head_arr->filename)) {
+                $url = Yii::$app->params['webpath'] . '/uploads/default_head.png';
+            } else {
+                $server = Yii::$app->params['imgServer'][$head_arr->group_name] ?? '';
+                $url = $server . $head_arr->group_name . '/' . $head_arr->filename;
+            }
+        } else {
+            $url = $this->head;
+        }
+        return $url ?? '';
+    }
+
+
+    public static function get_head_url($head)
+    {
+        $head_arr = json_decode($head);
+
+        if($head_arr && is_object($head_arr)) {
+            if(empty($head_arr->group_name) ||  empty($head_arr->filename)) {
+                $url = Yii::$app->params['webpath'] . '/uploads/default_head.png';
+            } else {
+                $server = Yii::$app->params['imgServer'][$head_arr->group_name] ?? '';
+                $url = $server . $head_arr->group_name . '/' . $head_arr->filename;
+            }
+        } else {
+            $url = $head;
+        }
+        return $url ?? '';
+    }
+
+    //计算总资产
+    public function countPrice() {
+        return (string)(number_format($this->wallet + $this->diamond / \lib\models\Setting::keyTovalue('money2diamond') * 100,2));
+    }
+
+    //修改密码
+    public function changePassword($password) {
+        $this->setPassword($password);
+        if(!$this->save()) {
+            throw new \Exception(AdCommon::modelMessage($this->errors));
+        }
+        return true;
+    }
+
     //验证密码
     public function validatePassword($password)
     {
@@ -162,31 +295,6 @@ class User extends ActiveRecord implements IdentityInterface
         }
     }
 
-    //创建authkey
-    public function generateAuthKey()
-    {
-        $this->auth_key = Yii::$app->security->generateRandomString();
-    }
-
-    //生成密码重置令牌
-    public function generatePasswordResetToken()
-    {
-        $this->password_reset_token = Yii::$app->security->generateRandomString() . '_' . time();
-    }
-
-    //消除密码重置令牌
-    public function removePasswordResetToken()
-    {
-        $this->password_reset_token = null;
-    }
-
-    //这个就是我们进行yii\filters\auth\QueryParamAuth调用认证的函数，下面会说到。
-    public function loginByAccessToken($accessToken, $type)
-    {
-        //查询数据库中有没有存在这个token
-        return static::findIdentityByAccessToken($accessToken, $type);
-    }
-
     //用户注册网易信息
     public function registerWyAccid()
     {
@@ -196,6 +304,7 @@ class User extends ActiveRecord implements IdentityInterface
                 case 414:   //用户已经注册更新wytoken
                         $result = wyim::refreshToken($this);
                     break;
+
             }
             //登记失败后处理方法
         }
@@ -221,7 +330,6 @@ class User extends ActiveRecord implements IdentityInterface
             return true;
         }
     }
-
 
     //取上一级
     public function getTop()

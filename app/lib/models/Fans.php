@@ -117,11 +117,13 @@ class Fans extends \yii\db\ActiveRecord
         return true;
     }
 
+    //取粉丝信息
     public function getFansinfo()
     {
         return $this->hasOne(User::className(), ['iid'=>'fans_id'])->select('iid,nickname,head,fans_number,vip_type');
     }
 
+    //取关注人的信息
     public function getFollowinfo()
     {
         return $this->hasOne(User::className(), ['iid'=>'user_id'])->select('iid,nickname,head,fans_number,vip_type');
@@ -139,6 +141,7 @@ class Fans extends \yii\db\ActiveRecord
         $select = "at_fans.fans_id,at_fans.iid,fs.iid as mutual";
         static::$key_name = 'at_fans.iid';
         $result = self::list(['at_fans.user_id'=>$user_id], $isNext, 'fansinfo', 20, $join, $select);
+
         return self::format($result, 'fansinfo');
     }
 
@@ -163,6 +166,7 @@ class Fans extends \yii\db\ActiveRecord
         $data = [];
         foreach($result as $row) {
             $row['followinfo']['mutual'] = '1';
+            $row['followinfo']['head'] = \lib\nodes\UserNode::get_head_url($row['followinfo']['head']);
             $data[] = $row['followinfo'];
         }
         return $data;
@@ -193,6 +197,7 @@ class Fans extends \yii\db\ActiveRecord
             $row[$infoField]['head'] = \lib\nodes\UserNode::get_head_url($row[$infoField]['head']);
             $data[] = $row[$infoField];
         }
+
         return $data;
     }
 
