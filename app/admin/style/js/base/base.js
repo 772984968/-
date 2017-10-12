@@ -448,7 +448,8 @@ $.ajaxSetup({
                     	width=0;
                     }
                     if(mode==null||mode==''){
-                    	mode='fit';
+
+                    	mode='exact';
                     }
                     uploader.option('formData' , $.extend(options.uploadParams(), {'class_id':$('#class_id').val(),'height':height,'width':width,'mode':mode}));
                     upButton.attr('disabled', true);
@@ -460,7 +461,7 @@ $.ajaxSetup({
                     upButton.attr('disabled', false);
                     upButton.find('.webuploader-pick span').text(' 上传');
                     if (data.status) {
-                        urlVal.val(data.data.url);
+                       urlVal.val(data.data.url);
                         options.complete(data.data);
                         preview.siblings('.upload_image_show').attr('src',data.data.url);
                         layer.alert('添加成功', {icon: 3});

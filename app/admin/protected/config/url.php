@@ -133,5 +133,12 @@ return [
 	'VipVideoEdit' => '/vipvideo/change',
 	'VipVideoDel' => '/vipvideo/del',
 	'VipVideoMAdd' => '/vipvideo/madd',
+	/*-------------- 机器人管理 ------------------*/
+
+    'Robotindex' => '/robot/index',
+    'Robotadd'=> '/robot/add',
+    'RobotEdit'=> '/robot/change',
+    'Robotdel'=> '/robot/del',
+
 
 ];

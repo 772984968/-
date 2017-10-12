@@ -24,9 +24,9 @@ class Upload
     public $_image_path   = '';    //默认图片上传路径
     public $_thumb_path   = '';    //默认缩略图上传路径
     public $_file_path    = '';    //默认文件上传路径
-    public $height='';              //图片设置高度
-    public $width='';               //图片设置宽度
-    public $mode='';               //是否是智适应1智适应0否
+    public $height='0';              //图片设置高度
+    public $width='0';               //图片设置宽度
+    public $mode='';               //是否是智适应:fit智适应否:exact
 
     /**
      * [__construct 构造函数]

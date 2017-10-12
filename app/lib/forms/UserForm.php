@@ -89,7 +89,8 @@ class UserForm extends Model
             ['username', 'unique', 'targetClass' => '\lib\models\User', 'message' => '帐号已经注册。','on'=>['register']],
             ['captcha','validateCode','on'=>'register'],//
             ['captcha','validateCode2','on'=>'msgpassword'],
-//             [['user_id','time'], 'required' , 'on' => 'sign'],
+//          [['user_id','time'], 'required' , 'on' => 'sign'],
+
         ];
     }
 
@@ -172,10 +173,8 @@ class UserForm extends Model
             $model->attributes = AdCommon::array_clear_null($this->attributes);
             $model->head = Yii::$app->params['webpath'] . '/uploads/default_head.png';
             $model->setPassword( $this->password );
-
             if( $model->save() ) {
                 $model->registerWyAccid();      //注册网易IM
-
                 $this->setScenario('login');    //登入
                 $result = $this->login();
                 return $result;
