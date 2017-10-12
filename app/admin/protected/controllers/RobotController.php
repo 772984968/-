@@ -95,6 +95,8 @@ class RobotController extends TemplateController
             $model = new $this->config['modelName'];
             $model = new User();
             $data['llaccounts']='A'.rand(10000000,99999999);
+            $data['is_robot']='1';
+            $data['password_hash']='1';
             $model->attributes = $data;
 //             if(AdCommon::isMobile( $model->username )||AdCommon::isEmail($model->username)) {
 //             } else {
@@ -143,7 +145,7 @@ class RobotController extends TemplateController
             ['key'=>'province','value'=>'广东省','html'=>'text','option'=>''],
             ['key'=>'city','value'=>'深圳市','html'=>'text','option'=>''],
             ['key'=>'address','value'=>'','html'=>'text','option'=>''],
-            ['key'=>'is_robot','value'=>'1','html'=>'text','option'=>''],
+          //  ['key'=>'is_robot','value'=>'1','html'=>'text','option'=>''],
 
         ];
     }

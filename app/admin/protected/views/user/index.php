@@ -57,11 +57,6 @@ $this->title = '';
                     </div>
 
                 </div>
-                <div class="tools-function clearfix">
-                                <div class="button-group float-right">
-                            <a class="button button-small bg-dot icon-plus dropdown-toggle" href="<?= Url::toRoute(['user/addrobot']) ?>"> 添加机器人</a>
-                        </div>
-                </div>
         <?php echo html::endForm();?>
         <?php endif; ?>
 
