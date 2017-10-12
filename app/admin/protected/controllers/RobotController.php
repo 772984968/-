@@ -167,7 +167,7 @@ class RobotController extends TemplateController
             'province',
             'city',
             'address',
-            'is_robot',
+
         ];
     }
 
