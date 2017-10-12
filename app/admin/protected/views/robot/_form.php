@@ -76,6 +76,10 @@ use yii\helpers\Html;
 
                                     <?php default: ?>
                                         <input name='<?= $fileName ?>' type='text' class='input' size='60' value='<?= Html::encode($field['value']) ?>' <?php if($config['method'] != 'change' && !isset($field['update']) && !empty($field['datatype'])): ?> datatype="<?= $field['datatype'] ?? '' ?>" <?php endif; ?> <?php if(isset($field['changedisabled']) && $config['method'] == 'change'):?> disabled="disabled" <?php endif;?> />
+                                        <?php if ($fileName=='User[nickname]'): ?>
+                                       <button class="button bg" type="reset"  onclick="refresh();"><span class="icon-refresh"></span></button>
+                                        <?php endif;?>
+
                                     <?php break; ?>
 
                                 <?php endswitch; ?>
@@ -89,7 +93,17 @@ use yii\helpers\Html;
                 </div>
               </div>
         </div>
+<script type="text/javascript">
+ function refresh(){
+	 var name=['李_','宝宝','王强','张','郑','刘','最强','上官','司徒__','欧阳__','_轩辕'];
+		var ming=["彪_","巨昆","锐_","翠花","小小","撒撒","熊大","宝强",'哒','A','bc','bb','pp','_sb','_wo','王者','民','明','林'];
+		var xing = name[Math.floor(Math.random() * (name.length))];
+		var ming = ming[Math.floor(Math.random() * (ming.length))];
+		var name=xing+ming;
+		$('input[datatype=nickname]').attr('value',name);
+		}
 
+</script>
 
 <script>
     Do.ready('base', function () {
