@@ -94,7 +94,7 @@ class RobotController extends TemplateController
             $data = $this->post( $this->config['modelShortName'] );
             $model = new $this->config['modelName'];
             $model = new User();
-            $data['llaccounts']='A'.rand(10000000,99999999);
+            $data['llaccounts']='AAAA'.rand(10000000,99999999);
             $data['is_robot']='1';
             $data['password_hash']='1';
             $model->attributes = $data;
