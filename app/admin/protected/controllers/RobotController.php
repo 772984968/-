@@ -103,6 +103,9 @@ class RobotController extends TemplateController
 //                 $this->error('账号格式不正确');
 
 //             }
+            if($model->username==''){
+                    $this->error('账户不能为空');
+            }
             if ($model::findByUsername($model->username)||$model::findByEmail($model->email)){
                 $this->error('账号或邮箱已经存在');
             }
@@ -138,7 +141,7 @@ class RobotController extends TemplateController
         return [
             ['key'=>'username','value'=>'','html'=>'text','option'=>'','changedisabled'=>1],
             ['key'=>'head','value'=>'','html'=>'image','option'=>''],
-            ['key'=>'nickname','value'=>'宝宝','html'=>'text','option'=>'','datatype'=>'nickname'],
+            ['key'=>'nickname','value'=>'宝宝','html'=>'text','option'=>''],
             ['key'=>'signature','value'=>'','html'=>'text','option'=>''],
             ['key'=>'name','value'=>'','html'=>'text','option'=>''],
             ['key'=>'sex','value'=>'','html'=>'select','option'=>['男'=>'男','女'=>'女']],

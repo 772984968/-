@@ -77,7 +77,7 @@ use yii\helpers\Html;
                                     <?php default: ?>
                                         <input name='<?= $fileName ?>' type='text' class='input' size='60' value='<?= Html::encode($field['value']) ?>' <?php if($config['method'] != 'change' && !isset($field['update']) && !empty($field['datatype'])): ?> datatype="<?= $field['datatype'] ?? '' ?>" <?php endif; ?> <?php if(isset($field['changedisabled']) && $config['method'] == 'change'):?> disabled="disabled" <?php endif;?> />
                                         <?php if ($fileName=='User[nickname]'): ?>
-                                       <button class="button bg" type="reset"  onclick="refresh();"><span class="icon-refresh"></span></button>
+                                       <button class="button bg" type="button"  onclick="refresh();"><span class="icon-refresh"></span></button>
                                         <?php endif;?>
 
                                     <?php break; ?>
@@ -100,7 +100,7 @@ use yii\helpers\Html;
 		var xing = name[Math.floor(Math.random() * (name.length))];
 		var ming = ming[Math.floor(Math.random() * (ming.length))];
 		var name=xing+ming;
-		$('input[datatype=nickname]').attr('value',name);
+		$("input[name='User[nickname]']").attr('value',name);
 		}
 
 </script>
