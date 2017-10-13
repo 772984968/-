@@ -97,6 +97,24 @@ class ActivityReward extends \yii\db\ActiveRecord
 
     }
 
+    //获取，注册奖励
+    public static function execute_register($parameter) {
+
+        $activitys = static::getActivityRows('register'); //取直活动
+
+        foreach ($activitys as $row) {
+
+            $check_rst = static::checkBaseInfo($row);        //检查通用的要求
+
+            if($check_rst !== true) {
+                continue;
+            }
+
+            static::reward($row);
+        }
+
+    }
+
     //获取，观看直播奖励
     public static function execute_watch_live($parameter)
     {

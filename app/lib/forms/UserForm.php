@@ -175,7 +175,9 @@ class UserForm extends Model
             $model->setPassword( $this->password );
             if( $model->save() ) {
                 $model->registerWyAccid();      //注册网易IM
-                $this->setScenario('login');    //登入
+                \lib\models\ActivityReward::$userModel = $model;
+                \lib\models\ActivityReward::get('register');        //获取注册优惠
+                $this->setScenario('login');                        //登入
                 $result = $this->login();
                 return $result;
             } else {
