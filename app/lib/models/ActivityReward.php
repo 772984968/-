@@ -264,9 +264,10 @@ class ActivityReward extends \yii\db\ActiveRecord
     }
 
     //删除激活
-    private static function clearActivity($event)
+    private static function clearActivity($event,$user_id)
     {
-        return Yii::$app->redis->HDEL(static::USER_ACTIVITY_REWARD_STATUS.static::$userModel->iid, $event);
+        $user_id = $user_id ?: static::$userModel->iid;
+        return Yii::$app->redis->HDEL(static::USER_ACTIVITY_REWARD_STATUS.$user_id, $event);
     }
 
     //拿取活动奖励
@@ -310,6 +311,12 @@ class ActivityReward extends \yii\db\ActiveRecord
         return Yii::$app->redis->hincrby(static::USER_ACTIVITY_STATUS_CACHE.static::$userModel->iid, $activity['event'].$activity['iid'],1);
     }
 
+    //消除用户活动状态
+    public static function clearstatus($activity,$user_id=0) {
+        $user_id = $user_id ?: static::$userModel->iid;
+        return Yii::$app->redis->hdel(static::USER_ACTIVITY_STATUS_CACHE.$user_id, $activity['event'].$activity['iid']);
+    }
+
     //取一个活动所有的状态
     public static function getActivityStatus($type) {
         $activitys = static::getActivityRows($type);
@@ -319,4 +326,52 @@ class ActivityReward extends \yii\db\ActiveRecord
         }
         return $newdata;
     }
+
+    //刷新缓存状态
+    public static function refurbishAll()
+    {
+        //取出所有活动
+        $activitys = static::find()->asArray()->all();
+        static::refurbish_jh($activitys);       //消除激活状态
+        static::refurbish_hd($activitys);       //消除活动状态
+
+    }
+
+    public static function refurbish_hd(&$activitys)
+    {
+        $redis = Yii::$app->redis;
+        //取出所有 ‘领取记录键’
+        $keys = $redis->keys(static::USER_ACTIVITY_STATUS_CACHE.'*');
+        foreach($keys as $key)
+        {
+            $user_id = substr($key,-1,1);
+            foreach($activitys as $activity)
+            {
+                if( !$activity['refresh_time'] || date('H',time())==date('H',strtotime($activity['refresh_time'])) ) {
+                    static::clearstatus($activity, $user_id);
+                }
+            }
+        }
+    }
+
+    public static function refurbish_jh(&$activitys)
+    {
+        $redis = Yii::$app->redis;
+        //取出所有 ‘领取记录键’
+        $keys = $redis->keys(static::USER_ACTIVITY_REWARD_STATUS.'*');
+        foreach($keys as $key)
+        {
+            $user_id = substr($key,-1,1);
+            foreach($activitys as $activity)
+            {
+                if( !$activity['refresh_time'] || date('H',time())==date('H',strtotime($activity['refresh_time'])) ) {
+                    static::clearActivity($activity['event'], $user_id);
+                }
+            }
+        }
+    }
+
+
+
+
 }
