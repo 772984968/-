@@ -112,16 +112,16 @@ class ActivityReward extends \yii\db\ActiveRecord
         $check_rst = static::checkBaseInfo($row);
         if($check_rst !== true) {
             //检测未通过
-            $rst[$row['iid']] =  static::$error_meaning[$check_rst] ?? '';
+            $rst[] = ['a_id'=>$row['iid'], 'rst'=>static::$error_meaning[$check_rst] ?? ''] ;;
 
         }elseif(static::reward($row)) {
             //领取成功
            \lib\wyim\chatroom::cacheUserIntoTime(static::$userModel->iid);  //刷新用户进入时间
            static::clearActivity('watch_live');     //消除缓存的礼物
-           $rst[$row['iid']] = 'ok';
+            $rst[] = ['a_id'=>$row['iid'], 'rst'=> 'ok'] ;;
 
        } else {
-           $rst[$row['iid']] = '领取失败';
+            $rst[] = ['a_id'=>$row['iid'], 'rst'=> '领取失败'] ;;
        }
         return $rst;
     }
@@ -151,21 +151,21 @@ class ActivityReward extends \yii\db\ActiveRecord
             $check_rst = static::activationCheckBaseInfo($row);        //检查通用的要求
 
             if($check_rst !== true) {
-                $rst[$row['iid']] =  static::$error_meaning[$check_rst] ?? '';
+                $rst[] = ['a_id'=>$row['iid'], 'rst'=>static::$error_meaning[$check_rst] ?? ''] ;
                 continue;
             }
 
             //检查这项活动特有的要求
             if($time<$a_parameter->duration) {
-                $rst[$row['iid']] = '时间不够'.$a_parameter->duration.'秒不能激活';
+                $rst[] = ['a_id'=>$row['iid'], 'rst'=>'时间不够'.$a_parameter->duration.'秒不能激活'] ;
                 break;
             }
 
             if(static::activity($row)) {
-                $rst[$row['iid']] = 'ok';
+                $rst[] = ['a_id'=>$row['iid'], 'rst'=>'ok'] ;
                 break;
             } else {
-                $rst[$row['iid']] = '激活失败';
+                $rst[$row['iid']] = $rst[] = ['a_id'=>$row['iid'], 'rst'=>'激活失败'] ;;
                 break;
             }
         }
