@@ -1,0 +1,1 @@
+<?phpnamespace lib\wealth;use Yii;use lib\models\Setting;use lib\nodes\Notice;class Beans extends BaseWealth{    protected $fieldName = 'beans';       //对应用户字段    protected $logClassName = '\lib\models\UserBeansLog';    //对应的日志文件名    public $error = '';    }

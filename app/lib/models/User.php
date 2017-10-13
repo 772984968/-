@@ -60,6 +60,7 @@ class User extends ActiveRecord
             [['province', 'city'], 'string', 'max' => 7],
             [['llaccounts', 'inviteCode'], 'string', 'max' => 20],
             [['address', 'signature'], 'string', 'max' => 50],
+            ['llaccounts', 'match', 'pattern'=>'/^[0-9A-Za-z]+$/','message'=>'联联号由字母和数字组成' ],
         ];
     }
     //通过ID取用户实例
@@ -342,6 +343,5 @@ class User extends ActiveRecord
         }
         return false;
     }
-
 
 }
