@@ -344,4 +344,14 @@ class User extends ActiveRecord
         return false;
     }
 
+    //取用户会员权限
+    public function getMemberPower()
+    {
+        if($this->vip_type) {
+            return Member::getCacheRow($this->vip_type);
+        } else {
+            return false;
+        }
+    }
+
 }
