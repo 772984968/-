@@ -36,7 +36,7 @@ class Member extends BaseModel
     {
         return [
             [[ 'friend_number', 'flock_number', 'flock_peopel_number', 'is_default'], 'integer'],
-            [['price', 'invite_price'],'number'],
+            [['price', 'invite_price', 'barrage'],'number'],
             [['operates'], 'string'],
             [['name','price'], 'required'],
             [['name'], 'string', 'max' => 10],
@@ -69,9 +69,10 @@ class Member extends BaseModel
     //取列表数据并缓存
     public static function getCacheList($fields = '*', $order = 'DESC')
     {
+
         $cache = Yii::$app->getCache();
         $data = $cache->get(self::LIST_CACHE_NAME);
- 
+
         if( !$data ) {
             $data = self::find()
                 ->select($fields)
