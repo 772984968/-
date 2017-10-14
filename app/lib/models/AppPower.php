@@ -16,6 +16,7 @@ use Yii;
  */
 class AppPower extends \yii\db\ActiveRecord
 {
+
     /**
      * @inheritdoc
      */

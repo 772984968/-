@@ -91,8 +91,6 @@ class UserForm extends Model
             ['captcha','validateCode2','on'=>'msgpassword'],
 //          [['user_id','time'], 'required' , 'on' => 'sign'],
 
-
-
         ];
     }
 
@@ -156,19 +154,9 @@ class UserForm extends Model
  */
     public function validateCode2($attribute, $params)
     {
-
         if (!$this->hasErrors()) {
-            if(AdCommon::isMobile( $this->username )) {
-                $className = '\lib\forms\NoteForm';
-            } else {
-                $this->addError($attribute, '用户名需为手机号码!');
-                return false;
-            }
-            $model = new User();
-           if (!$model->findOne(['username'=>$this->username])){
-               $this->addError($attribute, '不存在该用户');
-            }
-                if( !$className::checkfindpassword($this->username, $this->captcha)) {
+            $className = '\lib\forms\NoteForm';
+            if( !$className::checkfindpassword($this->username, $this->captcha)) {
                 $this->addError($attribute, Yii::t('common','sms_captcha_error'));
                 return false;
             }
@@ -187,7 +175,9 @@ class UserForm extends Model
             $model->setPassword( $this->password );
             if( $model->save() ) {
                 $model->registerWyAccid();      //注册网易IM
-                $this->setScenario('login');    //登入
+                \lib\models\ActivityReward::$userModel = $model;
+                \lib\models\ActivityReward::get('register');        //获取注册优惠
+                $this->setScenario('login');                        //登入
                 $result = $this->login();
                 return $result;
             } else {
@@ -201,52 +191,9 @@ class UserForm extends Model
     {
         if( $this->validate() )
         {
-            if( AdCommon::isMobile($this->username) ) {
-                $model = User::findByUsername( $this->username );
-            } elseif( AdCommon::isEmail($this->username) ) {
-                $model = User::findByEmail( $this->username );
-            } else {
-                $model = User::findByLlaccounts( $this->username );
-            }
-
-            if( empty($model) || !$model->validatePassword($this->password) ) {
-                $this->addError('username',Yii::t('common', 'password_error'));
-                return false;
-            }
-
-
-            if(HUANG_JING != 0)
-            {
-                $user = Yii::$app->factory->getuser();
-                $user->login( $model );
-                return [
-                    'userid'=>$model->iid,
-                    'token'=>$user->getToken(),
-                    'nickname' => $model->nickname,
-                    'llaccounts' => $model->llaccounts,
-                    'signature' => $model->signature,
-                    'fans_number' => $model->fans_number,
-                    'share_number' => $model->share_number,
-                    'follow_number' => $model->follow_number,
-                    'diamond' => $model->diamond,
-                    'head' => \lib\nodes\UserNode::get_head_url($model->head),
-                    'is_vip' => $model->vip_type ? 1 : 0,
-                    'accountlevel'=>$user->getAccountLevel(),
-                    'wy_im_accid' => $model->wy_accid,
-                    'wy_im_token' => $model->wy_token,
-                    'inviteCode' => $model->inviteCode,
-                    'total_assets' => $model->countPrice(),
-                ];
-            }
-            else
-            {
-                Yii::$app->getSession()->set('userId', $model->iid);
-                $user = Yii::$app->factory->getuser();
-                $user->login( $model );
-                return true;
-            }
-
-
+           
+            $rst = Yii::$app->factory->createuser()->login($this->username, $this->password);
+            return $rst;
         }
     }
 
@@ -255,14 +202,7 @@ class UserForm extends Model
 
         if( $this->validate() )
         {
-            $model = Yii::$app->factory->getuser()->getIdentity();
-            $model->setPassword( $this->password );
-            if( $model->save() ) {
-                return true;
-            } else {
-                $this->addError('username', AdCommon::modelMessage($model));
-                return false;
-            }
+            return Yii::$app->factory->getuser()->changePassword( $this->password );
         }
     }
         /**
@@ -274,14 +214,9 @@ class UserForm extends Model
     {
 
         if( $this->validate() )
-        {   $model=User::findOne(['username'=>$this->username]);
-            $model->setPassword( $this->password );
-            if($model->save()) {
-                return true;
-            } else {
-                $this->addError('username', AdCommon::modelMessage($model));
-                return false;
-            }
+        {
+            $model= Yii::$app->factory->createuser()->findByUsername($this->username);
+            return $model->changePassword( $this->password );
         }
     }
     /**

@@ -17,3 +17,4 @@ app/api/index.php
 app/api/uploads/
 app/upload/
 TestController.php
+app/api/protected/runtime/

@@ -65,6 +65,25 @@ class Member extends BaseModel
     {
         return self::findOne(['is_default'=>1])->toArray();
     }
+
+    //取列表数据并缓存
+    public static function getCacheList($fields = '*', $order = 'DESC')
+    {
+        $cache = Yii::$app->getCache();
+        $data = $cache->get(self::LIST_CACHE_NAME);
+ 
+        if( !$data ) {
+            $data = self::find()
+                ->select($fields)
+                ->asArray()
+                ->all();
+            foreach($data as $key => $row) {
+                $data[$key]['powers'] = AppPower::idToPowers($row['operates']);
+            }
+            $cache->set(static::LIST_CACHE_NAME, $data);
+        }
+        return $data;
+    }
     
     
 }
