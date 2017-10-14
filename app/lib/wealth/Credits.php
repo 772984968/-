@@ -4,47 +4,19 @@ namespace lib\wealth;
 use lib\models\UserCreditsLog;
 
 class Credits extends BaseWealth
-{
-
-    public $userModel;
-
-    // 用户模型
-    public $userId;
-
-    // 用户id
-    public $total = 1000;
-
-    // 每日总经验
-    public $max_credits = 21000;
-
-    // 总经验值
-    public $redis_key = 'credits';
-
-    // redis key前缀
-    public $redis;
-
-    // redis 实例
-    public $invite = 500;
-
-    // 邀请会员
-    public $live = 100;
-
-    // 直播
-    public $sharing = 20;
-
-    // 分享经验
-    public $praise = 10;
-
-    // 点赞积分
-    public $praise_limit = 100;
-
-    // 点赞限制
-    public $comment = 10;
-
-    // 评论积分
-    public $comment_limit = 100;
-
-    // 评论限制
+{   public $userModel;   // 用户模型
+    public $userId;  // 用户id
+    public $total = 1000; // 每日总经验
+    public $max_credits = 21000;// 总经验值
+    public $redis_key = 'credits';// redis key前缀
+    public $redis;  // redis 实例
+    public $invite = 100;// 邀请会员
+    public $live = 100; // 直播
+    public $sharing = 20;  // 分享经验
+    public $praise = 10; // 点赞积分
+    public $praise_limit = 100;   // 点赞限制
+    public $comment = 10;// 评论积分
+    public $comment_limit = 100; // 评论限制
     public function __construct()
     {
 
@@ -53,7 +25,6 @@ class Credits extends BaseWealth
         $this->userId = \Yii::$app->factory->getuser()->userId;
         $this->redis = \Yii::$app->redis;
     }
-
     // 发表评论
     public function comment()
     {
@@ -94,12 +65,7 @@ class Credits extends BaseWealth
     // 签到
     public function sign()
     {
-        $this->live(6);
-        $this->comment();
-        $this->gift(100, 6);
-        $this->praise();
-        $this->sharing();
-        $this->invitemembers(6);
+
       $score = $this->cheackday(0);
         if ($score===false) {
             $this->error = '今天已经签到过了!';
@@ -240,7 +206,6 @@ class Credits extends BaseWealth
 
         return true;
     }
-
     // 刷礼物
     public function gift($number, $giver_userid)
     {
@@ -511,3 +476,8 @@ class Credits extends BaseWealth
     }
 
 }
+
+
+
+
+
