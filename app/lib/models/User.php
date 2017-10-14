@@ -108,7 +108,7 @@ class User extends ActiveRecord
     {
         return $this->getPrimaryKey();
     }
-    
+
 
     //取代理信息
     public function getAgentinfo() {
@@ -149,7 +149,7 @@ class User extends ActiveRecord
         if( empty($model) || !$model->validatePassword($password) ) {
             throw new \Exception(Yii::t('common', 'password_error'));
         }
-     
+
         if(HUANG_JING != 0)
         {
             $model->setToken();
@@ -264,7 +264,7 @@ class User extends ActiveRecord
         }
         return $url ?? '';
     }
-    
+
 
     //修改密码
     public function changePassword($password) {
