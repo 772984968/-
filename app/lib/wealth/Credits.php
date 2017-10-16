@@ -476,8 +476,3 @@ class Credits extends BaseWealth
     }
 
 }
-
-
-
-
-
