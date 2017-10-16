@@ -190,6 +190,15 @@ class User extends ActiveRecord
         ];
     }
 
+    public function getWallet()
+    {
+        return [
+            'wallet' => $this->wallet,
+            'diamond' => $this->diamond,
+            'beans' => $this->beans,
+        ];
+    }
+
     //取用户信息
     public function getinfo()
     {

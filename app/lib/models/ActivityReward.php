@@ -135,7 +135,7 @@ class ActivityReward extends \yii\db\ActiveRecord
         }elseif(static::reward($row)) {
             //领取成功
            \lib\wyim\chatroom::cacheUserIntoTime(static::$userModel->iid);  //刷新用户进入时间
-           static::clearActivity('watch_live');     //消除缓存的礼物
+           static::clearActivity('watch_live',static::$userModel->iid);     //消除缓存的礼物
             $rst[] = ['a_id'=>$row['iid'], 'rst'=> 'ok'] ;;
 
        } else {
@@ -199,10 +199,27 @@ class ActivityReward extends \yii\db\ActiveRecord
             ->orderBy('iid ASC')
             ->asArray()
             ->all();
+
+        $activity_id = ActivityReward::getActivity($name);
         foreach($data as $key => $val) {
-            $data[$key]['parameter'] = json_decode($val['parameter']);
+            $val['parameter'] = json_decode($val['parameter']);
+            $val['receive'] = static::getstatus($val);
+            $val['activation'] = $val['iid'] == $activity_id ? '1' : '0';
+            $data[$key] = $val;
         }
         return $data;
+    }
+
+    //取没有领取的活动
+    public static function getUnused($name)
+    {
+        $data = static::getActivityRows($name);
+        foreach($data as $val) {
+            if($val['receive'] < $val['number_of_times']) {
+                return $val;
+            }
+        }
+        return [];
     }
 
     //检测通用信息
