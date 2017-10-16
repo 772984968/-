@@ -34,7 +34,6 @@ use yii\helpers\Url;
 		         <td> <?php echo $vo->total_credits; ?></td>
 		            <td> <?php echo date('Y-m-d',$vo->last_signtime); ?></td>
 		            <th><a class="button bg-blue button-small icon-eye" href="<?= URL::to(['user/signdetails','iid'=>$vo->iid])?>" title="会员签到详情"></a></th>
-
 		   </tr>
    <?php  endforeach; ?>
 

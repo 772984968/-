@@ -2,16 +2,11 @@
 namespace app\controllers;
 
 use lib\models\User;
-use lib\models\Agent;
-use lib\models\UserWalletLog;
 use yii;
-use yii\base\Request;
-use yii\data\Pagination;
-use lib\models\Sign;
-use lib\models\Signdate;
-use lib\models\Admin;
 use lib\components\AdCommon;
 use yii\base\Model;
+use lib\wealth\Pinyin;
+
 
 // 用户控制器
 class RobotController extends TemplateController
@@ -88,29 +83,27 @@ class RobotController extends TemplateController
     }
 
     public function actionAdd(){
-
         if( $this->isPost() )
         {
             $data = $this->post( $this->config['modelShortName'] );
             $model = new $this->config['modelName'];
-            $model = new User();
-            $data['llaccounts']='AAAA'.rand(10000000,99999999);
             $data['is_robot']='1';
             $data['password_hash']='1';
-            $model->attributes = $data;
-//             if(AdCommon::isMobile( $model->username )||AdCommon::isEmail($model->username)) {
-//             } else {
-//                 $this->error('账号格式不正确');
-
-//             }
-            if($model->username==''){
+            if($data['username']==''){
                     $this->error('账户不能为空');
             }
-            if ($model::findByUsername($model->username)||$model::findByEmail($model->email)){
+
+            if ($model::findByUsername($data['username'])||$model::findByEmail($data['username'])){
                 $this->error('账号或邮箱已经存在');
             }
+
+            $llacounts=$data['nickname'];
+            $llacounts=mb_substr($llacounts, 0,rand(0,strlen($llacounts)-2));
+            $ping=new Pinyin();
+            $data['llaccounts']=$ping->get_pinyin($llacounts).rand(100,99999999);
+            $model->attributes = $data;
             if ($model::findByLlaccounts($model->llaccounts)){
-                $this->error('发生错误,请重试');
+                $this->error('联联账号已存在,请重试');
             }
             if ($model->save()){
                 $model->registerWyAccid();
@@ -170,12 +163,5 @@ class RobotController extends TemplateController
 
         ];
     }
-
-
-
-
-
-
-
 }
 ?>
