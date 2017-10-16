@@ -27,7 +27,7 @@ class AdminController extends SellerController
     public function actionIndex()
     {
 		$model = new Admin();
-		$list = $this->query($model, 'group');
+		$list = $this->query($model, 'group','account!="beck"');
 		$this->data['count'] = $list['count'];
 		$this->data['data'] = $list['data'];
 		$this->data['page'] = $list['page'];
