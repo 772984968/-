@@ -47,7 +47,7 @@ class ActivityReward extends \yii\db\ActiveRecord
         return [
             [['rewardType'], 'string'],
             [['rewardNumber'], 'number'],
-            [['s_dt', 'e_dt', ' refresh_time'], 'safe'],
+            [['s_dt', 'e_dt', 'refresh_time'], 'safe'],
             [['vip', 'number_of_times'], 'integer'],
             [['name'], 'string', 'max' => 15],
             [['event'], 'string', 'max' => 20],
@@ -71,7 +71,7 @@ class ActivityReward extends \yii\db\ActiveRecord
             'e_dt' => 'E Dt',
             'vip' => 'Vip',
             'number_of_times' => 'Number Of Times',
-            ' refresh_time' => 'Refresh Time',
+            'refresh_time' => 'Refresh Time',
         ];
     }
 
