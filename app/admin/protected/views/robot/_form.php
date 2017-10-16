@@ -79,6 +79,9 @@ use yii\helpers\Html;
                                         <?php if ($fileName=='User[nickname]'): ?>
                                        <button class="button bg" type="button"  onclick="refresh();"><span class="icon-refresh"></span></button>
                                         <?php endif;?>
+                                         <?php if ($fileName=='User[username]'): ?>
+                                       <button class="button bg" type="button"  onclick="refreshName();"><span class="icon-refresh"></span></button>
+                                        <?php endif;?>
 
                                     <?php break; ?>
 
@@ -101,6 +104,17 @@ use yii\helpers\Html;
 		var ming = ming[Math.floor(Math.random() * (ming.length))];
 		var name=xing+ming;
 		$("input[name='User[nickname]']").attr('value',name);
+		}
+
+</script>
+
+<script type="text/javascript">
+ function refreshName(){
+	   var name=['136','181','189','158','137','159','150','138','159'];
+		var xing = name[Math.floor(Math.random() * (name.length))];
+		var ming = Math.ceil(Math.random() * 100000000+100000000);
+		var name=xing+ming;
+		$("input[name='User[username]']").attr('value',name);
 		}
 
 </script>
