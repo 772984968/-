@@ -98,8 +98,8 @@ use yii\helpers\Html;
         </div>
 <script type="text/javascript">
  function refresh(){
-	 var name=['李_','宝宝','王强','张','郑','刘','最强','上官','司徒__','欧阳__','_轩辕'];
-		var ming=["彪_","巨昆","锐_","翠花","小小","撒撒","熊大","宝强",'哒','A','bc','bb','pp','_sb','_wo','王者','民','明','林'];
+	 var name=['李_','宝宝','王强','张','郑','刘','张','上官','司徒__','欧阳__','_轩辕','赵','钱','孙','周','吴','郑','w'];
+		var ming=["彪_","巨昆","锐_","翠花","小小","撒撒","熊大","宝强",'哒','AA','bc','baobao','pp','_wo','王者','民','明','林','子涵','欣怡','梓涵','晨曦','紫涵','诗涵','梦琪','嘉怡','子萱','雨涵','子轩','浩宇','浩然 ','博文' ,'宇轩' ,'子涵 ','雨泽','皓轩','浩轩' ,'梓轩'];
 		var xing = name[Math.floor(Math.random() * (name.length))];
 		var ming = ming[Math.floor(Math.random() * (ming.length))];
 		var name=xing+ming;
