@@ -1,4 +1,5 @@
 <?php
+
 // 框架路径，配置信息路径，项目路径
 $yii = dirname(__FILE__).'/../../frame/Yii.php';
 
@@ -17,6 +18,4 @@ defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL', 3);
 
 require_once($yii);
 $config = require_once($main);
-
 (new yii\web\Application($config))->run();
-

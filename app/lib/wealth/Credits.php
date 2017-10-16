@@ -17,13 +17,13 @@ class Credits extends BaseWealth
     public $praise_limit = 100;   // 点赞限制
     public $comment = 10;// 评论积分
     public $comment_limit = 100; // 评论限制
-    public function __construct()
+    public function __construct($user_id=0)
     {
 
-        // 来源类型0签到1邀请会员2直播3分享4点赞5发表评论6刷礼物
-        $this->userModel = \Yii::$app->factory->getuser();
-        $this->userId = \Yii::$app->factory->getuser()->userId;
-        $this->redis = \Yii::$app->redis;
+     // 来源类型0签到1邀请会员2直播3分享4点赞5发表评论6刷礼物
+      $this->userModel = \Yii::$app->factory->getuser($user_id);
+      $this->userId=\Yii::$app->factory->getuser()->userId;
+      $this->redis = \Yii::$app->redis;
     }
     // 发表评论
     public function comment()
@@ -207,7 +207,7 @@ class Credits extends BaseWealth
         return true;
     }
     // 刷礼物
-    public function gift($number, $giver_userid)
+    public function gift($number, $giver_userid=0)
     {
         $score = $this->cheackday(6);
         if (! $score) {
@@ -223,7 +223,7 @@ class Credits extends BaseWealth
             if (! $this->userModel->save())
                 throw new \Exception();
             // 日志表
-            if (! $this->log($this->userId, 6, $gift_credits, '刷礼物积分', $giver_userid))
+            if (! $this->log($this->userId, 6, $gift_credits, '刷礼物积分give', $giver_userid))
                 throw new \Exception();
             $transaction->commit();
             $this->addredis(6, $gift_credits); // 添加redis
@@ -476,8 +476,3 @@ class Credits extends BaseWealth
     }
 
 }
-
-
-
-
-
