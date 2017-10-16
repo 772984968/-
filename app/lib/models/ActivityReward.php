@@ -199,10 +199,27 @@ class ActivityReward extends \yii\db\ActiveRecord
             ->orderBy('iid ASC')
             ->asArray()
             ->all();
+
+        $activity_id = ActivityReward::getActivity($name);
         foreach($data as $key => $val) {
+            $val['parameter'] = json_decode($val['parameter']);
+            $val['receive'] = static::getstatus($val);
+            $val['activation'] = $val['iid'] == $activity_id ? '1' : '0';
             $data[$key]['parameter'] = json_decode($val['parameter']);
         }
         return $data;
+    }
+
+    //取没有领取的活动
+    public static function getUnused($name)
+    {
+        $data = static::getActivityRows($name);
+        foreach($data as $val) {
+            if($val['receive'] < $val['rewardNumber']) {
+                return $val;
+            }
+        }
+        return [];
     }
 
     //检测通用信息

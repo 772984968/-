@@ -19,15 +19,31 @@ class UserMessage
         return Yii::$app->redis->rpush(static::CACHE_NAME.$user_id, json_encode($data));
     }
 
+
+
     //取一条最原始的数据
     public static function get($user_id)
     {
-        $rst = Yii::$app->redis->lpop
+        $rst = Yii::$app->redis->lpop(static::CACHE_NAME.$user_id);
+        if($rst) {
+            $rst = json_decode($rst);
+        }
+        return $rst;
     }
+
+
 
     //取该用户所有的数据
     public static function getall($user_id)
     {
+        $data = [];
+        do{
+            $rst = static::get($user_id);
+            if($rst) {
+                $data[] = $rst;
+            }
+        }while($rst);
+        return $data;
 
     }
 }
