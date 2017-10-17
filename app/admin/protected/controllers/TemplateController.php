@@ -142,9 +142,7 @@ abstract class TemplateController extends SellerController
         if( $this->isPost() )
         {
             $data = $this->post( $this->config['modelShortName'] );
-
             $model = new $this->config['modelName'];
-
             $model->attributes = $data;
             $model->save();
 

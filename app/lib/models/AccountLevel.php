@@ -30,7 +30,7 @@ class AccountLevel extends BaseModel
     public function rules()
     {
         return [
-            [['credits', 'withdrawal_proportion'], 'integer'],
+            [['credits', 'withdrawal_proportion','diamond_proportion'], 'integer'],
             [['name'], 'string', 'max' => 10],
             [['name'], 'required'],
         ];
@@ -48,5 +48,5 @@ class AccountLevel extends BaseModel
             'withdrawal_proportion' => Yii::t('common','withdrawal_proportion'),
         ];
     }
-    
+
 }
