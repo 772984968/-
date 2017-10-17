@@ -86,6 +86,7 @@ class Order extends \yii\db\ActiveRecord
                 $t->commit();
                 //推荐人奖励
                 if($userModel->inviteCode) {
+
                     $inviteUser = User::findOne(['llaccounts' => $userModel->inviteCode]);
                     Yii::$app->factory->getwealth('wallet', $inviteUser)->addReward([
                         'number' => Setting::keyTovalue('vip_recommend_reward'),
