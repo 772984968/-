@@ -89,6 +89,7 @@ class UserForm extends Model
             ['username', 'unique', 'targetClass' => '\lib\models\User', 'message' => '帐号已经注册。','on'=>['register']],
             ['captcha','validateCode','on'=>'register'],//
             ['captcha','validateCode2','on'=>'msgpassword'],
+            ['llaccounts', 'match', 'pattern'=>'/^[0-9A-Za-z]+$/','message'=>'联联号由字母和数字组成','on'=>['register'] ],
 //          [['user_id','time'], 'required' , 'on' => 'sign'],
 
         ];
