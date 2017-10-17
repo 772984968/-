@@ -193,9 +193,9 @@ class User extends ActiveRecord
     public function getWealth()
     {
         return [
-            'wallet' => $this->wallet,
-            'diamond' => $this->diamond,
-            'beans' => $this->beans,
+            'wallet' => (string)$this->wallet,
+            'diamond' => (string)$this->diamond,
+            'beans' => (string)$this->beans,
         ];
 
     }
