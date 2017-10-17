@@ -19,6 +19,15 @@ class UserMessage
         return Yii::$app->redis->rpush(static::CACHE_NAME.$user_id, json_encode($data));
     }
 
+    public static function sendBeans($user_id,$event,$number)
+    {
+        return static::send($user_id,[
+            'event' => $event,
+            'type' => 'beans',
+            'number' => (string)$number,
+        ]);
+    }
+
 
 
     //取一条最原始的数据
