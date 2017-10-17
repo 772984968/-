@@ -189,14 +189,16 @@ class User extends ActiveRecord
             'total_assets' => $this->countPrice(),
         ];
     }
+    
 
-    public function getWallet()
+    public function getWealth()
     {
         return [
             'wallet' => $this->wallet,
             'diamond' => $this->diamond,
             'beans' => $this->beans,
         ];
+
     }
 
     //取用户信息
