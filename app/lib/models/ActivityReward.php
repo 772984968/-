@@ -221,7 +221,7 @@ class ActivityReward extends \yii\db\ActiveRecord
                 return $val;
             }
         }
-        return [];
+        return json_decode('{}');
     }
 
     //检测通用信息
