@@ -196,8 +196,14 @@ class User extends ActiveRecord
             'wallet' => (string)$this->wallet,
             'diamond' => (string)$this->diamond,
             'beans' => (string)$this->beans,
+            'red_envelope' => (string)$this->red_envelope,
         ];
 
+    }
+
+    public function getLeval()
+    {
+        return AccountLevel::getLevel($this->credits);
     }
 
     //取用户信息
@@ -216,6 +222,11 @@ class User extends ActiveRecord
             'fans_number' => $this->fans_number,
             'follow_number' => $this->follow_number,
             'wy_accid' => $this->wy_accid,
+            'wallet' => (string)$this->wallet,
+            'diamond' => (string)$this->diamond,
+            'beans' => (string)$this->beans,
+            'red_envelope' => (string)$this->red_envelope,
+            'accountlevel' => $this->getLeval(),
         ];
     }
 
