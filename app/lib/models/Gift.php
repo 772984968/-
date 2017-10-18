@@ -51,6 +51,7 @@ class Gift extends BaseModel
     {
         $cache = Yii::$app->getCache();
         $data = $cache->get(self::LIST_CACHE_NAME);
+        $data = '';
         if( !$data ) {
             $data = self::find()
                 ->select($fields)
