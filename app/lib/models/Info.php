@@ -70,7 +70,7 @@ class Info extends \yii\db\ActiveRecord
             ->all();
         $ids = [];
         foreach ($rst  as $row) {
-            $ids[] = $row['user_id'];
+            $ids[] = $row['uid'];
         }
         return $ids;
     }
