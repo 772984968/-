@@ -304,6 +304,16 @@ class ActivityReward extends \yii\db\ActiveRecord
                     return false;
                 }
                 break;
+            case 'wallet':
+                if(!Yii::$app->factory->getwealth('wallet', static::$userModel)->add([
+                    'number' => $row['rewardNumber'],
+                    'type' => \Config::BEANS_ACTIVITY,
+                    'note' => $row['name'],
+                ])) {
+                    $t->rollBack();
+                    return false;
+                }
+                break;
             default:
                 $t->rollBack();
                 return false;
