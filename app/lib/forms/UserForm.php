@@ -179,6 +179,14 @@ class UserForm extends Model
                 \lib\models\ActivityReward::$userModel = $model;
                 \lib\models\ActivityReward::get('register');        //获取注册优惠
                 $this->setScenario('login');                        //登入
+                
+                //缴请人加积分
+                if($this->inviteCode) {
+                    $inviteUser = User::findByLlaccounts($this->inviteCode);
+                    $creditsClass=\Yii::$app->factory->getCredits($inviteUser->iid);
+                    $creditsClass->invitemembers($model->iid);
+                }
+
                 $result = $this->login();
                 return $result;
             } else {
