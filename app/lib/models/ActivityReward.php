@@ -109,8 +109,10 @@ class ActivityReward extends \yii\db\ActiveRecord
             if($check_rst !== true) {
                 continue;
             }
-
-            static::reward($row);
+            if(static::reward($row)) {
+                //直接加入到用户消息队列中
+                \lib\nodes\UserMessage::sendBeans(static::$userModel->iid, 'regiser', $row['rewardNumber']);
+            }
         }
 
     }
@@ -219,7 +221,7 @@ class ActivityReward extends \yii\db\ActiveRecord
                 return $val;
             }
         }
-        return [];
+        return json_decode('{}');
     }
 
     //检测通用信息
