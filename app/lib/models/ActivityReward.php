@@ -26,12 +26,7 @@ class ActivityReward extends \yii\db\ActiveRecord
     const USER_ACTIVITY_STATUS_CACHE = 'user_activity_status_cache';
     const USER_ACTIVITY_REWARD_STATUS = 'user_activity_reward_status';
     const USER_ACTIVITY_REGISTER_RANK='user_activity_register_rank';
-    private static $error_meaning= [
-        1 => '已达到了领奖次数限制',
-        2 => '非会员无法领取奖励',
-        3 => '活动还未开始',
-        4 => '活动已结束',
-    ];
+
 
     /**
      * @inheritdoc
@@ -120,7 +115,7 @@ class ActivityReward extends \yii\db\ActiveRecord
 
 
         //---------------------
-       /*  $activitys = static::getActivityRows('register'); //取直活动
+       $activitys = static::getActivityRows('register'); //取直活动
         foreach ($activitys as $row) {
             $check_rst = static::checkBaseInfo($row);        //检查通用的要求
             if($check_rst !== true) {
@@ -132,7 +127,7 @@ class ActivityReward extends \yii\db\ActiveRecord
            }
           static::reward($row);
           static::regisyter_rank(1);//添加总人数排名
-        } */
+        }
     }
    //获取，注册红包
     public static function execute_register_red($parameter)
@@ -178,7 +173,7 @@ class ActivityReward extends \yii\db\ActiveRecord
         return $rst;
     }
 
-    //激活，观看直播奖励
+    //激活，观看直播奖励  ----   宝箱类
     public static function activation_watch_live($parameter)
     {
 
@@ -255,31 +250,9 @@ class ActivityReward extends \yii\db\ActiveRecord
         return json_decode('{}');
     }
 
-    //检测通用信息
-    private static function checkBaseInfo($row)
-    {
-        //检测领取次数
-        $number = static::getstatus($row);
-        if($number >= $row['number_of_times']) { //达到了上领取上限
-                   return 1;
-        }
-        if($row['vip'] && !static::$userModel->vip_type) {
-            return 2;
-        }
 
-        if(strtotime($row['s_dt'])>time()) {
-            return 3;
-        }
 
-        if( $row['e_dt']<date('Y-m-d H:i:s', time()) ) {
-            return 4;
-        }
-
-        return true;
-
-    }
-
-    //激活检测
+    //激活检测  ----   宝箱类
     private static function activationCheckBaseInfo($row)
     {
         //检测领取次数
@@ -302,64 +275,24 @@ class ActivityReward extends \yii\db\ActiveRecord
 
     }
 
-    //激活礼物
+    //激活礼物  ----   宝箱类
     private static function activity($row) {
         return Yii::$app->redis->HSET(static::USER_ACTIVITY_REWARD_STATUS.static::$userModel->iid, $row['event'],$row['iid']);
     }
 
-    //取礼物激活状态
+    //取礼物激活状态  ----   宝箱类
     public static function getActivity($event) {
         return Yii::$app->redis->HGET(static::USER_ACTIVITY_REWARD_STATUS.static::$userModel->iid, $event);
     }
 
-    //删除激活
+    //删除激活  ----   宝箱类
     private static function clearActivity($event,$user_id)
     {
         $user_id = $user_id ? $user_id : static::$userModel->iid;
         return Yii::$app->redis->HDEL(static::USER_ACTIVITY_REWARD_STATUS.$user_id, $event);
     }
 
-    //拿取活动奖励
-    private static function reward($row) {
-        $t = Yii::$app->getDb()->beginTransaction();
-        switch ($row['rewardType'])
-        {
-            case 'beans':
-                if(!Yii::$app->factory->getwealth('beans', static::$userModel)->add([
-                    'number' => $row['rewardNumber'],
-                    'type' => \Config::BEANS_ACTIVITY,
-                    'note' => $row['name'],
-                ])) {
-                    $t->rollBack();
-                    return false;
-                }
-                \lib\nodes\UserMessage::sendBeans(static::$userModel->iid, 'regiser', $row['rewardNumber']);
-                break;
-            case 'wallet':
-                if(!Yii::$app->factory->getwealth('wallet', static::$userModel)->add([
-                    'number' => $row['rewardNumber'],
-                    'type' => \Config::BEANS_ACTIVITY,
-                    'note' => $row['name'],
-                ])) {
-                    $t->rollBack();
-                    return false;
-                }
-                break;
-            default:
-                $t->rollBack();
-                return false;
 
-        }
-       //修改状态
-        $rst = static::changestatus($row);
-        if($rst) {
-            $t->commit();
-            return true;
-        } else {
-            $t->rollBack();
-            return false;
-        }
-    }
 
     //取用户活动状态
     public static function getstatus($activity) {
@@ -388,7 +321,7 @@ class ActivityReward extends \yii\db\ActiveRecord
         return $newdata;
     }
 
-    //刷新缓存状态
+    //刷新缓存状态   ----   宝箱类
     public static function refurbishAll()
     {
         //取出所有活动
@@ -397,7 +330,7 @@ class ActivityReward extends \yii\db\ActiveRecord
         static::refurbish_hd($activitys);       //消除活动状态
 
     }
-
+    //----   宝箱类
     public static function refurbish_hd(&$activitys)
     {
         $redis = Yii::$app->redis;
@@ -417,6 +350,7 @@ class ActivityReward extends \yii\db\ActiveRecord
         }
     }
 
+    //----   宝箱类
     public static function refurbish_jh(&$activitys)
     {
         $redis = Yii::$app->redis;
