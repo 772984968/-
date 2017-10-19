@@ -101,8 +101,26 @@ class ActivityReward extends \yii\db\ActiveRecord
     }
 
     //获取，注册奖励
-    public static function execute_register($parameter) {
+    public static function execute_register($parameter='') {
+
         $activitys = static::getActivityRows('register'); //取直活动
+
+        foreach ($activitys as $row) {
+            $class_name = '\lib\activity\\'.$row['name'];
+
+            if(method_exists($class_name, 'join')) {
+                $class_name::$userModel = static::$userModel;
+                $class_name::join($row);
+            }
+        }
+
+
+
+
+
+
+        //---------------------
+       /*  $activitys = static::getActivityRows('register'); //取直活动
         foreach ($activitys as $row) {
             $check_rst = static::checkBaseInfo($row);        //检查通用的要求
             if($check_rst !== true) {
@@ -114,7 +132,7 @@ class ActivityReward extends \yii\db\ActiveRecord
            }
           static::reward($row);
           static::regisyter_rank(1);//添加总人数排名
-        }
+        } */
     }
    //获取，注册红包
     public static function execute_register_red($parameter)
