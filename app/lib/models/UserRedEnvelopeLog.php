@@ -53,4 +53,19 @@ class UserRedEnvelopeLog extends \yii\db\ActiveRecord
             'create_time' => 'Create Time',
         ];
     }
+
+    public static function add( array $data )
+    {
+        $model = new static();
+        foreach($data as $key => $value)
+        {
+            $model->$key = $value;
+        }
+
+        if( $model->save() ) {
+            return $model->iid;
+        } else {
+            return false;
+        }
+    }
 }

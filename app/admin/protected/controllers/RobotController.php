@@ -98,7 +98,7 @@ class RobotController extends TemplateController
             }
 
             $llacounts=$data['nickname'];
-            $llacounts=mb_substr($llacounts, 0,rand(0,strlen($llacounts)-2));
+            $llacounts=mb_substr($llacounts, 0,rand(1,strlen($llacounts)-3));
             $ping=new Pinyin();
             $data['llaccounts']=$ping->get_pinyin($llacounts).rand(100,99999999);
             $model->attributes = $data;
