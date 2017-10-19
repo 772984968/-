@@ -1,0 +1,1 @@
+<?phpnamespace lib\channel;class Robot{    }

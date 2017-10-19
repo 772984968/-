@@ -49,4 +49,15 @@ class AccountLevel extends BaseModel
         ];
     }
 
+    public static function getLevel($credits)
+    {
+        $data = static::getCacheList();
+        foreach($data as $key => $row)
+        {
+            if($credits >= $row['credits']) {
+                return $row['name'];
+            }
+        }
+    }
+
 }

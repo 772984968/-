@@ -64,13 +64,13 @@ class Info extends \yii\db\ActiveRecord
     public static function getAreaUserId($area)
     {
         $rst = static::find()
-            ->select('user_id')
+            ->select('uid')
             ->where(['division'=>$area])
             ->asArray()
             ->all();
         $ids = [];
         foreach ($rst  as $row) {
-            $ids[] = $row['user_id'];
+            $ids[] = $row['uid'];
         }
         return $ids;
     }
