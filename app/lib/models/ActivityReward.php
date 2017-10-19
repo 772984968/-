@@ -297,7 +297,7 @@ class ActivityReward extends \yii\db\ActiveRecord
     //删除激活
     private static function clearActivity($event,$user_id)
     {
-        $user_id = $user_id ?: static::$userModel->iid;
+        $user_id = $user_id ? $user_id : static::$userModel->iid;
         return Yii::$app->redis->HDEL(static::USER_ACTIVITY_REWARD_STATUS.$user_id, $event);
     }
 
@@ -356,7 +356,7 @@ class ActivityReward extends \yii\db\ActiveRecord
 
     //消除用户活动状态
     public static function clearstatus($activity,$user_id=0) {
-        $user_id = $user_id ?: static::$userModel->iid;
+        $user_id = $user_id ? $user_id : static::$userModel->iid;
         return Yii::$app->redis->hdel(static::USER_ACTIVITY_STATUS_CACHE.$user_id, $activity['event'].$activity['iid']);
     }
 
@@ -385,9 +385,11 @@ class ActivityReward extends \yii\db\ActiveRecord
         $redis = Yii::$app->redis;
         //取出所有 ‘领取记录键’
         $keys = $redis->keys(static::USER_ACTIVITY_STATUS_CACHE.'*');
+        $start = strlen(static::USER_ACTIVITY_STATUS_CACHE);
+
         foreach($keys as $key)
         {
-            $user_id = substr($key,-1,1);
+            $user_id = substr($key,$start);
             foreach($activitys as $activity)
             {
                 if( !$activity['refresh_time'] || date('H',time())==date('H',strtotime($activity['refresh_time'])) ) {
@@ -402,9 +404,10 @@ class ActivityReward extends \yii\db\ActiveRecord
         $redis = Yii::$app->redis;
         //取出所有 ‘领取记录键’
         $keys = $redis->keys(static::USER_ACTIVITY_REWARD_STATUS.'*');
+        $start = strlen(static::USER_ACTIVITY_REWARD_STATUS);
         foreach($keys as $key)
         {
-            $user_id = substr($key,-1,1);
+            $user_id = substr($key,$start);
             foreach($activitys as $activity)
             {
                 if( !$activity['refresh_time'] || date('H',time())==date('H',strtotime($activity['refresh_time'])) ) {
