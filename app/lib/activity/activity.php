@@ -82,5 +82,17 @@ class activity
         }
     }
 
+    //取没有领取的活动
+    public static function getUnused($name)
+    {
+        $data = static::getActivityRows($name);
+        foreach($data as $val) {
+            if($val['receive'] < $val['number_of_times']) {
+                return $val;
+            }
+        }
+        return json_decode('{}');
+    }
+
 }
 ?>

@@ -23,7 +23,7 @@ use Yii;
 class ActivityReward extends \yii\db\ActiveRecord
 {
     public static $userModel;
-    const USER_ACTIVITY_STATUS_CACHE = 'user_activity_status_cache';
+
     const USER_ACTIVITY_REWARD_STATUS = 'user_activity_reward_status';
     const USER_ACTIVITY_REGISTER_RANK='user_activity_register_rank';
 
@@ -75,316 +75,30 @@ class ActivityReward extends \yii\db\ActiveRecord
     //获取奖励
     public static function get($event, $parameter='')
     {
-        $method = 'execute_'.$event;
-        if(method_exists(__CLASS__,$method)) {
-            return static::$method($parameter);
-        } else {
-            throw new \Exception('方法不存在');
-        }
-    }
-
-    //激活奖励
-    public static function activation($event, $parameter='') {
-
-        $method = 'activation_'.$event;
-        if(method_exists(__CLASS__,$method)) {
-            return static::$method($parameter);
-        } else {
-            throw new \Exception('活动不存在');
-        }
-
-    }
-
-    //获取，注册奖励
-    public static function execute_register($parameter='') {
-
-        $activitys = static::getActivityRows('register'); //取直活动
+        $activitys = static::getRows($event); //取直活动
 
         foreach ($activitys as $row) {
             $class_name = '\lib\activity\\'.$row['name'];
 
             if(method_exists($class_name, 'join')) {
                 $class_name::$userModel = static::$userModel;
-                $class_name::join($row);
+                $class_name::join($row, $parameter);
             }
         }
 
-
-
-
-
-
-        //---------------------
-       $activitys = static::getActivityRows('register'); //取直活动
-        foreach ($activitys as $row) {
-            $check_rst = static::checkBaseInfo($row);        //检查通用的要求
-            if($check_rst !== true) {
-                continue;
-            }
-            $rank=static::regisyter_rank(0);//0查询人数排名
-            if ($rank!==false){
-                $row['rewardNumber']+=$rank;
-           }
-          static::reward($row);
-          static::regisyter_rank(1);//添加总人数排名
-        }
-    }
-   //获取，注册红包
-    public static function execute_register_red($parameter)
-    {
-        $activitys = static::getActivityRows('register_red'); //取红包活动
-        foreach ($activitys as $row) {
-            $check_rst = static::checkBaseInfo($row);        //检查通用的要求
-            if($check_rst !== true) {
-                continue;
-            }
-            //注册红包转余额
-         $red= new  \lib\wealth\RedEnvelope();
-         return $red->register_red($row,static::$userModel);
-        }
     }
 
-    //获取，观看直播奖励
-    public static function execute_watch_live($parameter)
-    {
-        //取激活礼物的ID
-        $activity_id = static::getActivity('watch_live');
-        if(!$activity_id) {
-            throw new \Exception('没有激活的宝箱可以打开');
-        }
-
-        //取活动数据
-        $row = static::findOne($activity_id)->toArray();
-
-        $check_rst = static::checkBaseInfo($row);
-        if($check_rst !== true) {
-            //检测未通过
-            $rst[] = ['a_id'=>$row['iid'], 'rst'=>static::$error_meaning[$check_rst] ?? ''] ;;
-
-        }elseif(static::reward($row)) {
-            //领取成功
-           \lib\wyim\chatroom::cacheUserIntoTime(static::$userModel->iid);  //刷新用户进入时间
-           static::clearActivity('watch_live',static::$userModel->iid);     //消除缓存的礼物
-            $rst[] = ['a_id'=>$row['iid'], 'rst'=> 'ok'] ;;
-
-       } else {
-            $rst[] = ['a_id'=>$row['iid'], 'rst'=> '领取失败'] ;;
-       }
-        return $rst;
-    }
-
-    //激活，观看直播奖励  ----   宝箱类
-    public static function activation_watch_live($parameter)
-    {
-
-        if(static::getActivity('watch_live')) {
-            throw new \Exception('有激活的宝箱还未打开');
-        }
-
-        //取用户进入直播时间
-        $into_time = \lib\wyim\chatroom::getUserIntoTime(static::$userModel->iid);
-
-        if(!$into_time) {
-            throw new \Exception('请先进入直播间,观看直播');
-        }
-
-        $time = $user_time = time() - $into_time;           //计算观看时长
-        $activitys = static::getActivityRows('watch_live'); //取直播间活动
-
-        $rst = [];
-        foreach ($activitys as $row) {
-
-            $a_parameter = $row['parameter'];
-            $check_rst = static::activationCheckBaseInfo($row);        //检查通用的要求
-
-            if($check_rst !== true) {
-                $rst[] = ['a_id'=>$row['iid'], 'rst'=>static::$error_meaning[$check_rst] ?? ''] ;
-                continue;
-            }
-
-            //检查这项活动特有的要求
-            if($time<$a_parameter->duration) {
-                $rst[] = ['a_id'=>$row['iid'], 'rst'=>'时间不够'.$a_parameter->duration.'秒不能激活'] ;
-                break;
-            }
-
-            if(static::activity($row)) {
-                $rst[] = ['a_id'=>$row['iid'], 'rst'=>'ok'] ;
-                break;
-            } else {
-                $rst[$row['iid']] = $rst[] = ['a_id'=>$row['iid'], 'rst'=>'激活失败'] ;;
-                break;
-            }
-        }
-        return $rst;
-    }
 
 
     //取活动的所有行
-    public static function getActivityRows($name)
+    public static function getRows($name)
     {
         $data = static::find()
             ->where(['event'=>$name])
             ->orderBy('iid ASC')
             ->asArray()
             ->all();
-        $activity_id = ActivityReward::getActivity($name);
-        foreach($data as $key => $val) {
-            $val['parameter'] = json_decode($val['parameter']);
-            $val['receive'] = static::getstatus($val);
-            $val['activation'] = $val['iid'] == $activity_id ? '1' : '0';
-            $data[$key] = $val;
-        }
         return $data;
     }
-
-    //取没有领取的活动
-    public static function getUnused($name)
-    {
-        $data = static::getActivityRows($name);
-        foreach($data as $val) {
-            if($val['receive'] < $val['number_of_times']) {
-                return $val;
-            }
-        }
-        return json_decode('{}');
-    }
-
-
-
-    //激活检测  ----   宝箱类
-    private static function activationCheckBaseInfo($row)
-    {
-        //检测领取次数
-        $number = static::getstatus($row);
-
-        if($number >= $row['number_of_times']) { //达到了上领取上限
-
-            return 1;
-        }
-
-        if(strtotime($row['s_dt'])>time()) {
-            return 3;
-        }
-
-        if( $row['e_dt']<date('Y-m-d H:i:s', time()) ) {
-            return 4;
-        }
-
-        return true;
-
-    }
-
-    //激活礼物  ----   宝箱类
-    private static function activity($row) {
-        return Yii::$app->redis->HSET(static::USER_ACTIVITY_REWARD_STATUS.static::$userModel->iid, $row['event'],$row['iid']);
-    }
-
-    //取礼物激活状态  ----   宝箱类
-    public static function getActivity($event) {
-        return Yii::$app->redis->HGET(static::USER_ACTIVITY_REWARD_STATUS.static::$userModel->iid, $event);
-    }
-
-    //删除激活  ----   宝箱类
-    private static function clearActivity($event,$user_id)
-    {
-        $user_id = $user_id ? $user_id : static::$userModel->iid;
-        return Yii::$app->redis->HDEL(static::USER_ACTIVITY_REWARD_STATUS.$user_id, $event);
-    }
-
-
-
-    //取用户活动状态
-    public static function getstatus($activity) {
-        $rst = Yii::$app->redis->hget(static::USER_ACTIVITY_STATUS_CACHE.static::$userModel->iid, $activity['event'].$activity['iid']);
-        return $rst ?? '0';
-    }
-
-    //修改用户活动状态
-    public static function changestatus($activity) {
-        return Yii::$app->redis->hincrby(static::USER_ACTIVITY_STATUS_CACHE.static::$userModel->iid, $activity['event'].$activity['iid'],1);
-    }
-
-    //消除用户活动状态
-    public static function clearstatus($activity,$user_id=0) {
-        $user_id = $user_id ? $user_id : static::$userModel->iid;
-        return Yii::$app->redis->hdel(static::USER_ACTIVITY_STATUS_CACHE.$user_id, $activity['event'].$activity['iid']);
-    }
-
-    //取一个活动所有的状态
-    public static function getActivityStatus($type) {
-        $activitys = static::getActivityRows($type);
-        $newdata = [];
-        foreach($activitys as $activity){
-            $newdata[$activity['iid']] = static::getstatus($activity);
-        }
-        return $newdata;
-    }
-
-    //刷新缓存状态   ----   宝箱类
-    public static function refurbishAll()
-    {
-        //取出所有活动
-        $activitys = static::find()->asArray()->all();
-        static::refurbish_jh($activitys);       //消除激活状态
-        static::refurbish_hd($activitys);       //消除活动状态
-
-    }
-    //----   宝箱类
-    public static function refurbish_hd(&$activitys)
-    {
-        $redis = Yii::$app->redis;
-        //取出所有 ‘领取记录键’
-        $keys = $redis->keys(static::USER_ACTIVITY_STATUS_CACHE.'*');
-        $start = strlen(static::USER_ACTIVITY_STATUS_CACHE);
-
-        foreach($keys as $key)
-        {
-            $user_id = substr($key,$start);
-            foreach($activitys as $activity)
-            {
-                if( !$activity['refresh_time'] || date('H',time())==date('H',strtotime($activity['refresh_time'])) ) {
-                    static::clearstatus($activity, $user_id);
-                }
-            }
-        }
-    }
-
-    //----   宝箱类
-    public static function refurbish_jh(&$activitys)
-    {
-        $redis = Yii::$app->redis;
-        //取出所有 ‘领取记录键’
-        $keys = $redis->keys(static::USER_ACTIVITY_REWARD_STATUS.'*');
-        $start = strlen(static::USER_ACTIVITY_REWARD_STATUS);
-        foreach($keys as $key)
-        {
-            $user_id = substr($key,$start);
-            foreach($activitys as $activity)
-            {
-                if( !$activity['refresh_time'] || date('H',time())==date('H',strtotime($activity['refresh_time'])) ) {
-                    static::clearActivity($activity['event'], $user_id);
-                }
-            }
-        }
-    }
-
-     //检查排名
-     public static function regisyter_rank($type=1){
-         //表示查询
-         if ($type==0){
-             $rank=Yii::$app->redis->llen(static::USER_ACTIVITY_REGISTER_RANK);
-             if (in_array($rank+1,[1,10,100])){
-                 return $rank+1;
-             }else{
-                 return false;
-             }
-         }
-         if ($type==1){
-            return $rank=Yii::$app->redis->rpush(static::USER_ACTIVITY_REGISTER_RANK,static::$userModel->iid);
-         }
-         return true;
-    }
-
 
 }
