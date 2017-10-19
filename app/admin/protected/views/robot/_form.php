@@ -82,7 +82,6 @@ use yii\helpers\Html;
                                          <?php if ($fileName=='User[username]'): ?>
                                        <button class="button bg" type="button"  onclick="refreshName();"><span class="icon-refresh"></span></button>
                                         <?php endif;?>
-
                                     <?php break; ?>
 
                                 <?php endswitch; ?>

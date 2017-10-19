@@ -87,8 +87,11 @@ $this->title = '';
                         <tr  class="trshow">
                             <?php foreach($title as $key => $fieldName): ?>
                                 <td>
-
-                                <?php if(is_string($fieldName)): ?>
+                                <?php if ($fieldName=='vip_type'&&$v[$fieldName]==5): ?>
+							     VIP
+							     <?php elseif($fieldName=='vip_type'&&$v[$fieldName]==0): ?>
+								非VIP
+                                <?php elseif(is_string($fieldName)): ?>
                                     <?php $value = $v[$fieldName] ?>
                                     <?php if(in_array($fieldName,['image']) && !empty( $value ) ): ?>
 

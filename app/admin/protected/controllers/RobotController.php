@@ -98,9 +98,15 @@ class RobotController extends TemplateController
             }
 
             $llacounts=$data['nickname'];
-            $llacounts=mb_substr($llacounts, 0,rand(1,strlen($llacounts)-3));
+            $llacounts=mb_substr($llacounts, 0,rand(1,2));
+
             $ping=new Pinyin();
             $data['llaccounts']=$ping->get_pinyin($llacounts).rand(100,99999999);
+            if (strlen($data['llaccounts'])%2==0){
+                $data['vip_type']=5;
+                $data['vip_start']=date('Y-m-d H:i:s');
+                $data['vip_end']=date('Y-m-d H:i:s',strtotime('+1 year'));
+            }
             $model->attributes = $data;
             if ($model::findByLlaccounts($model->llaccounts)){
                 $this->error('联联账号已存在,请重试');
@@ -141,8 +147,8 @@ class RobotController extends TemplateController
             ['key'=>'province','value'=>'广东省','html'=>'text','option'=>''],
             ['key'=>'city','value'=>'深圳市','html'=>'text','option'=>''],
             ['key'=>'address','value'=>'','html'=>'text','option'=>''],
-          //  ['key'=>'is_robot','value'=>'1','html'=>'text','option'=>''],
-
+            ['key'=>'follow_number','value'=>'0','html'=>'text','option'=>''],
+            ['key'=>'fans_number','value'=>'0','html'=>'text','option'=>''],
         ];
     }
 
@@ -160,7 +166,9 @@ class RobotController extends TemplateController
             'province',
             'city',
             'address',
-
+            'follow_number',
+            'fans_number',
+            'vip_type',
         ];
     }
 }
