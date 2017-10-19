@@ -1,1 +1,1 @@
-<?phpnamespace app\controllers;use yii\web\Controller;use Yii;use yii\extend\AdCommon;class ActivityController extends Controller{    //刷新活动状态    public function actionRefurbish()    {        \lib\models\ActivityReward::refurbishAll();    }}
+<?phpnamespace app\controllers;use lib\models\ActivityReward;use yii\web\Controller;use Yii;use yii\extend\AdCommon;class ActivityController extends Controller{    //刷新活动状态    public function actionRefurbish()    {        \lib\models\ActivityReward::refurbish();    }}

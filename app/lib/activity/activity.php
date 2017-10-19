@@ -1,18 +1,38 @@
 <?php
 namespace lib\activity;
-
+use lib\models\ActivityDetailed;
+use lib\models\ActivityReward;
+use Yii;
 class activity
 {
     public static $userModel;
-
+    const USER_ACTIVITY_STATUS_CACHE = 'user_activity_status_cache';
     protected static $error_meaning= [
         1 => '已达到了领奖次数限制',
         2 => '非会员无法领取奖励',
         3 => '活动还未开始',
-        4 => '活动已结束',
+        4 => '活动已经结束',
     ];
 
-    public static function join(){
+
+    public static function join($row, $parameter='')
+    {
+
+        $data = ActivityDetailed::getTypeRows($row['iid']);
+
+        foreach($data as $row)
+        {
+            $check_rst = static::checkBaseInfo($row);        //检查通用的要求
+            if($check_rst !== true) {
+                continue;
+            }
+            static::reward($row);
+        }
+    }
+
+    //刷新缓存状态   ----   宝箱类
+    public static function refurbish()
+    {
 
     }
 
@@ -27,15 +47,6 @@ class activity
         if($row['vip'] && !static::$userModel->vip_type) {
             return 2;
         }
-
-        if(strtotime($row['s_dt'])>time()) {
-            return 3;
-        }
-
-        if( $row['e_dt']<date('Y-m-d H:i:s', time()) ) {
-            return 4;
-        }
-
         return true;
 
     }
@@ -46,10 +57,11 @@ class activity
         switch ($row['rewardType'])
         {
             case 'beans':
-                if(!Yii::$app->factory->getwealth('beans', static::$userModel)->add([
+                $beans_cls = Yii::$app->factory->getwealth('beans', static::$userModel);
+                if(!$beans_cls->add([
                 'number' => $row['rewardNumber'],
                 'type' => \Config::BEANS_ACTIVITY,
-                'note' => $row['name'],
+                'note' => (string)$row['iid'],
                 ])) {
                     $t->rollBack();
                     return false;
@@ -59,8 +71,8 @@ class activity
             case 'wallet':
                 if(!Yii::$app->factory->getwealth('wallet', static::$userModel)->add([
                 'number' => $row['rewardNumber'],
-                'type' => \Config::BEANS_ACTIVITY,
-                'note' => $row['name'],
+                'type' => \Config::WALLET_ACTIVITY,
+                'note' => (string)$row['iid'],
                 ])) {
                     $t->rollBack();
                     return false;
@@ -83,16 +95,54 @@ class activity
     }
 
     //取没有领取的活动
-    public static function getUnused($name)
+    public static function getUnused($a_id)
     {
-        $data = static::getActivityRows($name);
+
+        $data = ActivityDetailed::getTypeRows($a_id);
         foreach($data as $val) {
-            if($val['receive'] < $val['number_of_times']) {
+            if(static::getstatus($val) < $val['number_of_times']) {
                 return $val;
             }
         }
         return json_decode('{}');
     }
+
+
+    //取用户获得次数
+    public static function getstatus($detailed) {
+        $rst = Yii::$app->redis->hget(static::USER_ACTIVITY_STATUS_CACHE.static::$userModel->iid, $detailed['a_id'].':'.$detailed['iid']);
+        return $rst ?? '0';
+    }
+
+    //用户获得次数加1
+    public static function changestatus($detailed) {
+        return Yii::$app->redis->hincrby(static::USER_ACTIVITY_STATUS_CACHE.static::$userModel->iid, $detailed['a_id'].':'.$detailed['iid'],1);
+    }
+
+    //消除用户获得次数
+    public static function clearstatus($detailed,$user_id=0) {
+        $user_id = $user_id ? $user_id : static::$userModel->iid;
+        return Yii::$app->redis->hdel(static::USER_ACTIVITY_STATUS_CACHE.$user_id, $detailed['a_id'].':'.$detailed['iid']);
+    }
+
+    //重置活动状态
+    public static function refurbish_status(&$detaileds)
+    {
+        $redis = Yii::$app->redis;
+        //取出所有 ‘领取记录键’
+        $keys = $redis->keys(static::USER_ACTIVITY_STATUS_CACHE.'*');
+        $start = strlen(static::USER_ACTIVITY_STATUS_CACHE);
+
+        foreach($keys as $key)
+        {
+            $user_id = substr($key,$start);
+            foreach($detaileds as $detailed)
+            {
+                static::clearstatus($detailed, $user_id);
+            }
+        }
+    }
+
 
 }
 ?>
