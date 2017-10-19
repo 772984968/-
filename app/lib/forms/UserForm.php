@@ -5,6 +5,7 @@ use Yii;
 use yii\base\Model;
 use yii\extend\AdCommon;
 use lib\models\User;
+use lib\wealth\RedEnvelope;
 
 class UserForm extends Model
 {
@@ -167,7 +168,6 @@ class UserForm extends Model
 
     public function register()
     {
-
         if( $this->validate() )
         {
             $model = new User();
@@ -185,7 +185,7 @@ class UserForm extends Model
                 $this->addError('name',AdCommon::modelMessage($model->errors));
                 return false;
             }
-        }
+         }
     }
 
     public function login()

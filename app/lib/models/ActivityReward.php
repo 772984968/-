@@ -4,6 +4,7 @@ namespace lib\models;
 
 use Yii;
 
+
 /**
  * This is the model class for table "at_activity_reward".
  *
@@ -24,6 +25,7 @@ class ActivityReward extends \yii\db\ActiveRecord
     public static $userModel;
     const USER_ACTIVITY_STATUS_CACHE = 'user_activity_status_cache';
     const USER_ACTIVITY_REWARD_STATUS = 'user_activity_reward_status';
+    const USER_ACTIVITY_REGISTER_RANK='user_activity_register_rank';
     private static $error_meaning= [
         1 => '已达到了领奖次数限制',
         2 => '非会员无法领取奖励',
@@ -88,6 +90,7 @@ class ActivityReward extends \yii\db\ActiveRecord
 
     //激活奖励
     public static function activation($event, $parameter='') {
+
         $method = 'activation_'.$event;
         if(method_exists(__CLASS__,$method)) {
             return static::$method($parameter);
@@ -99,22 +102,33 @@ class ActivityReward extends \yii\db\ActiveRecord
 
     //获取，注册奖励
     public static function execute_register($parameter) {
-
         $activitys = static::getActivityRows('register'); //取直活动
-
         foreach ($activitys as $row) {
-
             $check_rst = static::checkBaseInfo($row);        //检查通用的要求
-
             if($check_rst !== true) {
                 continue;
             }
-            if(static::reward($row)) {
-                //直接加入到用户消息队列中
-                \lib\nodes\UserMessage::sendBeans(static::$userModel->iid, 'regiser', $row['rewardNumber']);
-            }
+            $rank=static::regisyter_rank(0);//0查询人数排名
+            if ($rank!==false){
+                $row['rewardNumber']+=$rank;
+           }
+          static::reward($row);
+          static::regisyter_rank(1);//添加总人数排名
         }
-
+    }
+   //获取，注册红包
+    public static function execute_register_red($parameter)
+    {
+        $activitys = static::getActivityRows('register_red'); //取红包活动
+        foreach ($activitys as $row) {
+            $check_rst = static::checkBaseInfo($row);        //检查通用的要求
+            if($check_rst !== true) {
+                continue;
+            }
+            //注册红包转余额
+         $red= new  \lib\wealth\RedEnvelope();
+         return $red->register_red($row,static::$userModel);
+        }
     }
 
     //获取，观看直播奖励
@@ -201,7 +215,6 @@ class ActivityReward extends \yii\db\ActiveRecord
             ->orderBy('iid ASC')
             ->asArray()
             ->all();
-
         $activity_id = ActivityReward::getActivity($name);
         foreach($data as $key => $val) {
             $val['parameter'] = json_decode($val['parameter']);
@@ -229,11 +242,9 @@ class ActivityReward extends \yii\db\ActiveRecord
     {
         //检测领取次数
         $number = static::getstatus($row);
-
         if($number >= $row['number_of_times']) { //达到了上领取上限
-            return 1;
+                   return 1;
         }
-
         if($row['vip'] && !static::$userModel->vip_type) {
             return 2;
         }
@@ -257,6 +268,7 @@ class ActivityReward extends \yii\db\ActiveRecord
         $number = static::getstatus($row);
 
         if($number >= $row['number_of_times']) { //达到了上领取上限
+
             return 1;
         }
 
@@ -303,6 +315,7 @@ class ActivityReward extends \yii\db\ActiveRecord
                     $t->rollBack();
                     return false;
                 }
+                \lib\nodes\UserMessage::sendBeans(static::$userModel->iid, 'regiser', $row['rewardNumber']);
                 break;
             case 'wallet':
                 if(!Yii::$app->factory->getwealth('wallet', static::$userModel)->add([
@@ -319,6 +332,7 @@ class ActivityReward extends \yii\db\ActiveRecord
                 return false;
 
         }
+       //修改状态
         $rst = static::changestatus($row);
         if($rst) {
             $t->commit();
@@ -400,7 +414,22 @@ class ActivityReward extends \yii\db\ActiveRecord
         }
     }
 
-
+     //检查排名
+     public static function regisyter_rank($type=1){
+         //表示查询
+         if ($type==0){
+             $rank=Yii::$app->redis->llen(static::USER_ACTIVITY_REGISTER_RANK);
+             if (in_array($rank+1,[1,10,100])){
+                 return $rank+1;
+             }else{
+                 return false;
+             }
+         }
+         if ($type==1){
+            return $rank=Yii::$app->redis->rpush(static::USER_ACTIVITY_REGISTER_RANK,static::$userModel->iid);
+         }
+         return true;
+    }
 
 
 }
