@@ -1,7 +1,4 @@
-
-
 <?php
-
 namespace lib\models;
 
 use Yii;

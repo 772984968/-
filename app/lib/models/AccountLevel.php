@@ -1,9 +1,6 @@
 <?php
-
 namespace lib\models;
-
 use Yii;
-
 /**
  * This is the model class for table "at_account_level".
  *
