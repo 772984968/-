@@ -74,11 +74,11 @@ class ActivityReward extends \yii\db\ActiveRecord
             }
             $class_name = '\lib\activity\\'.$row['name'];
             if(method_exists($class_name, 'join')) {
-
                 $class_name::$userModel = static::$userModel;
-                $rst = $class_name::join($row, $parameter);
+                $rst[] = $class_name::join($row, $parameter);
             }
         }
+        
         return $rst;
 
     }
