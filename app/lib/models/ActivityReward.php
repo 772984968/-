@@ -62,7 +62,7 @@ class ActivityReward extends \yii\db\ActiveRecord
     public static function get($event, $parameter='')
     {
         $data = static::getRows($event); //取直活动
-        var_dump($data);die;
+       
         if(!$data) {
             return false;
         }
