@@ -38,8 +38,9 @@ class ActivityReward extends \yii\db\ActiveRecord
         return [
             [['s_dt', 'e_dt', 'refresh_time'], 'safe'],
             [['name'], 'string', 'max' => 15],
+            ['is_show', 'integer'],
             [['event','discription'], 'string', 'max' => 20],
-            [['image','url'], 'string', 'max' => 15],
+            [['image','url'], 'string', 'max' =>255],
         ];
     }
 
