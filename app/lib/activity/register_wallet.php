@@ -1,1 +1,1 @@
-<?phpnamespace lib\activity;class register_wallet extends activity{}
+<?phpnamespace lib\activity;class register_wallet extends activity{    public static function refurbish($a_id=3)    {        parent::refurbish($a_id);    }}
