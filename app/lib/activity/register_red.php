@@ -30,7 +30,7 @@ class register_red extends activity
         }
             $RedModel = new RedEnvelope();
             $userModel = User::findOne([
-            'username' => activity::$userModel->inviteCode
+            'llaccounts' => activity::$userModel->inviteCode
             ]);
             if (! $userModel)
             return false;
