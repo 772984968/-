@@ -1,1 +1,1 @@
-<?phpclass tree{    }
+<?phpclass tree{}

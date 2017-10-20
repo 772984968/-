@@ -18,7 +18,6 @@ class activity
     public static function join($row, $parameter='', $call_back='' )
     {
         $data = ActivityDetailed::getTypeRows($row['iid']);
-
         foreach($data as $drow)
         {
             $check_rst = static::checkBaseInfo($drow);        //检查通用的要求
@@ -29,21 +28,20 @@ class activity
                 if($call_back) {
                     $method = $call_back['method'];
                     $call_back['class']::$method($drow, $parameter);
-                }
+        }
                 return true;
             } else {
                 return false;
-            }
+    }
         }
     }
-
     //刷新缓存状态
     public static function refurbish($a_id)
     {
         $row = ActivityReward::findOne($a_id);
         if(!$row) {
             return false;
-        }
+    }
         $row->toArray();
         if( $row['refresh_time'] && date('H',time())==date('H',strtotime($row['refresh_time'])) ) {
             $data = ActivityDetailed::getTypeRows($a_id);
