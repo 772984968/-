@@ -22,8 +22,6 @@ class ActivityReward extends \yii\db\ActiveRecord
 {
     public static $userModel;
 
-
-
     /**
      * @inheritdoc
      */
@@ -41,6 +39,7 @@ class ActivityReward extends \yii\db\ActiveRecord
             [['s_dt', 'e_dt', 'refresh_time'], 'safe'],
             [['name'], 'string', 'max' => 15],
             [['event','discription'], 'string', 'max' => 20],
+            [['image','url'], 'string', 'max' => 15],
         ];
     }
 
@@ -63,6 +62,7 @@ class ActivityReward extends \yii\db\ActiveRecord
     public static function get($event, $parameter='')
     {
         $data = static::getRows($event); //取直活动
+       
         if(!$data) {
             return false;
         }
@@ -102,8 +102,10 @@ class ActivityReward extends \yii\db\ActiveRecord
     //取活动的所有行
     public static function getRows($event)
     {
+        $time = time();
         $data = static::find()
             ->where(['event'=>$event])
+            ->andWhere("UNIX_TIMESTAMP(s_dt)<=$time AND UNIX_TIMESTAMP(e_dt)>=$time")
             ->orderBy('iid ASC')
             ->asArray()
             ->all();
