@@ -141,4 +141,9 @@ return [
     'Robotdel'=> '/robot/del',
 
 
+	/*-------------- 活动管理 ------------------*/
+	'ActivityIndex' => '/activity/index',
+	'ActivityEdit'	=> '/activity/change',
+
+
 ];
