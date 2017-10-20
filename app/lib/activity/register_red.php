@@ -17,8 +17,6 @@ class register_red extends activity
 
     public static function join($row='',$parameter='',$call_back='')
     {
-
-
         if ($parameter['sharing']=='sharing'){
         $data = ActivityDetailed::getTypeRows($row['iid']);
         foreach($data as $drow)

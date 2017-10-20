@@ -13,8 +13,6 @@ class activity
         3 => '活动还未开始',
         4 => '活动已经结束',
     ];
-
-
     public static function join($row, $parameter='', $call_back='' )
     {
         $data = ActivityDetailed::getTypeRows($row['iid']);
@@ -127,7 +125,7 @@ class activity
         if(is_numeric($detailed)) {
             $detailed = ActivityDetailed::findOne($detailed);
         }
-        
+
         $rst = Yii::$app->redis->hget(static::USER_ACTIVITY_STATUS_CACHE.static::$userModel->iid, $detailed['a_id'].':'.$detailed['iid']);
         return $rst ?? '0';
     }
