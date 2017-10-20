@@ -1,5 +1,3 @@
-
-
 <?php
 namespace lib\activity;
 use lib\models\ActivityDetailed;
@@ -128,6 +126,10 @@ class activity
 
     //取用户获得次数
     public static function getstatus($detailed) {
+        if(is_numeric($detailed)) {
+            $detailed = ActivityDetailed::findOne($detailed);
+        }
+        
         $rst = Yii::$app->redis->hget(static::USER_ACTIVITY_STATUS_CACHE.static::$userModel->iid, $detailed['a_id'].':'.$detailed['iid']);
         return $rst ?? '0';
     }
