@@ -11,11 +11,9 @@ class activity
         3 => '活动还未开始',
         4 => '活动已结束',
     ];
-
     public static function join(){
 
     }
-
     //检测通用信息
     protected static function checkBaseInfo($row)
     {

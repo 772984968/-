@@ -76,10 +76,8 @@ class ActivityReward extends \yii\db\ActiveRecord
     public static function get($event, $parameter='')
     {
         $activitys = static::getRows($event); //取直活动
-
         foreach ($activitys as $row) {
-            $class_name = '\lib\activity\\'.$row['name'];
-
+            $class_name = "lib\\activity\\".$row['name'];
             if(method_exists($class_name, 'join')) {
                 $class_name::$userModel = static::$userModel;
                 $class_name::join($row, $parameter);
@@ -87,9 +85,6 @@ class ActivityReward extends \yii\db\ActiveRecord
         }
 
     }
-
-
-
     //取活动的所有行
     public static function getRows($name)
     {
