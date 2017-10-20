@@ -1,3 +1,5 @@
+
+
 <?php
 
 namespace lib\models;
@@ -23,7 +25,7 @@ use Yii;
 class ActivityReward extends \yii\db\ActiveRecord
 {
     public static $userModel;
-    
+
 
 
     /**
@@ -129,3 +131,4 @@ class ActivityReward extends \yii\db\ActiveRecord
     }
 
 }
+
