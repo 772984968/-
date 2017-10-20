@@ -1,0 +1,1 @@
+<?phpnamespace lib\activity;class register_wallet extends activity{}

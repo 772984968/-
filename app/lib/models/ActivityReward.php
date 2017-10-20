@@ -1,3 +1,5 @@
+
+
 <?php
 
 namespace lib\models;
@@ -24,8 +26,6 @@ class ActivityReward extends \yii\db\ActiveRecord
 {
     public static $userModel;
 
-    const USER_ACTIVITY_REWARD_STATUS = 'user_activity_reward_status';
-    const USER_ACTIVITY_REGISTER_RANK='user_activity_register_rank';
 
 
     /**
@@ -42,13 +42,9 @@ class ActivityReward extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['rewardType'], 'string'],
-            [['rewardNumber'], 'number'],
             [['s_dt', 'e_dt', 'refresh_time'], 'safe'],
-            [['vip', 'number_of_times'], 'integer'],
             [['name'], 'string', 'max' => 15],
-            [['event'], 'string', 'max' => 20],
-            [['parameter'], 'string', 'max' => 60],
+            [['event','discription'], 'string', 'max' => 20],
         ];
     }
 
@@ -61,39 +57,78 @@ class ActivityReward extends \yii\db\ActiveRecord
             'iid' => 'Iid',
             'name' => 'Name',
             'event' => 'Event',
-            'parameter' => 'Parameter',
-            'rewardType' => 'Reward Type',
-            'rewardNumber' => 'Reward Number',
             's_dt' => 'S Dt',
             'e_dt' => 'E Dt',
-            'vip' => 'Vip',
-            'number_of_times' => 'Number Of Times',
             'refresh_time' => 'Refresh Time',
         ];
     }
 
-    //获取奖励
+    //触发事件
     public static function get($event, $parameter='')
     {
-        $activitys = static::getRows($event); //取直活动
-        foreach ($activitys as $row) {
-            $class_name = "lib\\activity\\".$row['name'];
-            if(method_exists($class_name, 'join')) {
-                $class_name::$userModel = static::$userModel;
-                $class_name::join($row, $parameter);
-            }
+
+        $data = static::getRows($event); //取直活动
+        if(!$data) {
+            return false;
         }
 
+        $rst = [];
+        foreach($data as $row)
+        {
+            if(!static::check($row)) {
+                continue;
+            }
+            $class_name = '\lib\activity\\'.$row['name'];
+            if(method_exists($class_name, 'join')) {
+
+                $class_name::$userModel = static::$userModel;
+                $rst = $class_name::join($row, $parameter);
+            }
+        }
+        return $rst;
+
     }
+
+
+    //检查活动是否开始了
+    public static function check($row)
+    {
+        if(strtotime($row['s_dt'])>time()) {
+            return false;
+        }
+
+        if( $row['e_dt']<date('Y-m-d H:i:s', time()) ) {
+            return false;
+        }
+
+        return true;
+    }
+
+
     //取活动的所有行
-    public static function getRows($name)
+    public static function getRows($event)
     {
         $data = static::find()
-            ->where(['event'=>$name])
+            ->where(['event'=>$event])
             ->orderBy('iid ASC')
             ->asArray()
             ->all();
         return $data;
     }
 
+    //重置领取记录
+    public static function refurbish()
+    {
+        $data = static::find()->asArray()->all();
+        foreach ($data as $row)
+        {
+            $class_name = '\lib\activity\\'.$row['name'];
+
+            if(method_exists($class_name, 'refurbish')) {
+                $class_name::refurbish();
+            }
+        }
+    }
+
 }
+
