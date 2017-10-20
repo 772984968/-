@@ -62,7 +62,6 @@ class ActivityReward extends \yii\db\ActiveRecord
     public static function get($event, $parameter='')
     {
         $data = static::getRows($event); //取直活动
-       
         if(!$data) {
             return false;
         }
@@ -78,7 +77,7 @@ class ActivityReward extends \yii\db\ActiveRecord
                 $rst[] = $class_name::join($row, $parameter);
             }
         }
-        
+
         return $rst;
 
     }
