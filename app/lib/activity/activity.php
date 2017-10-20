@@ -35,7 +35,6 @@ class activity
     }
         }
     }
-
     //刷新缓存状态
     public static function refurbish($a_id)
     {
