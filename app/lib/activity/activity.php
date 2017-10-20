@@ -1,5 +1,3 @@
-
-
 <?php
 namespace lib\activity;
 use lib\models\ActivityDetailed;
@@ -19,9 +17,7 @@ class activity
 
     public static function join($row, $parameter='')
     {
-
         $data = ActivityDetailed::getTypeRows($row['iid']);
-
         foreach($data as $row)
         {
             $check_rst = static::checkBaseInfo($row);        //检查通用的要求

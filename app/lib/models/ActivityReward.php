@@ -1,9 +1,5 @@
-
-
 <?php
-
 namespace lib\models;
-
 use Yii;
 
 
@@ -66,13 +62,11 @@ class ActivityReward extends \yii\db\ActiveRecord
     //触发事件
     public static function get($event, $parameter='')
     {
-
         $data = static::getRows($event); //取直活动
         if(!$data) {
             return false;
         }
-
-        $rst = [];
+       $rst = [];
         foreach($data as $row)
         {
             if(!static::check($row)) {
