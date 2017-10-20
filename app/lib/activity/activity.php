@@ -115,6 +115,7 @@ class activity
         $data = ActivityDetailed::getTypeRows($a_id);
         foreach($data as $val) {
             if(static::getstatus($val) < $val['number_of_times']) {
+                $val['receive'] = (string)static::getstatus($val);
                 return $val;
             }
         }
