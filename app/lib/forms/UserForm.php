@@ -174,11 +174,17 @@ class UserForm extends Model
             $model->attributes = AdCommon::array_clear_null($this->attributes);
             $model->head = Yii::$app->params['webpath'] . '/uploads/default_head.png';
             $model->setPassword( $this->password );
+            $UserForm=\Yii::$app->request->post("UserForm");
+            if (isset($UserForm['sharing'])){
+                $sharing=$UserForm['sharing'];
+            }else{
+                $sharing='';
+            }
             if( $model->save() ) {
                 $model->registerWyAccid();      //注册网易IM
                 \lib\models\ActivityReward::$userModel = $model;
-                \lib\models\ActivityReward::get('register');        //获取注册优惠
-                $this->setScenario('login');                        //登入
+                \lib\models\ActivityReward::get('register',['sharing'=>$sharing]);        //获取注册优惠
+                $this->setScenario('login');                                             //登入
                 if($this->inviteCode) {
                     //缴请人加奖励积分,
                     $inviteUser = User::findByLlaccounts($this->inviteCode);
