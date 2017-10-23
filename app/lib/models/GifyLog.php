@@ -33,8 +33,8 @@ class GifyLog extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'receiver_id', 'gify_number', 'scale'], 'integer'],
-            [['price', 'gify_price'], 'number'],
+            [['user_id', 'receiver_id', 'gify_number'], 'integer'],
+            [['price', 'gify_price', 'scale'], 'number'],
             [['create_time'], 'safe'],
             [['gify_name'], 'string', 'max' => 20],
         ];

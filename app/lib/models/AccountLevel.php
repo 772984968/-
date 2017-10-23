@@ -46,6 +46,7 @@ class AccountLevel extends BaseModel
         ];
     }
 
+
     public static function getLevel($credits)
     {
         $data = static::getCacheList();
@@ -56,5 +57,38 @@ class AccountLevel extends BaseModel
             }
         }
     }
+    //直播收益返回等级比例
+    public  static  function liveearn($credits){
+        $level=self::getLevel($credits);
+        $AccountLevel=self::find()->where('iid>0')->asArray()->all();
+        $levels=array_column($AccountLevel,'name');
+        if (in_array($level,$levels)){
+            foreach ($AccountLevel as $key=>$value){
+                if ($value['name']==$level){
+                    $withdrawal_proportion=bcdiv($value['withdrawal_proportion'],100,3);//等级钻石提现比例
+                }
+            }
+               return  $withdrawal_proportion;
+        }
+
+        return 0;
+
+    }
+    //钻石提现返回等级比例
+    public  static function diamondWithdraw($credits){
+        $level=self::getLevel($credits);
+        $AccountLevel=self::find()->where('iid>0')->asArray()->all();
+        $levels=array_column($AccountLevel,'name');
+        if (in_array($level,$levels)){
+            foreach ($AccountLevel as $key=>$value){
+                if ($value['name']==$level){
+                    $withdrawal_proportion=bcdiv($value['diamond_proportion'],1000,3);//等级钻石提现比例
+                }
+            }
+            return  $withdrawal_proportion;
+        }
+        return 0;
+    }
+
 
 }
