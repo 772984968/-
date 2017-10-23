@@ -251,7 +251,7 @@ class User extends ActiveRecord
     }
 
     //取头像路径
-    public function get_head()
+        public function get_head()
     {
         $head_arr = json_decode($this->head);
 
