@@ -146,4 +146,7 @@ return [
 	'ActivityEdit'	=> '/activity/change',
 
 
+    /*-------------- 活动中心管理 ------------------*/
+    'ActivityCenterIndex' => '/activitycenter/index',
+    'ActivitycenterAdd' => '/activitycenter/add',
 ];
