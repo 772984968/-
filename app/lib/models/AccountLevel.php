@@ -71,7 +71,6 @@ class AccountLevel extends BaseModel
             }
                return  $withdrawal_proportion;
         }
-
         return 0;
 
     }
@@ -92,21 +91,31 @@ class AccountLevel extends BaseModel
     }
     //等级比率
     public static  function  classrate($credits){
-       $level=self::getLevel($credits);
-       var_dump($level);exit();
-        $AccountLevel=self::find()->where('iid>0')->asArray()->all();
-        $levels=array_column($AccountLevel,'name');
-        if (in_array($level,$levels)){
-            foreach ($AccountLevel as $key=>$value){
-                if ($value['name']==$level){
-                    $withdrawal_proportion=bcdiv($value['diamond_proportion'],1000,3);//等级钻石提现比例
-                }
-            }
-            return  $withdrawal_proportion;
-        }
-        return 0;
+       $level=self::getLevel($credits);//当前等级
+       $AccountLevel=self::find()->where('iid>0')->asArray()->orderBy('credits desc')->all();
+       if ($level>=$AccountLevel[0]['name']){
+           return 1;
+       }
+       foreach ($AccountLevel as $key=>$value){
+           if ($value['name']==($level+1)){
+               $next_credits=$value['credits'];
+               break;
 
+           }
+
+       }
+        return round($credits/$next_credits,3);
+}
+
+    //等级信息
+    public static function  accountlevel($credits){
+
+       return [
+            "name"=>self::getLevel($credits),
+            "credits"=>$credits,
+            "withdrawal_proportion"=>self::liveearn($credits)*100,
+            "diamond_proportion"=>self::diamondWithdraw($credits)*1000,
+        ];
 
     }
-
 }

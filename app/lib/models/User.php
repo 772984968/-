@@ -176,12 +176,7 @@ class User extends ActiveRecord
             'diamond' => $this->diamond,
             'head' => $this->get_head(),
             'is_vip' => $this->vip_type ? 1 : 0,
-            'accountlevel'=>[
-                "iid"=>"5",
-                "name"=>"一级",
-                "credits"=>"0",
-                "withdrawal_proportion"=>"1"
-            ],
+            'accountlevel'=>AccountLevel::accountlevel($this->credits),
             'wy_im_accid' => $this->wy_accid,
             'wy_im_token' => $this->wy_token,
             'inviteCode' => $this->inviteCode,
