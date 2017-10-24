@@ -3,7 +3,7 @@ namespace lib\models;
 use Yii;
 /**
  * This is the model class for table "at_account_level".
- *
+ *用户等级模型
  * @property integer $iid
  * @property string $name
  * @property integer $credits
@@ -65,7 +65,8 @@ class AccountLevel extends BaseModel
         if (in_array($level,$levels)){
             foreach ($AccountLevel as $key=>$value){
                 if ($value['name']==$level){
-                    $withdrawal_proportion=bcdiv($value['withdrawal_proportion'],100,3);//等级钻石提现比例
+                    $withdrawal_proportion=round($value['diamond_proportion']/100,3);//等级钻石提现比例
+
                 }
             }
                return  $withdrawal_proportion;
@@ -82,13 +83,30 @@ class AccountLevel extends BaseModel
         if (in_array($level,$levels)){
             foreach ($AccountLevel as $key=>$value){
                 if ($value['name']==$level){
-                    $withdrawal_proportion=bcdiv($value['diamond_proportion'],1000,3);//等级钻石提现比例
+                    $withdrawal_proportion=round($value['diamond_proportion']/1000,3);//等级钻石提现比例
                 }
             }
             return  $withdrawal_proportion;
         }
         return 0;
     }
+    //等级比率
+    public static  function  classrate($credits){
+       $level=self::getLevel($credits);
+       var_dump($level);exit();
+        $AccountLevel=self::find()->where('iid>0')->asArray()->all();
+        $levels=array_column($AccountLevel,'name');
+        if (in_array($level,$levels)){
+            foreach ($AccountLevel as $key=>$value){
+                if ($value['name']==$level){
+                    $withdrawal_proportion=bcdiv($value['diamond_proportion'],1000,3);//等级钻石提现比例
+                }
+            }
+            return  $withdrawal_proportion;
+        }
+        return 0;
 
+
+    }
 
 }
