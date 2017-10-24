@@ -8,7 +8,7 @@ use lib\models\ActivityCenter;
 
 
 //活动中心控制器
-class ActivityCenterController extends TemplateController
+class ActivitycenterController extends TemplateController
 {
 
     public $config = [
