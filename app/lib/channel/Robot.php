@@ -1,1 +1,1 @@
-<?phpnamespace lib\channel;class Robot{    }
+<?phpnamespace lib\channel;class Robot{    const CACHE_NAME = 'appapi:lib:channel:robot';    //向聊天室加机器人    public function add($cid)    {        $number = mt_rand(5, 15);            }    //取一个机器人    public function get()    {    }}
