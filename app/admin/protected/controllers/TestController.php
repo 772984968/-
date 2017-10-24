@@ -16,11 +16,12 @@ class TestController extends BasicsController
     public function actionIndex()
     {
         //$model = new Adstype();
-        $model = Adstype::findOne(85);
+//         $model = Adstype::findOne(85);
 
-        $result = $model->hasMany('lib\models\Ads',['type'=>'type'])->asArray()->all();
-        print_r($result);
+//         $result = $model->hasMany('lib\models\Ads',['type'=>'type'])->asArray()->all();
+//         print_r($result);
         //print_r($model->getOrders());
+     //   echo time();
     }
 
 
