@@ -47,9 +47,11 @@ class ActivitycenterController extends TemplateController
     {
         return [
             ['key'=>'title','value'=>'','html'=>'text','option'=>''],
-            ['key'=>'url','value'=>'','html'=>'image','option'=>''],
+            ['key'=>'image','value'=>'','html'=>'image','option'=>''],
+            ['key'=>'url','value'=>'','html'=>'text','option'=>''],
             ['key'=>'s_dt','value'=>'','html'=>'time','option'=>''],
             ['key'=>'e_dt','value'=>'','html'=>'time','option'=>''],
+
         ];
     }
 
@@ -60,6 +62,7 @@ class ActivitycenterController extends TemplateController
         return [
             'iid',
             'title',
+            'image',
             'url',
             's_dt',
             'e_dt'

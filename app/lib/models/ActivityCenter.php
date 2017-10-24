@@ -31,7 +31,7 @@ class ActivityCenter extends \yii\db\ActiveRecord
             ['iid','integer'],
             [['s_dt', 'e_dt'], 'safe'],
             [['title'], 'string', 'max' => 30],
-            [['url'], 'string', 'max' =>255],
+            [['url','image'], 'string', 'max' =>255],
         ];
     }
 
