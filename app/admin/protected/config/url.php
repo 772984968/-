@@ -147,7 +147,7 @@ return [
 
 
     /*-------------- 活动中心管理 ------------------*/
-    'ActivityCenterIndex' => '/activitycenter/index',
+    'ActivitycenterIndex' => '/activitycenter/index',
     'ActivitycenterAdd' => '/activitycenter/add',
     'ActivitycenterDel'=>'/activitycenter/del',
     'ActivitycenterEdit'=>'/activitycenter/change'

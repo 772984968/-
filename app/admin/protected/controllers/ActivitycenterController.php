@@ -14,7 +14,7 @@ class ActivitycenterController extends TemplateController
     public $config = [
         'modelName' => 'lib\models\ActivityCenter',
         'modelShortName' => 'ActivityCenter',
-        'listUrl' => 'ActivityCenterIndex',
+        'listUrl' => 'ActivitycenterIndex',
         'addUrl' => 'ActivitycenterAdd',
        'delUrl' => 'ActivitycenterDel',
        'chgUrl' => 'ActivitycenterEdit',
