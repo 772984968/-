@@ -65,7 +65,7 @@ class AccountLevel extends BaseModel
         if (in_array($level,$levels)){
             foreach ($AccountLevel as $key=>$value){
                 if ($value['name']==$level){
-                    $withdrawal_proportion=round($value['diamond_proportion']/100,3);//等级钻石提现比例
+                    $withdrawal_proportion=round($value['withdrawal_proportion']/100,3);//等级钻石提现比例
 
                 }
             }
@@ -83,10 +83,10 @@ class AccountLevel extends BaseModel
         if (in_array($level,$levels)){
             foreach ($AccountLevel as $key=>$value){
                 if ($value['name']==$level){
-                    $withdrawal_proportion=round($value['diamond_proportion']/1000,3);//等级钻石提现比例
+                    $diamond_proportion=round($value['diamond_proportion']/1000,3);//等级钻石提现比例
                 }
             }
-            return  $withdrawal_proportion;
+            return  $diamond_proportion;
         }
         return 0;
     }
