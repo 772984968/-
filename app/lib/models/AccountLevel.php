@@ -110,10 +110,11 @@ class AccountLevel extends BaseModel
     //等级信息
     public static function  accountlevel($credits){
        return [
-            "level"=>self::getLevel($credits),
-            "credits"=>$credits,
-            "withdrawal_proportion"=>self::liveearn($credits)*100,
-            "diamond_proportion"=>self::diamondWithdraw($credits)*1000,
+            "iid"=>'5',
+            "name"=>(string)self::getLevel($credits),
+            "credits"=>(string)$credits,
+            "withdrawal_proportion"=>(string)(self::liveearn($credits)*100),
+            "diamond_proportion"=>(string)(self::diamondWithdraw($credits)*1000),
         ];
 
     }
