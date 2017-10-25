@@ -76,14 +76,12 @@ class Channel extends \yii\db\ActiveRecord
             $img = new \yii\extend\Image($local_path,pathinfo($local_path, PATHINFO_EXTENSION));
             $img->noopsyche(500,500);   //裁剪图片
             $head_arr= json_encode(fastdfs_storage_upload_by_filename($local_path)); //保存到图片服务器
-           $head_arr='';
             if($head_arr&&is_object($head_arr)){
-                die('absd');
                 if(empty($head_arr->group_name) ||  empty($head_arr->filename)) {
-                    $url = Yii::$app->params['webpath'] . '/uploads/default_head.png';
+                    return $local_path;
                 } else {
                     $server = Yii::$app->params['imgServer'][$head_arr->group_name] ?? '';
-                    $url = $server . $head_arr->group_name . '/' . $head_arr->filename;
+                    return $server . $head_arr->group_name . '/' . $head_arr->filename;
                 }
             }else{
                  return    $local_path;
