@@ -94,7 +94,10 @@ class AccountLevel extends BaseModel
        $level=self::getLevel($credits);//当前等级
        $AccountLevel=self::find()->where('iid>0')->asArray()->orderBy('credits desc')->all();
        if ($level>=$AccountLevel[0]['name']){
-           return 1;
+           $data['classrate']=1;
+           $data['next_credits']=0;
+           return  $data;
+
        }
        foreach ($AccountLevel as $key=>$value){
            if ($value['name']==($level+1)){
@@ -102,11 +105,11 @@ class AccountLevel extends BaseModel
                break;
 
            }
-
        }
-        return round($credits/$next_credits,3);
+        $data['classrate']= round($credits/$next_credits,3);
+        $data['next_credits']=$next_credits-$credits;
+        return $data;
 }
-
     //等级信息
     public static function  accountlevel($credits){
        return [
@@ -118,4 +121,5 @@ class AccountLevel extends BaseModel
         ];
 
     }
+
 }
