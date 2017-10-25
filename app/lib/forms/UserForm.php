@@ -263,7 +263,6 @@ class UserForm extends Model
         {
             $userModel = User::findOne($this->user_id);
             $userModel->attributes = AdCommon::array_clear_null($this->attributes);
-
             if( $userModel->save() ) {
                 $url = \lib\nodes\UserNode::get_head_url($userModel->head);
                 if($this->head || $this->nickname) {

@@ -76,7 +76,6 @@ class Channel extends \yii\db\ActiveRecord
             $img = new \yii\extend\Image($local_path,pathinfo($local_path, PATHINFO_EXTENSION));
             $img->noopsyche(500,500);   //裁剪图片
             $head_arr= fastdfs_storage_upload_by_filename($local_path); //保存到图片服务器
-            var_dump($head_arr);exit();
             if($head_arr&&is_object($head_arr)){
                 if(empty($head_arr->group_name) ||  empty($head_arr->filename)) {
                     return $local_path;
