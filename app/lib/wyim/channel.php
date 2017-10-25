@@ -2,9 +2,11 @@
 namespace lib\wyim;
 use lib\vendor\imagine\Filter\Basic\Paste;
 use Yii;
+
 class channel extends wy
 {
     const LIST_CACHE = 'wy_channel_list_cache';
+
 
     //创建直播
     public static function createLiveRoom($name)
@@ -89,7 +91,7 @@ class channel extends wy
         //chatroom::refurbish();   //刷新聊天室人数
 
     }
-    
+
     //取缓存在本机的直播信息
     public static function getinfo($cid)
     {
