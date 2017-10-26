@@ -81,12 +81,13 @@ class Channel extends \yii\db\ActiveRecord
                     return $local_path;
                 } else {
                     $server = Yii::$app->params['imgServer'][$head_arr['group_name']] ?? '';
+                    @unlink($local_path);  //删除文件
                     return $server . $head_arr['group_name'] . '/' . $head_arr['filename'];
                 }
             }else{
                  return    $local_path;
             }
-            unlink($local_path);  //删除文件
+
         }
         return '';
     }
