@@ -38,7 +38,7 @@ class Channel extends \yii\db\ActiveRecord
         return [
             [['user_id', 'type', 'status', 'look_number', 'roomid'], 'integer'],
             [['name'], 'string', 'max' => 30],
-            [['cid'], 'string', 'max' => 32],
+            [['cid','password'], 'string', 'max' => 32],
             ['ctime', 'safe'],
             [['pushUrl', 'httpPullUrl', 'hlsPullUrl', 'rtmpPullUrl', 'img'], 'string', 'max' => 255],
         ];
