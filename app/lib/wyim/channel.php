@@ -8,6 +8,18 @@ class channel extends wy
     const LIST_CACHE = 'wy_channel_list_cache';
 
 
+    //缓存直播
+    public  static  function cacheLive($cid){
+        static::$url='https://vcloud.163.com/app/channel/setAlwaysRecord';
+        $data=[
+            'cid'=>$cid,
+            'needRecord'=>1,
+            'format'=>1,
+            'duration'=>30,
+        ];
+        $result=static::sendJson($data);
+        return $result;
+    }
     //创建直播
     public static function createLiveRoom($name)
     {
