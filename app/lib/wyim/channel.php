@@ -11,7 +11,7 @@ class channel extends wy
     public static  function setcallback(){
         static::$url = 'https://vcloud.163.com/app/record/setcallback';
         $data = array(
-            'recordClk'=>'http://xxx',
+            'recordClk'=>'http://appapi.atkj6666.com/channel/livecallback',
         );
         $result = static::sendJson($data);
         return $result;
@@ -42,7 +42,7 @@ class channel extends wy
         static::$url='https://vcloud.163.com/app/channel/setAlwaysRecord';
         $data=[
             'cid'=>$cid,
-            'needRecord'=>1,//1开启录制，0关闭录制
+            'needRecord'=>$needRecord,//1开启录制，0关闭录制
             'format'=>1,//格式1flv,0mp4
             'duration'=>30,//切片大小
         ];
