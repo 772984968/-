@@ -53,6 +53,7 @@ class VideoList extends \yii\db\ActiveRecord
             'orig_video_key' => 'Orig Video Key',
             'begin_time' => 'Begin Time',
             'end_time' => 'End Time',
+            'Text'=>'Text',
         ];
     }
 }
