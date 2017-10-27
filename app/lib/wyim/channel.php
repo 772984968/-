@@ -7,15 +7,44 @@ class channel extends wy
 {
     const LIST_CACHE = 'wy_channel_list_cache';
 
+    //设置录制视频回调地址
+    public static  function setcallback(){
+        static::$url = 'https://vcloud.163.com/app/record/setcallback';
+        $data = array(
+            'recordClk'=>'http://xxx',
+        );
+        $result = static::sendJson($data);
+        return $result;
+    }
+    //设置录制视频回调地址查询
+    public static  function callbackQuery(){
+        static::$url = 'https://vcloud.163.com/app/record/callbackQuery';
+        $data = array();
+        $result = static::sendJson($data);
+        return $result;
+    }
+    //缓存直播列表
+    public static  function vedioList($cid,$records=10,$pum=1){
+        static::$url = 'https://vcloud.163.com/app/videolist';
+        $data = array(
+            'cid'=>$cid,
+            'records' => $records,
+            'pum' => 1,
+        );
+        $result = static::sendJson($data);
+        return $result;
+
+
+    }
 
     //缓存直播
-    public  static  function cacheLive($cid){
+    public  static  function cacheLive($cid,$needRecord){
         static::$url='https://vcloud.163.com/app/channel/setAlwaysRecord';
         $data=[
             'cid'=>$cid,
-            'needRecord'=>1,
-            'format'=>1,
-            'duration'=>30,
+            'needRecord'=>1,//1开启录制，0关闭录制
+            'format'=>1,//格式1flv,0mp4
+            'duration'=>30,//切片大小
         ];
         $result=static::sendJson($data);
         return $result;

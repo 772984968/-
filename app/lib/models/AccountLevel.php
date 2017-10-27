@@ -99,14 +99,17 @@ class AccountLevel extends BaseModel
            return  $data;
 
        }
-       foreach ($AccountLevel as $key=>$value){
-           if ($value['name']==($level+1)){
-               $next_credits=$value['credits'];
-               break;
 
+       foreach ($AccountLevel as $key=>$value){
+          if ($value['name']==$level){
+               $level_redits=$value['credits'];//当前最低等级所需经验
+               break;
+           }
+           if ($value['name']==($level+1)){
+               $next_credits=$value['credits'];//下等级所需经验
            }
        }
-        $data['classrate']= round($credits/$next_credits,3);
+        $data['classrate']= round(($credits-$level_redits)/($next_credits-$level_redits),3);
         $data['next_credits']=$next_credits-$credits;
         return $data;
 }
