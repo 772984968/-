@@ -63,6 +63,6 @@ class register_red extends activity
     //返回已领取人数
     public static function user_red_all()
     {
-        return \Yii::$app->redis->scard(static::USER_RED_ALL);
+        return \Yii::$app->redis->scard(static::USER_RED_ALL)+875;
     }
 }
