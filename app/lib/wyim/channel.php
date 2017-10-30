@@ -176,19 +176,6 @@ class channel extends wy
         return $status;
     }
 
-    /**
-     *
-     * @查询直播文件保存状态
-     */
-    public static  function getlivesave($cid){
-
-        static::$url ='https://vcloud.163.com/app/channelstats';
-        $data = array(
-            'cid' => $cid
-        );
-        $result = static::sendJson($data);
-     //   return $result->ret;
-    }
     //开始直播
     public static function begin($cid, $grade) {
 

@@ -32,7 +32,6 @@ class VideoList extends \yii\db\ActiveRecord
     {
         return [
             [['iid'], 'integer'],
-            ['text','string'],
          //   [['cid','orig_url'],'string'],
            // [['orig_video_key', 'video_name'], 'string', 'max' => 100]
         ];
@@ -53,7 +52,6 @@ class VideoList extends \yii\db\ActiveRecord
             'orig_video_key' => 'Orig Video Key',
             'begin_time' => 'Begin Time',
             'end_time' => 'End Time',
-            'Text'=>'Text',
         ];
     }
 }
