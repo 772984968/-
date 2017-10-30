@@ -123,8 +123,6 @@ class User extends ActiveRecord
     public function getMemberinfo() {
         return $this->hasOne(Member::className(),['iid'=>'vip_type']);
     }
-
-
     public function countPrice() {
         return (string)(number_format($this->wallet + $this->diamond / \lib\models\Setting::keyTovalue('money2diamond') * 100,2));
     }
