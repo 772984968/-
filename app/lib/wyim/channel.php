@@ -43,7 +43,7 @@ class channel extends wy
         $data=[
             'cid'=>$cid,
             'needRecord'=>$needRecord,//1开启录制，0关闭录制
-            'format'=>1,//格式1flv,0mp4
+            'format'=>0,//格式1flv,0mp4
             'duration'=>30,//切片大小
         ];
         $result=static::sendJson($data);
