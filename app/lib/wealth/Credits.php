@@ -2,6 +2,8 @@
 namespace lib\wealth;
 
 use lib\models\UserCreditsLog;
+use lib\models\AccountLevel;
+use lib\nodes\Notice;
 
 class Credits extends BaseWealth
 {   public $userModel;   // 用户模型
@@ -17,12 +19,14 @@ class Credits extends BaseWealth
     public $praise_limit = 100;   // 点赞限制
     public $comment = 10;// 评论积分
     public $comment_limit = 100; // 评论限制
+    public $level='';
     public function __construct($user_id=0)
     {
 
      // 来源类型0签到1邀请会员2直播3分享4点赞5发表评论6刷礼物
       $this->userModel = \Yii::$app->factory->getuser($user_id);
       $this->userId=\Yii::$app->factory->getuser()->userId;
+      $this->level=AccountLevel::getLevel($this->userModel->credits);
       $this->redis = \Yii::$app->redis;
     }
     // 发表评论
@@ -275,6 +279,7 @@ class Credits extends BaseWealth
     // 分享
     public function sharing()
     {
+
         $score = $this->cheackday(3);
         if (! $score) {
             return true;
@@ -369,6 +374,8 @@ class Credits extends BaseWealth
     // 写入redis
     public function addredis($type, $score)
     {
+        //检查是否升级
+       // $this->cheackuplevel();
         $redis = $this->redis;
         // 用户签到
         if ($type == 0) {
@@ -475,4 +482,12 @@ class Credits extends BaseWealth
         }
     }
 
+    //检查是否升级
+    public  function cheackuplevel(){
+        $newLevel=AccountLevel::getLevel($this->userModel);
+        if ($newLevel>$this->level){
+            Notice::upLevel($this->userModel->wy_accid,$this->userModel,['level'=>$newLevel]);
+        }
+
+    }
 }
