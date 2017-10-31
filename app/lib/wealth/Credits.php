@@ -375,7 +375,7 @@ class Credits extends BaseWealth
     public function addredis($type, $score)
     {
         //检查是否升级
-    //  $this->cheackuplevel();
+        $this->cheackuplevel();
         $redis = $this->redis;
         // 用户签到
         if ($type == 0) {
