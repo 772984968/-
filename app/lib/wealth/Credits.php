@@ -487,7 +487,7 @@ class Credits extends BaseWealth
         $newLevel=AccountLevel::getLevel($this->userModel->credits);
         if ($newLevel>$this->level){
             $this->level=$newLevel;
-        Notice::upLevel($this->userModel->wy_accid,$this->userModel,['level'=>$newLevel]);
+            Notice::upLevel($this->userModel->wy_accid,$this->userModel,['level'=>$newLevel]);
         }
 
     }
