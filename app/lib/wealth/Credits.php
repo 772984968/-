@@ -69,7 +69,6 @@ class Credits extends BaseWealth
     // 签到
     public function sign()
     {
-
       $score = $this->cheackday(0);
         if ($score===false) {
             $this->error = '今天已经签到过了!';
