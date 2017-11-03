@@ -338,6 +338,7 @@ class Credits extends BaseWealth
     // 直播
     public function live($leng)
     {
+
         $score = $this->cheackday(2);
         // 判断总积分和直播时长
         if (! $score) {
@@ -347,11 +348,10 @@ class Credits extends BaseWealth
             $this->error='直播时长不够！';
             return false;
         }
-
         $long=ceil($leng);
         $live = $this->live*$long;
         $live_credits = $live >= $score ? $score : $live; // 获取邀请会员积分
-                                                          // 开启事务
+                                                         // 开启事务
         $transaction = \Yii::$app->db->beginTransaction();
         try {
             // 用户表
