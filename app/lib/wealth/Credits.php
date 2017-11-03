@@ -81,7 +81,7 @@ class Credits extends BaseWealth
             'user_id' => $this->userId
         ])
             ->one();
-         $today =  mktime(4,0,0,date('m'),date('d')+1,date('Y'));
+         $today =  mktime(4,0,0,date('m'),date('d'),date('Y'));
         // 首次签到
         if (! $sign) {
             $signModel->user_id = $this->userId;
@@ -136,11 +136,14 @@ class Credits extends BaseWealth
           else {
             $last_day = $sign->last_signtime;
             // 判断今天是否签到
-            if ($last_day == $today) {
+            if (($today-$last_day)< 86400) {
+
                 $this->error = '今天已经签到过了';
                 return false;
             }
-            if (($today - $last_day) <= 86400) {
+
+            $cha=time()-$last_day;
+            if ($cha >= 86400&&$cha<172800) {
                 // 小于一天，连续签到
                 $sign_day = $sign->sign_day + 1;
                 $rs = $signsetting->find()
