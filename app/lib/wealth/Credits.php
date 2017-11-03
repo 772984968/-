@@ -349,7 +349,8 @@ class Credits extends BaseWealth
             return false;
         }
 
-        $live = $this->live;
+        $long=ceil($leng);
+        $live = $this->live*$long;
         $live_credits = $live >= $score ? $score : $live; // 获取邀请会员积分
                                                           // 开启事务
         $transaction = \Yii::$app->db->beginTransaction();
@@ -398,7 +399,7 @@ class Credits extends BaseWealth
             if (! $redis->hexists($this->redis_key . $this->userId, 'live')) {
                 $redis->hset($this->redis_key . $this->userId, 'live', $score);
             } else {
-                return  false;
+                $redis->hincrby($this->redis_key . $this->userId, 'live', $score);
 
             }
         }
@@ -407,10 +408,9 @@ class Credits extends BaseWealth
             if (! $redis->hexists($this->redis_key . $this->userId, 'sharing')) {
                 $redis->hset($this->redis_key . $this->userId, 'sharing', $score);
             } else {
-                return  false;
-
+                $redis->hincrby($this->redis_key . $this->userId, 'sharing', $score);
             }
-        }
+       }
         //用户点赞
         if ($type == 4) {
                         $redis->hincrby($this->redis_key . $this->userId, 'praise', $score);
@@ -453,16 +453,18 @@ class Credits extends BaseWealth
             if ($redis->hexists($this->redis_key.$this->userId, 'sign'))
                 return false;
        }
+       /**
        //用户直播
        if ($type == 2) {
            if ($redis->hexists($this->redis_key.$this->userId, 'live'))
                return false;
        }
-       //用户分享
+       /*
+       //用户分享/*
        if ($type == 3) {
            if ($redis->hexists($this->redis_key.$this->userId, 'sharing'))
                return false;
-       }
+       }*/
        //返回可添加积分
         return $this->total-$today_total;
     }
@@ -491,4 +493,6 @@ class Credits extends BaseWealth
         }
 
     }
+
+
 }
