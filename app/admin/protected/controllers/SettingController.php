@@ -4,6 +4,8 @@ namespace app\controllers;
 use app\controllers\SellerController;
 use lib\models\Setting;
 use lib\models\Signsetting;
+use lib\components\AdCommon;
+use lib\nodes\Notice;
 
 
 class SettingController extends SellerController
@@ -82,6 +84,59 @@ class SettingController extends SellerController
         $signtting=new Signsetting();
         $this->data['signsetting']= $data=$signtting::find()->orderBy('continue_day asc,credits asc')->all();
         return $this->view();
+    }
+    /**
+     *设置系统群发消息
+     */
+    public function actionMessage(){
+        $rows = (new \yii\db\Query())
+        ->from('at_lianlian_message')
+        ->all();
+        $this->data['data']=$rows;
+        return $this->view();
+    }
+    /**
+     *设置系统群发消息
+     */
+    public function actionAddmessage(){
+        if (\Yii::$app->request->isPost){
+            $model=new \lib\models\LianlianMessage();
+            $data=\Yii::$app->request->post();
+            $model->load(\Yii::$app->request->post(),'');
+            if($model->insert()){
+             $this->success('添加成功');
+            }
+            $this->error(AdCommon::modelMessage($model->errors));
+        }
+
+         return $this->view();
+    }
+
+    //删除消息
+    public function actionDelmessage(){
+        //删除系统消息
+        if (\Yii::$app->request->isGet){
+            $model=new \lib\models\LianlianMessage();
+            $iid=\Yii::$app->request->get('iid');
+            if ($model->deleteAll(['iid'=>$iid])){
+                 $this->success('删除成功');
+            }else{
+                $this->error(AdCommon::modelMessage($model->errors));
+            }
+        }
+    }
+        //发送系统消息
+    public function actionSendmessage(){
+
+        $model=new \lib\models\LianlianMessage();
+        $iid=\Yii::$app->request->get('iid');
+        $data=$model->findOne(['iid'=>$iid])->toArray();
+        $allUser=\lib\models\User::find()->all();
+        foreach ($allUser  as $user){
+            if (Notice::sendmessage($user->wy_accid, $user,$data)==false)
+                continue;
+        }
+            $this->success('发送成功');
     }
     /**
      *签到积分添加

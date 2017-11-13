@@ -14,14 +14,14 @@ use lib\models\AppAdstype;
 use yii\helpers\VarDumper;
 
 class SystemController extends SellerController
-{ 
+{
 	private $_adstype;
 	private $_appadstype;
 	/**
-	* @desc    
-	* @access  
-	* @param   
-	* @return  
+	* @desc
+	* @access
+	* @param
+	* @return
 	*/
 	public function init()
 	{
@@ -33,7 +33,7 @@ class SystemController extends SellerController
 
 	/**
 	* @desc     系统设置
-	* @access  
+	* @access
 	* @param     void
 	* @return    void
 	*/
@@ -42,9 +42,10 @@ class SystemController extends SellerController
 		$data = Setting::find()->where(['type'=>1])->orderBy('id ASC')->all();
 
 		$this->data['data'] = $data;
-		
+
 		return $this->view();
 	}
+
 
 
 	/**
@@ -56,9 +57,9 @@ class SystemController extends SellerController
 	public function actionPayset()
 	{
 		$data = Setting::find()->where(['type'=>2])->orderBy('id ASC')->all();
-	
+
 		$this->data['data'] = $data;
-	
+
 		return $this->view();
 	}
 
@@ -72,16 +73,16 @@ class SystemController extends SellerController
 	public function actionXieyi()
 	{
 		$data = Setting::findOne(['type'=>5,'key'=>'shouce']);
-	
+
 		$this->data['info'] = $data;
-	
+
 		return $this->view();
 	}
 
 
 	/**
 	* @desc     修改公共配置
-	* @access   
+	* @access
 	* @param     void
 	* @return    void
 	*/
@@ -98,7 +99,7 @@ class SystemController extends SellerController
 				}
 			}
 
-			$this->success(\yii::t('app', 'success'));	
+			$this->success(\yii::t('app', 'success'));
 		}
 		else{
 			$this->error(\yii::t('app', 'error'));
@@ -137,10 +138,10 @@ class SystemController extends SellerController
 		{
 			$post = $this->post('Adstype');
 			$post['addtime'] = time();
-	
+
 			$adstype->attributes = $post;
 			$adstype->save();
-	
+
 			if (empty($adstype->errors))
 			{
 				$this->success(\yii::t('app', 'success'), \yii::$app->params['url']['adstype']);
@@ -150,7 +151,7 @@ class SystemController extends SellerController
 				$this->error(AdCommon::modelMessage($adstype->errors));
 			}
 		}
-	
+
 		$this->data['model'] = $adstype;
 		return $this->view();
 	}
@@ -186,7 +187,7 @@ class SystemController extends SellerController
 			$post = $this->post('Adstype');
 			$adtype->attributes = $post;
 			$adtype->save();
-	
+
 			if (empty($adtype->errors))
 			{
 				$this->success(\yii::t('app', 'success'), \yii::$app->params['url']['adstype']);
@@ -196,7 +197,7 @@ class SystemController extends SellerController
 				$this->error(AdCommon::modelMessage($adtype->errors));
 			}
 		}
-	
+
 		$this->data['model'] = $adtype;
 		return $this->view();
 	}
@@ -289,7 +290,7 @@ class SystemController extends SellerController
 	/**
 	* @desc   修改广告
 	* @access  public
-	* @param   int $id 
+	* @param   int $id
 	* @return  void
 	*/
 	public function actionUpads()
@@ -367,10 +368,10 @@ class SystemController extends SellerController
 		{
 			$post = $this->post('App');
 			$post['addtime'] = time();
-			
+
 			$app->attributes = $post;
 			$app->save();
-			
+
 			if (empty($app->errors))
 			{
 				$this->success(\yii::t('app', 'success'), \yii::$app->params['url']['app']);
@@ -380,7 +381,7 @@ class SystemController extends SellerController
 				$this->error(AdCommon::modelMessage($app->errors));
 			}
 		}
-		
+
 		$this->data['model'] = $app;
 		return $this->view();
 	}
@@ -400,7 +401,7 @@ class SystemController extends SellerController
 			$post = $this->post('App');
 			$app->attributes = $post;
 			$app->save();
-			
+
 			if (empty($app->errors))
 			{
 				$this->success(\yii::t('app', 'success'), \yii::$app->params['url']['app']);
@@ -410,7 +411,7 @@ class SystemController extends SellerController
 				$this->error(AdCommon::modelMessage($app->errors));
 			}
 		}
-		
+
 		$this->data['model'] = $app;
 		return $this->view();
 	}
@@ -458,14 +459,14 @@ class SystemController extends SellerController
 	public function actionFeedback()
 	{
 		$Feedback = new Feedback();
-	
+
 		$where  = '1=1';
 		$query = $this->query($Feedback, '', $where);
 		$this->data['count'] = $query['count'];
 		$this->data['page']  = $query['page'];
 		$this->data['data']  = $query['data'];
-	
-		 
+
+
 		return $this->view();
 	}
 
@@ -711,7 +712,7 @@ class SystemController extends SellerController
 			"http://api.er.cc/order/setday?classify=2&type=3",
 			"http://api.er.cc/order/setday?classify=2&type=4",
 		];
-		
+
 		$curl = new \lib\nodes\Curl();
 		foreach ($urls as $url) {
 			$curl->get($url);

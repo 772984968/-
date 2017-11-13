@@ -9,6 +9,7 @@ return [
     /*----------- 系统设置 -------------*/
     'system'    => '/system/index',
 	'setting'  => '/setting/index',
+    'setMessage'=>'/setting/message',
 	'upSetting'  => '/setting/update',
     'upSystem'  => '/system/update',
 
@@ -16,6 +17,7 @@ return [
     'addAdstype'=> '/system/addadstype',
     'upAdstype' => '/system/upadstype',
     'delAdstype'=> '/system/deladstype',
+
 
 	'ads'       => '/system/ads',
     'addAds'    => '/system/addads',
