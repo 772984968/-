@@ -34,7 +34,7 @@ use yii\helpers\Url;
 			</div>
 		</div>
 		<div class="form-button">
-			<button class="button bg-main" type="submit">登录</button>
+			<button class="button bg-main" type="submit">添加</button>
 				<button class="button " type="reset">重置</button>
 		</div>
 	</form>
