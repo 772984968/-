@@ -149,7 +149,6 @@ class User extends ActiveRecord
 
         if(HUANG_JING != 0)
         {
-
             $model->setToken();
             return $model->getLoginInfo();
         }
