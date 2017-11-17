@@ -49,6 +49,7 @@ class Signdate extends \yii\db\ActiveRecord
             'sign_day'=>' Sign_day'
        ];
     }
+    //签到日期表
     public function insertdate($sign_id,$time,$key=0){
         $year=date('Y',$time);
         $month=date('m',$time);
