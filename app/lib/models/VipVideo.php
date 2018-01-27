@@ -48,10 +48,10 @@ class VipVideo extends \yii\db\ActiveRecord
             [['title'], 'required'],
             [['description'], 'string'],
             [['price', 'vip_price'], 'number'],
-            [['date', 'watch_count', 'like_count', 'wy_vid', 'upload_status', 'upload_status_image'], 'integer'],
+            [['date', 'watch_count', 'like_count', 'wy_vid', 'upload_status'], 'integer'],
             [['title', 'cover'], 'string', 'max' => 1024],
-            [['thumbnail', 'url', 'thumbnail_json'], 'string', 'max' => 2048],
-            [['wy_name', 'local_address', 'cover_string'], 'string', 'max' => 100],
+            [['thumbnail', 'url'], 'string', 'max' => 2048],
+            [['wy_name', 'local_address'], 'string', 'max' => 100],
         ];
     }
 
@@ -78,4 +78,5 @@ class VipVideo extends \yii\db\ActiveRecord
             'upload_status' => 'upload_status',
         ];
     }
+
 }

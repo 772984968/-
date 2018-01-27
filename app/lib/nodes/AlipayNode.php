@@ -48,15 +48,15 @@ class AlipayNode extends \yii\base\Component
         $responseNode = str_replace(".", "_", $request->getApiMethodName()) . "_response";
 
         $resultCode = $result->$responseNode->code;
-        
+
         if(!empty($resultCode)&&$resultCode == 10000){
             return true;
         } else {
             return $result->$responseNode->sub_msg ?? '';
         }
     }
-    
-    
+
+
 
 
 }

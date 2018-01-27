@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace app\controllers;
 
 use app\controllers\BasicsController;
@@ -24,9 +24,9 @@ class SellerController extends BasicsController
      */
     public function init()
     {
-        parent::init();  
+        parent::init();
 
-        if (empty(\Yii::$app->session['admin'])) 
+        if (empty(\Yii::$app->session['admin']))
         {
             $this->redirect(\Yii::$app->params['url']['login']);
         }
@@ -37,11 +37,12 @@ class SellerController extends BasicsController
             $this->admin = \yii::$app->session['admin'];
 
             $this->data['admin'] = $this->admin;
+
             # 权限
             $this->_setPower();
             \yii::$app->params['setting'] = \lib\models\Setting::getSetting();
-            
-        }   
+
+        }
     }
 
     /**
@@ -56,7 +57,7 @@ class SellerController extends BasicsController
             'pageSize'   => \yii::$app->params['pageSize'],
             'totalCount' => $count,
         ]);
-        
+
         return $pagination;
     }
 
@@ -80,13 +81,13 @@ class SellerController extends BasicsController
         $page  = $this->page($count);
 
         $query  = $query->orderBy($order)->offset($page->offset)->limit($page->limit)->all();
-        
+
         return ['count' => $count, 'page' => $page, 'data' => $query];
     }
 
     public function query2($model, $with = '', $where = [], $order = 'id desc')
     {
-       
+
         $query = $model->find();
         //if ($with != '') $query = $query->innerJoinWith($with);
         if ($with != '') $query = $query->With($with);
@@ -110,7 +111,7 @@ class SellerController extends BasicsController
         $url = '/' . $this->id . '/' . $this->action->id;
         $key = array_search($url, \yii::$app->params['url']);
 
-        /*if (!in_array($key, $this->data['power'])) 
+        /*if (!in_array($key, $this->data['power']))
         {
             $this->error(\yii::t('app', 'powerError'));
         }*/
@@ -131,7 +132,7 @@ class SellerController extends BasicsController
     private function _setPower()
     {
         $power = $this->admin['isAdmin'] != 1 ? \yii::$app->session['power'] : '';
-        $power = \app\library\MenuLibrary::app()->getPower($power);   
+        $power = \app\library\MenuLibrary::app()->getPower($power);
         $this->data['power'] = $power;
     }
 
@@ -165,7 +166,7 @@ class SellerController extends BasicsController
         {
             $title .= ',id=' . $_POST['data'];
         }
-        
+
         $doing  = json_encode($_POST);
 
         # 入库
@@ -177,7 +178,7 @@ class SellerController extends BasicsController
         $data['action']   = strtolower($this->action->id);
         $data['title']    = $title;
         $data['doing']    = $doing;
-        
+
         $model->attributes = $data;
         $model->save();
     }

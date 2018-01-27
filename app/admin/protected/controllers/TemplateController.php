@@ -75,7 +75,6 @@ abstract class TemplateController extends SellerController
         $page = \Yii::$app->getRequest()->get('page', 0);
         $start = $page>0 ? ($page-1)*20 : 0;
         $this->data['data']  = $query->offset($start)->limit(20)->all();
-
         $this->data['searchvalue'] = $search;
 
     }

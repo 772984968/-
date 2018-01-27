@@ -31,7 +31,7 @@ class MainController extends SellerController
             $menuList = MenuLibrary::app()->setPower2($power);
         }
 
-        //var_dump($menuList);die;
+       //var_dump($menuList);die;
         $menuList = json_encode($menuList);
         $this->data['menuList'] = $menuList;
         return $this->view();
@@ -45,5 +45,4 @@ class MainController extends SellerController
     {
         return $this->view();
     }
-
-}   
+}
